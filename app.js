@@ -5481,7 +5481,6 @@ function markdownToHtml(
 
 }
 
-:
 
 /* =========================================================
    SIDEBAR NAVIGATION
