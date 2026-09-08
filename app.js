@@ -1,6 +1,6 @@
 /* =========================================================
-   UNIVERSAL AI BOOK LIBRARY
-   LOCAL PDF LIBRARY
+   DOCUMENT MANAGEMENT SYSTEM
+   LOCAL PDF DOCUMENTATION
    ========================================================= */
 
 
@@ -13,7 +13,7 @@ const AI_WORKER_URL =
 
 
 /* =========================================================
-   LOCAL LIBRARY CONFIGURATION
+   LOCAL DOCUMENT LIBRARY CONFIGURATION
    ========================================================= */
 
 const LOCAL_BOOKS_DB_NAME =
@@ -36,14 +36,14 @@ let LOCAL_BOOK_FILES =
 
 
 /* =========================================================
-   BOOKS
+   DOCUMENT DATA
    ========================================================= */
 
 let BOOKS = [];
 
 
 /* =========================================================
-   I18N
+   APPLICATION I18N
    ========================================================= */
 
 const I18N = {
@@ -51,60 +51,478 @@ const I18N = {
   en: {
 
     appTitle:
-      'AI Book Library',
+      'Document Management System',
 
-    library: 'Library',
-    search: 'Search',
-    create: 'Create',
-    saved: 'My works',
+    dashboard:
+      'Dashboard',
 
-    books: 'Loaded books',
-    titles: 'titles',
+    documents:
+      'Documents',
 
-    sources: 'Sources',
-    passages: 'passages',
+    search:
+      'Search',
 
-    acrossBooks:
-      'Search loaded books…',
+    categories:
+      'Categories',
 
-    noResults:
-      'No passages found',
+    recent:
+      'Recent',
 
-    searching:
-      'Preparing the library search…',
+    favorites:
+      'Favorites',
 
-    preparingSearch:
-      'Preparing search index…',
+    review:
+      'Review',
 
-    searchReady:
-      'Library search ready',
+    archive:
+      'Archive',
 
-    rebuildingSearch:
-      'Building the library index…',
+    ai:
+      'Document AI',
 
-    searchHint:
-      'Search the text of the loaded PDF books.',
+    saved:
+      'AI Results',
 
-    reader:
-      'Reader',
+    settings:
+      'Settings',
 
-    loading:
-      'Loading…',
+    language:
+      'Language',
+
+    overview:
+      'Overview',
+
+    totalDocuments:
+      'Total documents',
+
+    categoriesCount:
+      'Categories',
+
+    reviewCount:
+      'Needs review',
+
+    favoriteCount:
+      'Favorites',
+
+    activeDocuments:
+      'Active documents',
+
+    archivedDocuments:
+      'Archived documents',
+
+    expiredDocuments:
+      'Expired documents',
+
+    recentDocuments:
+      'Recent documents',
+
+    noDocuments:
+      'No documents found.',
+
+    noFavorites:
+      'No favorite documents yet.',
+
+    noRecent:
+      'No recently opened documents yet.',
+
+    noReview:
+      'No documents currently require review.',
+
+    noArchive:
+      'No archived documents.',
+
+    noCategories:
+      'No categories found.',
+
+    documentsInCategory:
+      'documents',
+
+    open:
+      'Open',
 
     openPdf:
       'Open PDF',
 
+    details:
+      'Details',
+
+    documentDetails:
+      'Document details',
+
+    documentId:
+      'Document ID',
+
+    title:
+      'Title',
+
+    filename:
+      'Filename',
+
+    folder:
+      'Folder',
+
+    category:
+      'Category',
+
+    subcategory:
+      'Subcategory',
+
+    department:
+      'Department',
+
+    owner:
+      'Owner',
+
+    author:
+      'Author',
+
+    documentDate:
+      'Document date',
+
+    lastModified:
+      'Last modified',
+
+    fileSize:
+      'File size',
+
+    pages:
+      'Pages',
+
+    type:
+      'Type',
+
+    status:
+      'Status',
+
+    version:
+      'Version',
+
+    tags:
+      'Tags',
+
+    notes:
+      'Notes',
+
+    keywords:
+      'Keywords',
+
+    active:
+      'Active',
+
+    draft:
+      'Draft',
+
+    inReview:
+      'In review',
+
+    approved:
+      'Approved',
+
+    valid:
+      'Valid',
+
+    expired:
+      'Expired',
+
+    archived:
+      'Archived',
+
+    unknown:
+      'Unknown',
+
+    markFavorite:
+      'Add to favorites',
+
+    removeFavorite:
+      'Remove from favorites',
+
+    markArchived:
+      'Archive document',
+
+    restoreDocument:
+      'Restore document',
+
+    markReview:
+      'Send to review',
+
+    saveMetadata:
+      'Save metadata',
+
+    cancel:
+      'Cancel',
+
+    back:
+      'Back',
+
+    refresh:
+      'Refresh',
+
+    chooseFolder:
+      'Choose documents folder',
+
+    changeFolder:
+      'Change folder',
+
+    refreshDocuments:
+      'Refresh documents',
+
+    localDocuments:
+      'Local document repository',
+
+    selectedFolder:
+      'Selected folder',
+
+    folderNotSelected:
+      'No document folder has been selected yet.',
+
+    browserNotSupported:
+      'Your browser does not support folder access. Please use Chrome or Edge.',
+
+    folderPermission:
+      'Please allow access to the selected document folder.',
+
+    documentsLoaded:
+      'documents loaded.',
+
+    folderLoadError:
+      'The document folder could not be loaded.',
+
+    searchDocuments:
+      'Search documents…',
+
+    searchFullText:
+      'Search filename, title, folder, category, tags and full PDF text…',
+
+    advancedSearch:
+      'Advanced search',
+
+    clearFilters:
+      'Clear filters',
+
+    applyFilters:
+      'Apply filters',
+
+    sortBy:
+      'Sort by',
+
+    relevance:
+      'Relevance',
+
+    nameAsc:
+      'Name A–Z',
+
+    nameDesc:
+      'Name Z–A',
+
+    newest:
+      'Newest',
+
+    oldest:
+      'Oldest',
+
+    largest:
+      'Largest',
+
+    smallest:
+      'Smallest',
+
+    allStatuses:
+      'All statuses',
+
+    allCategories:
+      'All categories',
+
+    allDepartments:
+      'All departments',
+
+    allFolders:
+      'All folders',
+
+    dateFrom:
+      'Date from',
+
+    dateTo:
+      'Date to',
+
+    reset:
+      'Reset',
+
+    results:
+      'results',
+
+    page:
+      'Page',
+
     openPage:
       'Open page',
 
-    createWork:
-      'Create',
+    snippet:
+      'Text match',
 
-    chooseBooks:
-      'Choose books',
+    recentActivity:
+      'Recent activity',
 
-    selectedBooks:
-      'selected',
+    actions:
+      'Actions',
+
+    reviewQueue:
+      'Review queue',
+
+    categoryOverview:
+      'Category overview',
+
+    folderOverview:
+      'Folder overview',
+
+    documentation:
+      'Documentation',
+
+    metadata:
+      'Metadata',
+
+    fileInformation:
+      'File information',
+
+    aiAssistant:
+      'AI document assistant',
+
+    aiDescription:
+      'Use AI to work with business documentation and selected documents.',
+
+    aiSummary:
+      'Summarize document',
+
+    aiAnalysis:
+      'Analyze document',
+
+    aiExtract:
+      'Extract information',
+
+    aiCompare:
+      'Compare documents',
+
+    askDocumentation:
+      'Ask documentation',
+
+    assistantPrompt:
+      'Request',
+
+    assistantPlaceholder:
+      'Ask a question, request an explanation, extract information, compare documents or analyze documentation…',
+
+    askAI:
+      'Ask AI',
+
+    lecture:
+      'Structured brief',
+
+    lectureDescription:
+      'Create a structured business briefing from selected documents.',
+
+    topic:
+      'Topic',
+
+    topicPlaceholder:
+      'What should the briefing explain?',
+
+    length:
+      'Length',
+
+    short:
+      'Short',
+
+    standard:
+      'Standard',
+
+    detailed:
+      'Detailed',
+
+    createBrief:
+      'Create briefing',
+
+    articleWriting:
+      'AI report writing',
+
+    articleDescription:
+      'Create a long, detailed professional report based on the selected documentation.',
+
+    articlePlaceholder:
+      'Describe the subject, issue, process, event or question the report should cover in depth…',
+
+    articleMinimum:
+      '10,000 words or more',
+
+    writeReport:
+      'Write report',
+
+    question:
+      'Question',
+
+    questionPlaceholder:
+      'Ask specifically about the selected company documentation…',
+
+    answer:
+      'Answer',
+
+    sources:
+      'Sources',
+
+    sourceMaterialOnly:
+      'Answers are based on the selected documentation.',
+
+    preparing:
+      'AI is preparing the response…',
+
+    searching:
+      'Searching document content…',
+
+    preparingSearch:
+      'Preparing document search index…',
+
+    searchReady:
+      'Document search ready',
+
+    searchError:
+      'Document search could not be prepared.',
+
+    noRelevantPages:
+      'No relevant document passages were found.',
+
+    saveResult:
+      'Save result',
+
+    openResult:
+      'Open',
+
+    download:
+      'Download',
+
+    delete:
+      'Delete',
+
+    noResults:
+      'No saved AI results yet.',
+
+    created:
+      'Created',
+
+    loading:
+      'Loading…',
+
+    settingsDescription:
+      'Local application settings and document repository information.',
+
+    repository:
+      'Repository',
+
+    localOnly:
+      'Local browser application',
+
+    securityNote:
+      'Documents remain in the selected local folder. AI receives extracted text passages rather than the PDF files themselves.',
+
+    selectedDocuments:
+      'selected documents',
 
     selectAll:
       'Select all',
@@ -112,221 +530,50 @@ const I18N = {
     unselectAll:
       'Unselect all',
 
-    chooseBooksFolder:
-      'Choose books folder',
+    chooseDocuments:
+      'Choose documents',
 
-    changeBooksFolder:
-      'Change folder',
+    statusUpdated:
+      'Document status updated.',
 
-    refreshBooks:
-      'Refresh books',
+    metadataSaved:
+      'Document metadata saved.',
 
-    localBooks:
-      'Local books',
+    addedFavorite:
+      'Document added to favorites.',
 
-    selectedFolder:
-      'Selected folder',
+    removedFavorite:
+      'Document removed from favorites.',
 
-    folderNotSelected:
-      'No books folder selected yet.',
+    archived:
+      'Document archived.',
 
-    browserNotSupported:
-      'Your browser does not support folder access. Please use Chrome or Edge.',
+    restored:
+      'Document restored.',
 
-    folderPermission:
-      'Please allow access to your books folder.',
+    needsReview:
+      'Needs review',
 
-    booksLoaded:
-      'books loaded.',
+    today:
+      'Today',
 
-    aiLecture:
-      'AI Lecture',
+    yesterday:
+      'Yesterday',
 
-    lectureDescription:
-      'Create a structured lecture using the selected books.',
+    activityOpened:
+      'Document opened',
 
-    lectureTopic:
-      'Lecture topic',
+    activityArchived:
+      'Document archived',
 
-    lectureTopicPlaceholder:
-      'What should the lecture explain?',
+    activityRestored:
+      'Document restored',
 
-    lectureLength:
-      'Lecture length',
+    activityFavorite:
+      'Favorite changed',
 
-    minutes10:
-      '10 min',
-
-    minutes20:
-      '20 min',
-
-    minutes40:
-      '40 min',
-
-    minutes60:
-      '60 min',
-
-    minutes120:
-      '120 min',
-
-    lectureLanguage:
-      'Lecture language',
-
-    createLecture:
-      'Create lecture',
-
-    aiAssistant:
-      'AI Assistant',
-
-    assistantDescription:
-      'Use AI normally. Relevant information from the selected books can be used when useful.',
-
-    assistantPrompt:
-      'Message',
-
-    assistantPlaceholder:
-      'Ask anything, request an explanation, write something, plan something, summarize something, or discuss a topic…',
-
-    assistantButton:
-      'Ask AI',
-
-    assistantPreparing:
-      'AI is preparing your answer…',
-
-    assistantNotCreated:
-      'The answer has not been created yet.',
-
-    assistantError:
-      'Could not create the AI answer.',
-
-    articleWriting:
-      'AI Article Writing',
-
-    articleDescription:
-      'Create a very long, detailed article suitable for newspapers, magazines, journals, websites and other publications.',
-
-    articleTopic:
-      'Article topic',
-
-    articlePlaceholder:
-      'Describe the topic, idea, event, person, issue or theme you want the article to cover in depth…',
-
-    articleLength:
-      'Article length',
-
-    articleMinimum:
-      '10,000 words or more',
-
-    createArticle:
-      'Write article',
-
-    articlePreparing:
-      'AI is writing your long article…',
-
-    articleNotCreated:
-      'The article has not been created yet.',
-
-    articleError:
-      'Could not create the article.',
-
-    askBooks:
-      'Ask the Books',
-
-    askDescription:
-      'Ask specifically about the selected PDF books. Answers are based only on the library source material.',
-
-    askQuestion:
-      'Question',
-
-    askQuestionPlaceholder:
-      'Ask about the selected books: summaries, comparisons, facts, explanations, passages, dates, people, ideas, or other details…',
-
-    askBooksButton:
-      'Ask the Books',
-
-    answer:
-      'Answer',
-
-    answerPreparing:
-      'AI is searching the books and preparing your answer…',
-
-    answerNotCreated:
-      'The answer has not been created yet.',
-
-    noAnswer:
-      'The AI could not create an answer.',
-
-    sourceMaterialOnly:
-      'Answers are based only on the selected PDF books.',
-
-    works:
-      'Works',
-
-    noSavedWorks:
-      'No generated works yet.',
-
-    lectureWork:
-      'Lecture',
-
-    assistantWork:
-      'AI Assistant',
-
-    articleWork:
-      'Article',
-
-    askWork:
-      'Book question',
-
-    created:
-      'Created',
-
-    deleteWork:
-      'Delete',
-
-    openWork:
-      'Open',
-
-    downloadWork:
-      'Download',
-
-    noBooks:
-      'No PDF books have been loaded yet.',
-
-    localFolderMissing:
-      'Please choose your books folder first.',
-
-    chooseAtLeastOne:
-      'Please select at least one book.',
-
-    missingTopic:
-      'Please enter a lecture topic.',
-
-    missingAssistant:
-      'Please enter a message.',
-
-    missingArticle:
-      'Please enter an article topic.',
-
-    missingQuestion:
-      'Please enter a question.',
-
-    noRelevantPages:
-      'No relevant passages were found in the selected books.',
-
-    answerError:
-      'Could not create the answer.',
-
-    lectureError:
-      'Could not create the lecture.',
-
-    articleErrorGeneric:
-      'Could not create the article.',
-
-    folderLoadError:
-      'The books folder could not be loaded.',
-
-    booksRefreshed:
-      'Books refreshed.'
+    activityMetadata:
+      'Metadata updated'
 
   },
 
@@ -334,60 +581,478 @@ const I18N = {
   sl: {
 
     appTitle:
-      'UI Knjižnica',
+      'Sistem za upravljanje dokumentacijo',
 
-    library: 'Knjižnica',
-    search: 'Iskanje',
-    create: 'Ustvari',
-    saved: 'Moja dela',
+    dashboard:
+      'Nadzorna plošča',
 
-    books: 'Naložene knjige',
-    titles: 'naslovov',
+    documents:
+      'Dokumenti',
 
-    sources: 'Viri',
-    passages: 'odlomkov',
+    search:
+      'Iskanje',
 
-    acrossBooks:
-      'Išči po naloženih knjigah…',
+    categories:
+      'Kategorije',
 
-    noResults:
-      'Odlomkov ni bilo mogoče najti',
+    recent:
+      'Nedavni',
 
-    searching:
-      'Pripravljam iskanje po knjižnici…',
+    favorites:
+      'Priljubljeni',
 
-    preparingSearch:
-      'Pripravljam iskalni indeks…',
+    review:
+      'Pregled',
 
-    searchReady:
-      'Iskanje po knjižnici je pripravljeno',
+    archive:
+      'Arhiv',
 
-    rebuildingSearch:
-      'Gradim indeks knjižnice…',
+    ai:
+      'AI dokumenti',
 
-    searchHint:
-      'Išči po besedilu naloženih PDF knjig.',
+    saved:
+      'AI rezultati',
 
-    reader:
-      'Bralnik',
+    settings:
+      'Nastavitve',
 
-    loading:
-      'Nalaganje…',
+    language:
+      'Jezik',
+
+    overview:
+      'Pregled',
+
+    totalDocuments:
+      'Vsi dokumenti',
+
+    categoriesCount:
+      'Kategorije',
+
+    reviewCount:
+      'Za pregled',
+
+    favoriteCount:
+      'Priljubljeni',
+
+    activeDocuments:
+      'Aktivni dokumenti',
+
+    archivedDocuments:
+      'Arhivirani dokumenti',
+
+    expiredDocuments:
+      'Potekli dokumenti',
+
+    recentDocuments:
+      'Nedavni dokumenti',
+
+    noDocuments:
+      'Dokumentov ni mogoče najti.',
+
+    noFavorites:
+      'Priljubljenih dokumentov še ni.',
+
+    noRecent:
+      'Nedavnih dokumentov še ni.',
+
+    noReview:
+      'Trenutno ni dokumentov za pregled.',
+
+    noArchive:
+      'Arhiv je prazen.',
+
+    noCategories:
+      'Kategorij ni mogoče najti.',
+
+    documentsInCategory:
+      'dokumentov',
+
+    open:
+      'Odpri',
 
     openPdf:
       'Odpri PDF',
 
+    details:
+      'Podrobnosti',
+
+    documentDetails:
+      'Podrobnosti dokumenta',
+
+    documentId:
+      'ID dokumenta',
+
+    title:
+      'Naslov',
+
+    filename:
+      'Ime datoteke',
+
+    folder:
+      'Mapa',
+
+    category:
+      'Kategorija',
+
+    subcategory:
+      'Podkategorija',
+
+    department:
+      'Oddelek',
+
+    owner:
+      'Odgovorna oseba',
+
+    author:
+      'Avtor',
+
+    documentDate:
+      'Datum dokumenta',
+
+    lastModified:
+      'Zadnja sprememba',
+
+    fileSize:
+      'Velikost datoteke',
+
+    pages:
+      'Strani',
+
+    type:
+      'Vrsta',
+
+    status:
+      'Status',
+
+    version:
+      'Različica',
+
+    tags:
+      'Oznake',
+
+    notes:
+      'Opombe',
+
+    keywords:
+      'Ključne besede',
+
+    active:
+      'Aktiven',
+
+    draft:
+      'Osnutek',
+
+    inReview:
+      'V pregledu',
+
+    approved:
+      'Potrjen',
+
+    valid:
+      'Veljaven',
+
+    expired:
+      'Potekel',
+
+    archived:
+      'Arhiviran',
+
+    unknown:
+      'Neznano',
+
+    markFavorite:
+      'Dodaj med priljubljene',
+
+    removeFavorite:
+      'Odstrani iz priljubljenih',
+
+    markArchived:
+      'Arhiviraj dokument',
+
+    restoreDocument:
+      'Obnovi dokument',
+
+    markReview:
+      'Pošlji v pregled',
+
+    saveMetadata:
+      'Shrani metapodatke',
+
+    cancel:
+      'Prekliči',
+
+    back:
+      'Nazaj',
+
+    refresh:
+      'Osveži',
+
+    chooseFolder:
+      'Izberi mapo dokumentov',
+
+    changeFolder:
+      'Spremeni mapo',
+
+    refreshDocuments:
+      'Osveži dokumente',
+
+    localDocuments:
+      'Lokalni repozitorij dokumentov',
+
+    selectedFolder:
+      'Izbrana mapa',
+
+    folderNotSelected:
+      'Mapa z dokumenti še ni izbrana.',
+
+    browserNotSupported:
+      'Tvoj brskalnik ne podpira dostopa do map. Uporabi Chrome ali Edge.',
+
+    folderPermission:
+      'Dovoli dostop do izbrane mape dokumentov.',
+
+    documentsLoaded:
+      'dokumentov naloženih.',
+
+    folderLoadError:
+      'Mape z dokumenti ni bilo mogoče naložiti.',
+
+    searchDocuments:
+      'Išči po dokumentih…',
+
+    searchFullText:
+      'Išči po imenu, naslovu, mapi, kategoriji, oznakah in besedilu PDF-ja…',
+
+    advancedSearch:
+      'Napredno iskanje',
+
+    clearFilters:
+      'Počisti filtre',
+
+    applyFilters:
+      'Uporabi filtre',
+
+    sortBy:
+      'Razvrsti',
+
+    relevance:
+      'Ustreznost',
+
+    nameAsc:
+      'Ime A–Ž',
+
+    nameDesc:
+      'Ime Ž–A',
+
+    newest:
+      'Najnovejši',
+
+    oldest:
+      'Najstarejši',
+
+    largest:
+      'Največji',
+
+    smallest:
+      'Najmanjši',
+
+    allStatuses:
+      'Vsi statusi',
+
+    allCategories:
+      'Vse kategorije',
+
+    allDepartments:
+      'Vsi oddelki',
+
+    allFolders:
+      'Vse mape',
+
+    dateFrom:
+      'Datum od',
+
+    dateTo:
+      'Datum do',
+
+    reset:
+      'Ponastavi',
+
+    results:
+      'rezultatov',
+
+    page:
+      'Stran',
+
     openPage:
       'Odpri stran',
 
-    createWork:
-      'Ustvari',
+    snippet:
+      'Zadetek v besedilu',
 
-    chooseBooks:
-      'Izberi knjige',
+    recentActivity:
+      'Nedavna dejavnost',
 
-    selectedBooks:
-      'izbranih',
+    actions:
+      'Dejanja',
+
+    reviewQueue:
+      'Čakalna vrsta za pregled',
+
+    categoryOverview:
+      'Pregled kategorij',
+
+    folderOverview:
+      'Pregled map',
+
+    documentation:
+      'Dokumentacija',
+
+    metadata:
+      'Metapodatki',
+
+    fileInformation:
+      'Podatki o datoteki',
+
+    aiAssistant:
+      'AI pomoč pri dokumentaciji',
+
+    aiDescription:
+      'Uporabi AI za delo s poslovno dokumentacijo in izbranimi dokumenti.',
+
+    aiSummary:
+      'Povzemi dokument',
+
+    aiAnalysis:
+      'Analiziraj dokument',
+
+    aiExtract:
+      'Izlušči podatke',
+
+    aiCompare:
+      'Primerjaj dokumente',
+
+    askDocumentation:
+      'Vprašaj dokumentacijo',
+
+    assistantPrompt:
+      'Zahteva',
+
+    assistantPlaceholder:
+      'Postavi vprašanje, zahtevaj razlago, izlušči podatke, primerjaj dokumente ali analiziraj dokumentacijo…',
+
+    askAI:
+      'Vprašaj AI',
+
+    lecture:
+      'Strukturirani povzetek',
+
+    lectureDescription:
+      'Ustvari strukturiran poslovni povzetek na podlagi izbranih dokumentov.',
+
+    topic:
+      'Tema',
+
+    topicPlaceholder:
+      'Kaj naj povzetek pojasni?',
+
+    length:
+      'Dolžina',
+
+    short:
+      'Kratek',
+
+    standard:
+      'Običajen',
+
+    detailed:
+      'Podroben',
+
+    createBrief:
+      'Ustvari povzetek',
+
+    articleWriting:
+      'AI pisanje poročil',
+
+    articleDescription:
+      'Ustvari dolg in podroben strokovni poslovni dokument na podlagi izbrane dokumentacije.',
+
+    articlePlaceholder:
+      'Opiši predmet, vprašanje, proces, dogodek ali problem, ki ga mora poročilo podrobno obravnavati…',
+
+    articleMinimum:
+      '10.000 besed ali več',
+
+    writeReport:
+      'Napiši poročilo',
+
+    question:
+      'Vprašanje',
+
+    questionPlaceholder:
+      'Postavi vprašanje posebej o izbrani poslovni dokumentaciji…',
+
+    answer:
+      'Odgovor',
+
+    sources:
+      'Viri',
+
+    sourceMaterialOnly:
+      'Odgovori temeljijo na izbrani dokumentaciji.',
+
+    preparing:
+      'AI pripravlja odgovor…',
+
+    searching:
+      'Iščem po vsebini dokumentov…',
+
+    preparingSearch:
+      'Pripravljam iskalni indeks dokumentov…',
+
+    searchReady:
+      'Iskanje po dokumentih je pripravljeno',
+
+    searchError:
+      'Iskalnega indeksa dokumentov ni bilo mogoče pripraviti.',
+
+    noRelevantPages:
+      'Ustreznih odlomkov dokumentov ni bilo mogoče najti.',
+
+    saveResult:
+      'Shrani rezultat',
+
+    openResult:
+      'Odpri',
+
+    download:
+      'Prenesi',
+
+    delete:
+      'Izbriši',
+
+    noResults:
+      'AI rezultatov še ni.',
+
+    created:
+      'Ustvarjeno',
+
+    loading:
+      'Nalaganje…',
+
+    settingsDescription:
+      'Lokalne nastavitve aplikacije in podatki o repozitoriju dokumentov.',
+
+    repository:
+      'Repozitorij',
+
+    localOnly:
+      'Lokalna aplikacija v brskalniku',
+
+    securityNote:
+      'Dokumenti ostanejo v izbrani lokalni mapi. AI prejme izluščene odlomke besedila in ne samih PDF-datotek.',
+
+    selectedDocuments:
+      'izbranih dokumentov',
 
     selectAll:
       'Označi vse',
@@ -395,221 +1060,50 @@ const I18N = {
     unselectAll:
       'Odznači vse',
 
-    chooseBooksFolder:
-      'Izberi mapo knjig',
+    chooseDocuments:
+      'Izberi dokumente',
 
-    changeBooksFolder:
-      'Spremeni mapo',
+    statusUpdated:
+      'Status dokumenta je posodobljen.',
 
-    refreshBooks:
-      'Osveži knjige',
+    metadataSaved:
+      'Metapodatki dokumenta so shranjeni.',
 
-    localBooks:
-      'Lokalne knjige',
+    addedFavorite:
+      'Dokument je dodan med priljubljene.',
 
-    selectedFolder:
-      'Izbrana mapa',
+    removedFavorite:
+      'Dokument je odstranjen iz priljubljenih.',
 
-    folderNotSelected:
-      'Mapa s knjigami še ni izbrana.',
+    archived:
+      'Dokument je arhiviran.',
 
-    browserNotSupported:
-      'Tvoj brskalnik ne podpira dostopa do map. Uporabi Chrome ali Edge.',
+    restored:
+      'Dokument je obnovljen.',
 
-    folderPermission:
-      'Dovoli dostop do izbrane mape s knjigami.',
+    needsReview:
+      'Za pregled',
 
-    booksLoaded:
-      'knjig naloženih.',
+    today:
+      'Danes',
 
-    aiLecture:
-      'AI predavanje',
+    yesterday:
+      'Včeraj',
 
-    lectureDescription:
-      'Ustvari strukturirano predavanje s pomočjo izbranih knjig.',
+    activityOpened:
+      'Dokument odprt',
 
-    lectureTopic:
-      'Tema predavanja',
+    activityArchived:
+      'Dokument arhiviran',
 
-    lectureTopicPlaceholder:
-      'Kaj naj predavanje razloži?',
+    activityRestored:
+      'Dokument obnovljen',
 
-    lectureLength:
-      'Dolžina predavanja',
+    activityFavorite:
+      'Spremenjeni priljubljeni',
 
-    minutes10:
-      '10 min',
-
-    minutes20:
-      '20 min',
-
-    minutes40:
-      '40 min',
-
-    minutes60:
-      '60 min',
-
-    minutes120:
-      '120 min',
-
-    lectureLanguage:
-      'Jezik predavanja',
-
-    createLecture:
-      'Ustvari predavanje',
-
-    aiAssistant:
-      'AI pomočnik',
-
-    assistantDescription:
-      'Uporabljaj AI povsem normalno. Ko je koristno, lahko uporabi tudi ustrezne podatke iz izbranih knjig.',
-
-    assistantPrompt:
-      'Sporočilo',
-
-    assistantPlaceholder:
-      'Vprašaj karkoli, zahtevaj razlago, napiši besedilo, pripravi načrt, naredi povzetek ali odpri katerokoli temo…',
-
-    assistantButton:
-      'Vprašaj AI',
-
-    assistantPreparing:
-      'AI pripravlja odgovor…',
-
-    assistantNotCreated:
-      'Odgovor še ni ustvarjen.',
-
-    assistantError:
-      'AI odgovora ni bilo mogoče ustvariti.',
-
-    articleWriting:
-      'AI pisanje članka',
-
-    articleDescription:
-      'Ustvari zelo dolg in poglobljen članek za časopis, revijo, strokovno publikacijo, spletni portal, glasilo ali drugo publikacijo.',
-
-    articleTopic:
-      'Tema članka',
-
-    articlePlaceholder:
-      'Opiši temo, idejo, dogodek, osebo, vprašanje ali področje, o katerem želiš zelo poglobljen članek…',
-
-    articleLength:
-      'Dolžina članka',
-
-    articleMinimum:
-      '10.000 besed ali več',
-
-    createArticle:
-      'Napiši članek',
-
-    articlePreparing:
-      'AI piše dolg članek…',
-
-    articleNotCreated:
-      'Članek še ni ustvarjen.',
-
-    articleError:
-      'Članka ni bilo mogoče ustvariti.',
-
-    askBooks:
-      'Vprašaj knjige',
-
-    askDescription:
-      'Postavi vprašanje posebej o izbranih PDF knjigah. Odgovori temeljijo samo na knjižničnem gradivu.',
-
-    askQuestion:
-      'Vprašanje',
-
-    askQuestionPlaceholder:
-      'Vprašaj o izbranih knjigah: povzetek, primerjava, dejstva, razlaga, odlomki, datumi, osebe, ideje ali druge podrobnosti…',
-
-    askBooksButton:
-      'Vprašaj knjige',
-
-    answer:
-      'Odgovor',
-
-    answerPreparing:
-      'AI išče po knjigah in pripravlja odgovor…',
-
-    answerNotCreated:
-      'Odgovor še ni ustvarjen.',
-
-    noAnswer:
-      'AI ni mogel ustvariti odgovora.',
-
-    sourceMaterialOnly:
-      'Odgovori temeljijo samo na izbranih PDF knjigah.',
-
-    works:
-      'Dela',
-
-    noSavedWorks:
-      'Zaenkrat še ni ustvarjenih del.',
-
-    lectureWork:
-      'Predavanje',
-
-    assistantWork:
-      'AI pomočnik',
-
-    articleWork:
-      'Članek',
-
-    askWork:
-      'Vprašanje knjig',
-
-    created:
-      'Ustvarjeno',
-
-    deleteWork:
-      'Izbriši',
-
-    openWork:
-      'Odpri',
-
-    downloadWork:
-      'Prenesi',
-
-    noBooks:
-      'Zaenkrat ni naloženih PDF knjig.',
-
-    localFolderMissing:
-      'Najprej izberi mapo s knjigami.',
-
-    chooseAtLeastOne:
-      'Najprej izberi vsaj eno knjigo.',
-
-    missingTopic:
-      'Najprej vpiši temo predavanja.',
-
-    missingAssistant:
-      'Najprej napiši sporočilo.',
-
-    missingArticle:
-      'Najprej vpiši temo članka.',
-
-    missingQuestion:
-      'Najprej napiši vprašanje.',
-
-    noRelevantPages:
-      'V izbranih knjigah ni bilo mogoče najti ustreznih odlomkov.',
-
-    answerError:
-      'Odgovora ni bilo mogoče ustvariti.',
-
-    lectureError:
-      'Predavanja ni bilo mogoče ustvariti.',
-
-    articleErrorGeneric:
-      'Članka ni bilo mogoče ustvariti.',
-
-    folderLoadError:
-      'Mape s knjigami ni bilo mogoče naložiti.',
-
-    booksRefreshed:
-      'Knjige so osvežene.'
+    activityMetadata:
+      'Metapodatki posodobljeni'
 
   }
 
@@ -623,28 +1117,49 @@ const I18N = {
 let state = {
 
   screen:
-    'library',
-
-  book:
-    0,
+    'dashboard',
 
   query:
     '',
 
-  filter:
-    'All books',
+  searchSort:
+    'relevance',
 
-  sources:
+  searchStatus:
+    'all',
+
+  searchCategory:
+    'all',
+
+  searchDepartment:
+    'all',
+
+  searchFolder:
+    'all',
+
+  searchDateFrom:
+    '',
+
+  searchDateTo:
+    '',
+
+  searchApplied:
+    false,
+
+  selectedDocumentIds:
     [],
 
-  script:
-    true,
+  documentId:
+    '',
 
-  toast:
+  sourceDocumentId:
     '',
 
   lang:
-    'en',
+    'sl',
+
+  toast:
+    '',
 
   searchIndex:
     [],
@@ -655,22 +1170,10 @@ let state = {
   searchLoading:
     false,
 
-  lectureTopic:
-    '',
+  creationType:
+    'assistant',
 
-  lectureLength:
-    '20',
-
-  lectureGenerating:
-    false,
-
-  generatedLecture:
-    '',
-
-  lectureError:
-    '',
-
-  lecturePassages:
+  selectedAiDocuments:
     [],
 
   assistantPrompt:
@@ -686,6 +1189,24 @@ let state = {
     '',
 
   assistantPassages:
+    [],
+
+  briefTopic:
+    '',
+
+  briefLength:
+    'standard',
+
+  briefGenerating:
+    false,
+
+  generatedBrief:
+    '',
+
+  briefError:
+    '',
+
+  briefPassages:
     [],
 
   articleTopic:
@@ -718,23 +1239,41 @@ let state = {
   askPassages:
     [],
 
-  creationType:
-    'assistant',
-
   works:
     [],
 
-  bookmarks:
+  favorites:
+    [],
+
+  recent:
+    [],
+
+  metadata:
+    {},
+
+  activity:
     [],
 
   localFolderName:
-    ''
+    '',
+
+  activeCategory:
+    '',
+
+  activeStatus:
+    'all',
+
+  activeDepartment:
+    '',
+
+  documentsView:
+    'list'
 
 };
 
 
 /* =========================================================
-   LOAD LOCAL STATE
+   LOAD SAVED STATE
    ========================================================= */
 
 try {
@@ -742,8 +1281,9 @@ try {
   const saved =
     JSON.parse(
       localStorage.getItem(
-        'universal-ai-library-state'
-      ) || '{}'
+        'dms-local-state'
+      ) ||
+      '{}'
     );
 
   Object.assign(
@@ -754,7 +1294,7 @@ try {
 } catch (error) {
 
   console.warn(
-    'Could not load saved state.',
+    'Could not load saved DMS state.',
     error
   );
 
@@ -771,66 +1311,135 @@ if (
 ) {
 
   state.lang =
-    'en';
+    'sl';
 
 }
-
-if (!Array.isArray(state.sources)) {
-  state.sources = [];
-}
-
-if (!Array.isArray(state.works)) {
-  state.works = [];
-}
-
-if (!Array.isArray(state.bookmarks)) {
-  state.bookmarks = [];
-}
-
-if (!Array.isArray(state.lecturePassages)) {
-  state.lecturePassages = [];
-}
-
-if (!Array.isArray(state.assistantPassages)) {
-  state.assistantPassages = [];
-}
-
-if (!Array.isArray(state.articlePassages)) {
-  state.articlePassages = [];
-}
-
-if (!Array.isArray(state.askPassages)) {
-  state.askPassages = [];
-}
-
-state.lectureLength =
-  String(
-    state.lectureLength ||
-    '20'
-  );
 
 if (
-  state.creationType !== 'lecture' &&
-  state.creationType !== 'assistant' &&
-  state.creationType !== 'article' &&
-  state.creationType !== 'ask'
+  !Array.isArray(
+    state.selectedDocumentIds
+  )
 ) {
 
-  state.creationType =
-    'assistant';
+  state.selectedDocumentIds =
+    [];
+
+}
+
+if (
+  !Array.isArray(
+    state.selectedAiDocuments
+  )
+) {
+
+  state.selectedAiDocuments =
+    [];
+
+}
+
+if (
+  !Array.isArray(
+    state.works
+  )
+) {
+
+  state.works =
+    [];
+
+}
+
+if (
+  !Array.isArray(
+    state.favorites
+  )
+) {
+
+  state.favorites =
+    [];
+
+}
+
+if (
+  !Array.isArray(
+    state.recent
+  )
+) {
+
+  state.recent =
+    [];
+
+}
+
+if (
+  !Array.isArray(
+    state.activity
+  )
+) {
+
+  state.activity =
+    [];
+
+}
+
+if (
+  !Array.isArray(
+    state.searchIndex
+  )
+) {
+
+  state.searchIndex =
+    [];
+
+}
+
+if (
+  !state.metadata ||
+  typeof state.metadata !==
+    'object'
+) {
+
+  state.metadata =
+    {};
+
+}
+
+if (
+  ![
+    'relevance',
+    'nameAsc',
+    'nameDesc',
+    'newest',
+    'oldest',
+    'largest',
+    'smallest'
+  ].includes(
+    state.searchSort
+  )
+) {
+
+  state.searchSort =
+    'relevance';
 
 }
 
 
 /* =========================================================
-   GENERAL
+   TRANSLATION
    ========================================================= */
 
-function t(key) {
+function t(
+  key
+) {
 
   return (
-    I18N[state.lang]?.[key] ||
-    I18N.en[key] ||
+    I18N[
+      state.lang
+    ]?.[
+      key
+    ] ||
+    I18N.en[
+      key
+    ] ||
     key
   );
 
@@ -838,7 +1447,298 @@ function t(key) {
 
 
 /* =========================================================
-   LOCAL BOOK DATABASE
+   SAVE STATE
+   ========================================================= */
+
+function save() {
+
+  try {
+
+    localStorage.setItem(
+      'dms-local-state',
+      JSON.stringify({
+
+        screen:
+          state.screen,
+
+        query:
+          state.query,
+
+        searchSort:
+          state.searchSort,
+
+        searchStatus:
+          state.searchStatus,
+
+        searchCategory:
+          state.searchCategory,
+
+        searchDepartment:
+          state.searchDepartment,
+
+        searchFolder:
+          state.searchFolder,
+
+        searchDateFrom:
+          state.searchDateFrom,
+
+        searchDateTo:
+          state.searchDateTo,
+
+        selectedDocumentIds:
+          state.selectedDocumentIds,
+
+        documentId:
+          state.documentId,
+
+        sourceDocumentId:
+          state.sourceDocumentId,
+
+        lang:
+          state.lang,
+
+        selectedAiDocuments:
+          state.selectedAiDocuments,
+
+        assistantPrompt:
+          state.assistantPrompt,
+
+        generatedAssistant:
+          state.generatedAssistant,
+
+        assistantError:
+          state.assistantError,
+
+        assistantPassages:
+          state.assistantPassages,
+
+        briefTopic:
+          state.briefTopic,
+
+        briefLength:
+          state.briefLength,
+
+        generatedBrief:
+          state.generatedBrief,
+
+        briefError:
+          state.briefError,
+
+        briefPassages:
+          state.briefPassages,
+
+        articleTopic:
+          state.articleTopic,
+
+        generatedArticle:
+          state.generatedArticle,
+
+        articleError:
+          state.articleError,
+
+        articlePassages:
+          state.articlePassages,
+
+        askPrompt:
+          state.askPrompt,
+
+        generatedAnswer:
+          state.generatedAnswer,
+
+        askError:
+          state.askError,
+
+        askPassages:
+          state.askPassages,
+
+        works:
+          state.works,
+
+        favorites:
+          state.favorites,
+
+        recent:
+          state.recent,
+
+        metadata:
+          state.metadata,
+
+        activity:
+          state.activity,
+
+        localFolderName:
+          state.localFolderName,
+
+        activeCategory:
+          state.activeCategory,
+
+        activeStatus:
+          state.activeStatus,
+
+        activeDepartment:
+          state.activeDepartment,
+
+        documentsView:
+          state.documentsView
+
+      })
+    );
+
+  } catch (error) {
+
+    console.warn(
+      'Could not save DMS state.',
+      error
+    );
+
+  }
+
+}
+
+
+/* =========================================================
+   HTML ESCAPING
+   ========================================================= */
+
+function escapeHtml(
+  value
+) {
+
+  return String(
+    value ??
+    ''
+  )
+    .replace(
+      /&/g,
+      '&amp;'
+    )
+    .replace(
+      /</g,
+      '&lt;'
+    )
+    .replace(
+      />/g,
+      '&gt;'
+    )
+    .replace(
+      /"/g,
+      '&quot;'
+    )
+    .replace(
+      /'/g,
+      '&#039;'
+    );
+
+}
+
+
+function escapeAttribute(
+  value
+) {
+
+  return String(
+    value ??
+    ''
+  )
+    .replace(
+      /\\/g,
+      '\\\\'
+    )
+    .replace(
+      /'/g,
+      "\\'"
+    );
+
+}
+
+
+/* =========================================================
+   GENERAL NAVIGATION
+   ========================================================= */
+
+function go(
+  screen
+) {
+
+  state.screen =
+    screen;
+
+  save();
+
+  render();
+
+  window.scrollTo({
+    top:
+      0,
+    behavior:
+      'smooth'
+  });
+
+}
+
+
+/* =========================================================
+   LANGUAGE
+   ========================================================= */
+
+function setLanguage(
+  lang
+) {
+
+  if (
+    lang !== 'en' &&
+    lang !== 'sl'
+  ) {
+
+    return;
+
+  }
+
+  state.lang =
+    lang;
+
+  save();
+
+  render();
+
+}
+
+
+/* =========================================================
+   TOAST
+   ========================================================= */
+
+function toast(
+  message
+) {
+
+  state.toast =
+    message;
+
+  render();
+
+  window.clearTimeout(
+    window.__DMSToastTimer
+  );
+
+  window.__DMSToastTimer =
+    window.setTimeout(
+      () => {
+
+        state.toast =
+          '';
+
+        render();
+
+      },
+      2200
+    );
+
+}
+
+
+/* =========================================================
+   LOCAL FOLDER DATABASE
    ========================================================= */
 
 function openLocalBooksDatabase() {
@@ -850,10 +1750,7 @@ function openLocalBooksDatabase() {
     ) => {
 
       if (
-        !(
-          'indexedDB' in
-          window
-        )
+        !('indexedDB' in window)
       ) {
 
         reject(
@@ -907,7 +1804,7 @@ function openLocalBooksDatabase() {
           reject(
             request.error ||
             new Error(
-              'Local books database error.'
+              'Local database error.'
             )
           );
 
@@ -954,6 +1851,7 @@ function saveLocalBooksDirectoryHandle(
               function () {
 
                 db.close();
+
                 resolve();
 
               };
@@ -1042,7 +1940,7 @@ function loadSavedLocalBooksDirectoryHandle() {
 
 
 /* =========================================================
-   LOCAL BOOK PERMISSION
+   DIRECTORY PERMISSION
    ========================================================= */
 
 async function verifyDirectoryPermission(
@@ -1050,9 +1948,7 @@ async function verifyDirectoryPermission(
   requestIfNeeded
 ) {
 
-  if (
-    !handle
-  ) {
+  if (!handle) {
 
     return false;
 
@@ -1097,14 +1993,14 @@ async function verifyDirectoryPermission(
       'function'
     ) {
 
-      const requested =
+      const permission =
         await handle.requestPermission({
           mode:
             'read'
         });
 
       return (
-        requested ===
+        permission ===
         'granted'
       );
 
@@ -1113,7 +2009,7 @@ async function verifyDirectoryPermission(
   } catch (error) {
 
     console.warn(
-      'Could not verify folder permission.',
+      'Folder permission error.',
       error
     );
 
@@ -1125,7 +2021,7 @@ async function verifyDirectoryPermission(
 
 
 /* =========================================================
-   RECURSIVE LOCAL PDF SCAN
+   RECURSIVE PDF SCAN
    ========================================================= */
 
 async function collectLocalPdfFiles(
@@ -1211,7 +2107,149 @@ async function collectLocalPdfFiles(
 
 
 /* =========================================================
-   BUILD BOOK OBJECTS FROM LOCAL FILES
+   FILE SIZE
+   ========================================================= */
+
+function formatFileSize(
+  bytes
+) {
+
+  const value =
+    Number(
+      bytes ||
+      0
+    );
+
+  if (
+    !Number.isFinite(
+      value
+    ) ||
+    value <=
+      0
+  ) {
+
+    return '—';
+
+  }
+
+  const units =
+    [
+      'B',
+      'KB',
+      'MB',
+      'GB'
+    ];
+
+  let size =
+    value;
+
+  let index =
+    0;
+
+  while (
+    size >=
+      1024 &&
+    index <
+      units.length -
+        1
+  ) {
+
+    size /=
+      1024;
+
+    index++;
+
+  }
+
+  return (
+    size >=
+      10
+      ? size.toFixed(0)
+      : size.toFixed(1)
+  ) +
+  ' ' +
+  units[index];
+
+}
+
+
+/* =========================================================
+   CATEGORY FROM FOLDER
+   ========================================================= */
+
+function getPathParts(
+  path
+) {
+
+  return String(
+    path ||
+    ''
+  )
+    .split('/')
+    .filter(
+      Boolean
+    );
+
+}
+
+
+function getDocumentCategoryFromPath(
+  path
+) {
+
+  const parts =
+    getPathParts(
+      path
+    );
+
+  if (
+    parts.length <=
+    1
+  ) {
+
+    return (
+      state.lang ===
+      'sl'
+        ? 'Nerazvrščeno'
+        : 'Uncategorized'
+    );
+
+  }
+
+  return (
+    parts[0]
+  );
+
+}
+
+
+function getDocumentSubcategoryFromPath(
+  path
+) {
+
+  const parts =
+    getPathParts(
+      path
+    );
+
+  if (
+    parts.length <=
+    2
+  ) {
+
+    return '';
+
+  }
+
+  return (
+    parts[1]
+  );
+
+}
+
+
+/* =========================================================
+   BUILD DOCUMENT OBJECTS
    ========================================================= */
 
 async function buildLocalBooksFromDirectory(
@@ -1226,74 +2264,138 @@ async function buildLocalBooksFromDirectory(
   LOCAL_BOOK_FILES =
     new Map();
 
-  const books =
+  const documents =
     [];
 
-  files.forEach(
-    fileInfo => {
+  for (
+    const fileInfo
+    of files
+  ) {
 
-      const title =
-        String(
-          fileInfo.name ||
-          ''
-        ).replace(
+    const title =
+      String(
+        fileInfo.name ||
+        ''
+      )
+        .replace(
           /\.pdf$/i,
           ''
         );
 
-      const id =
-        'local-pdf-' +
-        encodeURIComponent(
-          fileInfo.path
-        );
+    const pdfKey =
+      'local://' +
+      fileInfo.path;
 
-      const pdfKey =
-        'local://' +
-        fileInfo.path;
-
-      LOCAL_BOOK_FILES.set(
-        pdfKey,
-        fileInfo.handle
+    const id =
+      'DOC-' +
+      encodeURIComponent(
+        fileInfo.path
       );
 
-      books.push({
+    let fileSize =
+      0;
 
-        id,
+    let lastModified =
+      '';
 
-        short:
-          title,
+    try {
 
-        author:
-          '',
+      const file =
+        await fileInfo.handle.getFile();
 
-        script:
-          'PDF',
+      fileSize =
+        file.size ||
+        0;
 
-        filename:
-          fileInfo.name,
+      lastModified =
+        file.lastModified
+          ? new Date(
+              file.lastModified
+            ).toISOString()
+          : '';
 
-        path:
-          fileInfo.path,
+    } catch (error) {
 
-        pdf:
-          pdfKey
-
-      });
+      console.warn(
+        'Could not inspect file.',
+        error
+      );
 
     }
-  );
 
-  books.sort(
+    LOCAL_BOOK_FILES.set(
+      pdfKey,
+      fileInfo.handle
+    );
+
+    documents.push({
+
+      id,
+
+      short:
+        title,
+
+      title,
+
+      author:
+        '',
+
+      script:
+        'PDF',
+
+      filename:
+        fileInfo.name,
+
+      path:
+        fileInfo.path,
+
+      pdf:
+        pdfKey,
+
+      category:
+        getDocumentCategoryFromPath(
+          fileInfo.path
+        ),
+
+      subcategory:
+        getDocumentSubcategoryFromPath(
+          fileInfo.path
+        ),
+
+      department:
+        '',
+
+      owner:
+        '',
+
+      documentDate:
+        '',
+
+      lastModified,
+
+      fileSize,
+
+      pages:
+        0,
+
+      type:
+        'PDF'
+
+    });
+
+  }
+
+  documents.sort(
     (
       a,
       b
     ) =>
       String(
-        a.short ||
+        a.title ||
         ''
       ).localeCompare(
         String(
-          b.short ||
+          b.title ||
           ''
         ),
         undefined,
@@ -1304,13 +2406,384 @@ async function buildLocalBooksFromDirectory(
       )
   );
 
-  return books;
+  return documents;
 
 }
 
 
 /* =========================================================
-   LOAD LOCAL BOOKS
+   DOCUMENT METADATA
+   ========================================================= */
+
+function getMetadata(
+  document
+) {
+
+  if (
+    !document ||
+    !document.id
+  ) {
+
+    return {};
+
+  }
+
+  const saved =
+    state.metadata[
+      document.id
+    ];
+
+  if (
+    saved &&
+    typeof saved ===
+      'object'
+  ) {
+
+    return {
+
+      category:
+        saved.category ??
+        document.category ??
+        '',
+
+      subcategory:
+        saved.subcategory ??
+        document.subcategory ??
+        '',
+
+      department:
+        saved.department ??
+        document.department ??
+        '',
+
+      owner:
+        saved.owner ??
+        document.owner ??
+        '',
+
+      author:
+        saved.author ??
+        document.author ??
+        '',
+
+      documentDate:
+        saved.documentDate ??
+        document.documentDate ??
+        '',
+
+      status:
+        saved.status ??
+        'active',
+
+      version:
+        saved.version ??
+        '1.0',
+
+      tags:
+        Array.isArray(
+          saved.tags
+        )
+          ? saved.tags
+          : [],
+
+      keywords:
+        saved.keywords ??
+        '',
+
+      notes:
+        saved.notes ??
+        '',
+
+      reviewDate:
+        saved.reviewDate ??
+        '',
+
+      expiryDate:
+        saved.expiryDate ??
+        ''
+
+    };
+
+  }
+
+  return {
+
+    category:
+      document.category ||
+      '',
+
+    subcategory:
+      document.subcategory ||
+      '',
+
+    department:
+      document.department ||
+      '',
+
+    owner:
+      document.owner ||
+      '',
+
+    author:
+      document.author ||
+      '',
+
+    documentDate:
+      document.documentDate ||
+      '',
+
+    status:
+      'active',
+
+    version:
+      '1.0',
+
+    tags:
+      [],
+
+    keywords:
+      '',
+
+    notes:
+      '',
+
+    reviewDate:
+      '',
+
+    expiryDate:
+      ''
+
+  };
+
+}
+
+
+function getDocumentStatus(
+  document
+) {
+
+  const metadata =
+    getMetadata(
+      document
+    );
+
+  if (
+    metadata.expiryDate
+  ) {
+
+    const expiry =
+      new Date(
+        metadata.expiryDate
+      );
+
+    if (
+      !Number.isNaN(
+        expiry.getTime()
+      ) &&
+      expiry <
+        new Date()
+    ) {
+
+      return 'expired';
+
+    }
+
+  }
+
+  return (
+    metadata.status ||
+    'active'
+  );
+
+}
+
+
+/* =========================================================
+   STATUS LABEL
+   ========================================================= */
+
+function statusLabel(
+  status
+) {
+
+  const map = {
+
+    active:
+      t('active'),
+
+    draft:
+      t('draft'),
+
+    review:
+      t('inReview'),
+
+    approved:
+      t('approved'),
+
+    valid:
+      t('valid'),
+
+    expired:
+      t('expired'),
+
+    archived:
+      t('archived')
+
+  };
+
+  return (
+    map[
+      status
+    ] ||
+    t('unknown')
+  );
+
+}
+
+
+/* =========================================================
+   STATUS CLASS
+   ========================================================= */
+
+function statusClass(
+  status
+) {
+
+  const map = {
+
+    active:
+      'status-approved',
+
+    draft:
+      'status-draft',
+
+    review:
+      'status-review',
+
+    approved:
+      'status-approved',
+
+    valid:
+      'status-valid',
+
+    expired:
+      'status-expired',
+
+    archived:
+      'status-archived'
+
+  };
+
+  return (
+    map[
+      status
+    ] ||
+    'status-draft'
+  );
+
+}
+
+
+/* =========================================================
+   DATE FORMATTING
+   ========================================================= */
+
+function formatDate(
+  value
+) {
+
+  if (!value) {
+    return '—';
+  }
+
+  try {
+
+    return new Date(
+      value
+    ).toLocaleDateString(
+      state.lang ===
+      'sl'
+        ? 'sl-SI'
+        : 'en-US',
+      {
+        year:
+          'numeric',
+
+        month:
+          '2-digit',
+
+        day:
+          '2-digit'
+      }
+    );
+
+  } catch (error) {
+
+    return '—';
+
+  }
+
+}
+
+
+function formatDateTime(
+  value
+) {
+
+  if (!value) {
+    return '—';
+  }
+
+  try {
+
+    return new Date(
+      value
+    ).toLocaleString(
+      state.lang ===
+      'sl'
+        ? 'sl-SI'
+        : 'en-US',
+      {
+        dateStyle:
+          'medium',
+
+        timeStyle:
+          'short'
+      }
+    );
+
+  } catch (error) {
+
+    return '—';
+
+  }
+
+}
+
+
+/* =========================================================
+   DOCUMENT LOOKUP
+   ========================================================= */
+
+function getDocumentById(
+  id
+) {
+
+  return (
+    BOOKS.find(
+      document =>
+        document &&
+        document.id ===
+        id
+    ) ||
+    null
+  );
+
+}
+
+
+/* =========================================================
+   OPEN DOCUMENT FOLDER
    ========================================================= */
 
 async function loadBooksFromLocalFolder(
@@ -1323,20 +2796,22 @@ async function loadBooksFromLocalFolder(
     if (!handle) {
 
       throw new Error(
-        'No directory handle.'
+        'No folder handle.'
       );
 
     }
 
-    const hasPermission =
+    const permission =
       await verifyDirectoryPermission(
         handle,
         false
       );
 
-    if (!hasPermission) {
+    if (!permission) {
 
-      if (showMessage) {
+      if (
+        showMessage
+      ) {
 
         toast(
           t('folderPermission')
@@ -1351,40 +2826,63 @@ async function loadBooksFromLocalFolder(
     LOCAL_BOOKS_DIRECTORY_HANDLE =
       handle;
 
-    const books =
+    BOOKS =
       await buildLocalBooksFromDirectory(
         handle
       );
-
-    BOOKS =
-      books;
 
     state.localFolderName =
       handle.name ||
       '';
 
-    state.sources =
-      BOOKS.map(
-        (
-          _,
-          index
-        ) =>
-          index
+    const validIds =
+      new Set(
+        BOOKS.map(
+          document =>
+            document.id
+        )
       );
 
-    state.book =
-      BOOKS.length
-        ? 0
-        : 0;
+    state.selectedDocumentIds =
+      state.selectedDocumentIds.filter(
+        id =>
+          validIds.has(
+            id
+          )
+      );
+
+    state.selectedAiDocuments =
+      state.selectedAiDocuments.filter(
+        id =>
+          validIds.has(
+            id
+          )
+      );
+
+    state.favorites =
+      state.favorites.filter(
+        id =>
+          validIds.has(
+            id
+          )
+      );
+
+    state.recent =
+      state.recent.filter(
+        id =>
+          validIds.has(
+            id
+          )
+      );
+
+    state.searchIndex =
+      [];
 
     state.searchReady =
       false;
 
     state.searchLoading =
       false;
-
-    state.searchIndex =
-      [];
 
     try {
 
@@ -1395,13 +2893,14 @@ async function loadBooksFromLocalFolder(
     } catch (error) {
 
       console.warn(
-        'Could not save local folder handle.',
+        'Could not persist folder handle.',
         error
       );
 
     }
 
     save();
+
     render();
 
     if (
@@ -1409,34 +2908,21 @@ async function loadBooksFromLocalFolder(
     ) {
 
       toast(
-        state.lang ===
-        'sl'
-          ? (
-              BOOKS.length +
-              ' ' +
-              t('booksRefreshed')
-            )
-          : (
-              BOOKS.length +
-              ' ' +
-              t('booksLoaded')
-            )
+        BOOKS.length +
+        ' ' +
+        t(
+          'documentsLoaded'
+        )
       );
 
     }
-
-    console.log(
-      'Universal AI Library: local folder loaded.',
-      BOOKS.length,
-      'PDF books.'
-    );
 
     return true;
 
   } catch (error) {
 
     console.error(
-      'Could not load local books:',
+      'Could not load local documents:',
       error
     );
 
@@ -1458,7 +2944,7 @@ async function loadBooksFromLocalFolder(
 
 
 /* =========================================================
-   CHOOSE BOOKS FOLDER
+   CHOOSE DOCUMENT FOLDER
    ========================================================= */
 
 async function chooseBooksFolder() {
@@ -1485,7 +2971,7 @@ async function chooseBooksFolder() {
           'read',
 
         id:
-          'universal-ai-library-books'
+          'dms-document-repository'
 
       });
 
@@ -1495,9 +2981,7 @@ async function chooseBooksFolder() {
         true
       );
 
-    if (
-      !permission
-    ) {
+    if (!permission) {
 
       toast(
         t('folderPermission')
@@ -1524,7 +3008,7 @@ async function chooseBooksFolder() {
     }
 
     console.error(
-      'Choose books folder error:',
+      'Choose document folder error:',
       error
     );
 
@@ -1538,7 +3022,7 @@ async function chooseBooksFolder() {
 
 
 /* =========================================================
-   REFRESH BOOKS
+   REFRESH DOCUMENTS
    ========================================================= */
 
 async function refreshBooks() {
@@ -1555,7 +3039,7 @@ async function refreshBooks() {
     } catch (error) {
 
       console.warn(
-        'Could not restore folder handle.',
+        'Could not restore saved folder handle.',
         error
       );
 
@@ -1568,7 +3052,10 @@ async function refreshBooks() {
   ) {
 
     toast(
-      t('localFolderMissing')
+      state.lang ===
+      'sl'
+        ? 'Najprej izberi mapo dokumentov.'
+        : 'Please choose a document folder first.'
     );
 
     return;
@@ -1581,9 +3068,7 @@ async function refreshBooks() {
       true
     );
 
-  if (
-    !permission
-  ) {
+  if (!permission) {
 
     toast(
       t('folderPermission')
@@ -1602,7 +3087,7 @@ async function refreshBooks() {
 
 
 /* =========================================================
-   AUTO RESTORE LOCAL FOLDER
+   RESTORE DOCUMENT FOLDER
    ========================================================= */
 
 async function restoreLocalBooksFolder() {
@@ -1615,6 +3100,7 @@ async function restoreLocalBooksFolder() {
     if (!handle) {
 
       render();
+
       return;
 
     }
@@ -1628,6 +3114,7 @@ async function restoreLocalBooksFolder() {
     if (!permission) {
 
       render();
+
       return;
 
     }
@@ -1640,7 +3127,7 @@ async function restoreLocalBooksFolder() {
   } catch (error) {
 
     console.warn(
-      'Could not restore local books folder.',
+      'Could not restore local document folder.',
       error
     );
 
@@ -1652,401 +3139,664 @@ async function restoreLocalBooksFolder() {
 
 
 /* =========================================================
-   SAVE
+   ACTIVITY LOG
    ========================================================= */
 
-function save() {
+function addActivity(
+  type,
+  document,
+  extra = ''
+) {
 
-  try {
-
-    const savedState = {
-
-      screen:
-        state.screen,
-
-      book:
-        state.book,
-
-      query:
-        state.query,
-
-      filter:
-        state.filter,
-
-      sources:
-        state.sources,
-
-      script:
-        state.script,
-
-      lang:
-        state.lang,
-
-      lectureTopic:
-        state.lectureTopic,
-
-      lectureLength:
-        state.lectureLength,
-
-      generatedLecture:
-        state.generatedLecture,
-
-      lectureError:
-        state.lectureError,
-
-      lecturePassages:
-        state.lecturePassages,
-
-      assistantPrompt:
-        state.assistantPrompt,
-
-      generatedAssistant:
-        state.generatedAssistant,
-
-      assistantError:
-        state.assistantError,
-
-      assistantPassages:
-        state.assistantPassages,
-
-      articleTopic:
-        state.articleTopic,
-
-      generatedArticle:
-        state.generatedArticle,
-
-      articleError:
-        state.articleError,
-
-      articlePassages:
-        state.articlePassages,
-
-      askPrompt:
-        state.askPrompt,
-
-      generatedAnswer:
-        state.generatedAnswer,
-
-      askError:
-        state.askError,
-
-      askPassages:
-        state.askPassages,
-
-      creationType:
-        state.creationType,
-
-      works:
-        state.works,
-
-      bookmarks:
-        state.bookmarks,
-
-      localFolderName:
-        state.localFolderName
-
-    };
-
-    localStorage.setItem(
-      'universal-ai-library-state',
-      JSON.stringify(
-        savedState
-      )
-    );
-
-  } catch (error) {
-
-    console.warn(
-      'Could not save state.',
-      error
-    );
-
-  }
-
-}
-
-
-/* =========================================================
-   ESCAPING
-   ========================================================= */
-
-function escapeHtml(value) {
-
-  return String(
-    value ?? ''
-  )
-    .replace(
-      /&/g,
-      '&amp;'
-    )
-    .replace(
-      /</g,
-      '&lt;'
-    )
-    .replace(
-      />/g,
-      '&gt;'
-    )
-    .replace(
-      /"/g,
-      '&quot;'
-    )
-    .replace(
-      /'/g,
-      '&#039;'
-    );
-
-}
-
-
-function escapeAttribute(value) {
-
-  return String(
-    value ?? ''
-  )
-    .replace(
-      /\\/g,
-      '\\\\'
-    )
-    .replace(
-      /'/g,
-      "\\'"
-    );
-
-}
-
-
-/* =========================================================
-   LANGUAGE
-   ========================================================= */
-
-function setLanguage(lang) {
-
-  if (
-    lang !== 'en' &&
-    lang !== 'sl'
-  ) {
-
+  if (!document) {
     return;
+  }
+
+  const labels = {
+
+    opened:
+      t('activityOpened'),
+
+    archived:
+      t('activityArchived'),
+
+    restored:
+      t('activityRestored'),
+
+    favorite:
+      t('activityFavorite'),
+
+    metadata:
+      t('activityMetadata')
+
+  };
+
+  const item = {
+
+    id:
+      'activity-' +
+      Date.now() +
+      '-' +
+      Math.random()
+        .toString(
+          36
+        )
+        .slice(
+          2,
+          7
+        ),
+
+    type,
+
+    documentId:
+      document.id,
+
+    documentTitle:
+      document.title,
+
+    label:
+      labels[type] ||
+      type,
+
+    extra,
+
+    createdAt:
+      new Date().toISOString()
+
+  };
+
+  state.activity = [
+
+    item,
+
+    ...state.activity
+
+  ].slice(
+    0,
+    100
+  );
+
+  save();
+
+}
+
+
+/* =========================================================
+   FAVORITE
+   ========================================================= */
+
+function toggleFavorite(
+  documentId
+) {
+
+  const document =
+    getDocumentById(
+      documentId
+    );
+
+  if (!document) {
+    return;
+  }
+
+  const exists =
+    state.favorites.includes(
+      documentId
+    );
+
+  if (exists) {
+
+    state.favorites =
+      state.favorites.filter(
+        id =>
+          id !==
+          documentId
+      );
+
+    toast(
+      t('removedFavorite')
+    );
+
+  } else {
+
+    state.favorites = [
+
+      documentId,
+
+      ...state.favorites.filter(
+        id =>
+          id !==
+          documentId
+      )
+
+    ];
+
+    toast(
+      t('addedFavorite')
+    );
 
   }
 
-  state.lang =
-    lang;
+  addActivity(
+    'favorite',
+    document
+  );
 
   save();
+
   render();
 
 }
 
 
 /* =========================================================
-   NAVIGATION
+   RECENT DOCUMENTS
    ========================================================= */
 
-function go(screen) {
+function addRecentDocument(
+  document
+) {
 
-  state.screen =
-    screen;
+  if (!document) {
+    return;
+  }
+
+  state.recent = [
+
+    document.id,
+
+    ...state.recent.filter(
+      id =>
+        id !==
+        document.id
+    )
+
+  ].slice(
+    0,
+    30
+  );
+
+  addActivity(
+    'opened',
+    document
+  );
 
   save();
-  render();
-
-  window.scrollTo({
-    top:
-      0,
-    behavior:
-      'smooth'
-  });
 
 }
 
 
 /* =========================================================
-   TOAST
+   OPEN DOCUMENT
    ========================================================= */
 
-function toast(message) {
+function openDocument(
+  documentId
+) {
 
-  state.toast =
-    message;
+  const document =
+    getDocumentById(
+      documentId
+    );
 
-  render();
+  if (!document) {
+    return;
+  }
 
-  setTimeout(
-    () => {
+  state.documentId =
+    document.id;
 
-      state.toast =
-        '';
+  state.sourceDocumentId =
+    document.id;
 
-      render();
+  addRecentDocument(
+    document
+  );
 
-    },
-    1800
+  openPdf(
+    document.pdf
   );
 
 }
 
 
 /* =========================================================
-   LANGUAGE SELECTOR
+   DOCUMENT STATUS
    ========================================================= */
 
-function languageSelector() {
+function updateDocumentStatus(
+  documentId,
+  status
+) {
 
-  return `
+  const document =
+    getDocumentById(
+      documentId
+    );
 
-    <div class="language-selector">
+  if (!document) {
+    return;
+  }
 
-      <button
-        type="button"
-        class="chip ${
-          state.lang === 'en'
-            ? 'on'
-            : ''
-        }"
-        onclick="
-          setLanguage('en')
-        ">
+  const metadata =
+    getMetadata(
+      document
+    );
 
-        🇬🇧 EN
+  state.metadata[
+    document.id
+  ] = {
 
-      </button>
+    ...metadata,
 
-      <button
-        type="button"
-        class="chip ${
-          state.lang === 'sl'
-            ? 'on'
-            : ''
-        }"
-        onclick="
-          setLanguage('sl')
-        ">
+    status
 
-        🇸🇮 SL
+  };
 
-      </button>
+  if (
+    status ===
+    'archived'
+  ) {
 
-    </div>
+    addActivity(
+      'archived',
+      document
+    );
 
-  `;
+    toast(
+      t('archived')
+    );
+
+  } else {
+
+    addActivity(
+      'metadata',
+      document
+    );
+
+    toast(
+      t('statusUpdated')
+    );
+
+  }
+
+  save();
+
+  render();
 
 }
 
 
 /* =========================================================
-   NAVIGATION
+   RESTORE DOCUMENT
    ========================================================= */
 
-function nav() {
+function restoreDocument(
+  documentId
+) {
+
+  const document =
+    getDocumentById(
+      documentId
+    );
+
+  if (!document) {
+    return;
+  }
+
+  const metadata =
+    getMetadata(
+      document
+    );
+
+  state.metadata[
+    document.id
+  ] = {
+
+    ...metadata,
+
+    status:
+      'active'
+
+  };
+
+  addActivity(
+    'restored',
+    document
+  );
+
+  save();
+
+  toast(
+    t('restored')
+  );
+
+  render();
+
+}
+
+
+/* =========================================================
+   METADATA SAVE
+   ========================================================= */
+
+function saveDocumentMetadata(
+  documentId
+) {
+
+  const document =
+    getDocumentById(
+      documentId
+    );
+
+  if (!document) {
+    return;
+  }
+
+  const fields = {
+
+    category:
+      document.querySelector(
+        '#metadata-category'
+      )?.value ||
+      '',
+
+    subcategory:
+      document.querySelector(
+        '#metadata-subcategory'
+      )?.value ||
+      '',
+
+    department:
+      document.querySelector(
+        '#metadata-department'
+      )?.value ||
+      '',
+
+    owner:
+      document.querySelector(
+        '#metadata-owner'
+      )?.value ||
+      '',
+
+    author:
+      document.querySelector(
+        '#metadata-author'
+      )?.value ||
+      '',
+
+    documentDate:
+      document.querySelector(
+        '#metadata-document-date'
+      )?.value ||
+      '',
+
+    status:
+      document.querySelector(
+        '#metadata-status'
+      )?.value ||
+      'active',
+
+    version:
+      document.querySelector(
+        '#metadata-version'
+      )?.value ||
+      '1.0',
+
+    keywords:
+      document.querySelector(
+        '#metadata-keywords'
+      )?.value ||
+      '',
+
+    tags:
+      (
+        document.querySelector(
+          '#metadata-tags'
+        )?.value ||
+        ''
+      )
+        .split(',')
+        .map(
+          value =>
+            value.trim()
+        )
+        .filter(
+          Boolean
+        ),
+
+    notes:
+      document.querySelector(
+        '#metadata-notes'
+      )?.value ||
+      '',
+
+    reviewDate:
+      document.querySelector(
+        '#metadata-review-date'
+      )?.value ||
+      '',
+
+    expiryDate:
+      document.querySelector(
+        '#metadata-expiry-date'
+      )?.value ||
+      ''
+
+  };
+
+  state.metadata[
+    document.id
+  ] =
+    fields;
+
+  addActivity(
+    'metadata',
+    document
+  );
+
+  save();
+
+  toast(
+    t('metadataSaved')
+  );
+
+  render();
+
+}
+
+
+/* =========================================================
+   SELECT ALL DOCUMENTS
+   ========================================================= */
+
+function toggleAllDocuments() {
+
+  const allIds =
+    BOOKS
+      .filter(
+        document =>
+          getDocumentStatus(
+            document
+          ) !==
+          'archived'
+      )
+      .map(
+        document =>
+          document.id
+      );
+
+  const allSelected =
+    allIds.length >
+      0 &&
+    allIds.every(
+      id =>
+        state.selectedDocumentIds.includes(
+          id
+        )
+    );
+
+  state.selectedDocumentIds =
+    allSelected
+      ? []
+      : allIds;
+
+  save();
+
+  render();
+
+}
+
+
+/* =========================================================
+   TOGGLE DOCUMENT SELECTION
+   ========================================================= */
+
+function toggleDocumentSelection(
+  documentId
+) {
+
+  if (
+    state.selectedDocumentIds.includes(
+      documentId
+    )
+  ) {
+
+    state.selectedDocumentIds =
+      state.selectedDocumentIds.filter(
+        id =>
+          id !==
+          documentId
+      );
+
+  } else {
+
+    state.selectedDocumentIds = [
+
+      ...state.selectedDocumentIds,
+
+      documentId
+
+    ];
+
+  }
+
+  save();
+
+  render();
+
+}
+
+
+/* =========================================================
+   TOGGLE AI DOCUMENT
+   ========================================================= */
+
+function toggleAiDocument(
+  documentId
+) {
+
+  if (
+    state.selectedAiDocuments.includes(
+      documentId
+    )
+  ) {
+
+    state.selectedAiDocuments =
+      state.selectedAiDocuments.filter(
+        id =>
+          id !==
+          documentId
+      );
+
+  } else {
+
+    state.selectedAiDocuments = [
+
+      ...state.selectedAiDocuments,
+
+      documentId
+
+    ];
+
+  }
+
+  save();
+
+  render();
+
+}
+
+
+/* =========================================================
+   DOCUMENT TITLE
+   ========================================================= */
+
+function documentTitle(
+  document
+) {
+
+  if (!document) {
+    return '';
+  }
+
+  const metadata =
+    getMetadata(
+      document
+    );
+
+  return (
+    document.title ||
+    metadata.title ||
+    document.filename ||
+    ''
+  );
+
+}
+
+
+/* =========================================================
+   DOCUMENT TAG HTML
+   ========================================================= */
+
+function renderTags(
+  tags
+) {
+
+  if (
+    !Array.isArray(
+      tags
+    ) ||
+    !tags.length
+  ) {
+
+    return '';
+
+  }
 
   return `
 
-    <nav class="nav">
+    <div class="tag-list">
 
-      ${[
-        [
-          'library',
-          '▦',
-          t('library')
-        ],
-        [
-          'search',
-          '⌕',
-          t('search')
-        ],
-        [
-          'create',
-          '✦',
-          t('create')
-        ],
-        [
-          'saved',
-          '♡',
-          t('saved')
-        ]
-      ]
+      ${tags
+        .slice(
+          0,
+          8
+        )
         .map(
-          (
-            [
-              key,
-              icon,
-              label
-            ]
-          ) => `
+          tag => `
 
-            <button
-              type="button"
-              class="${
-                state.screen ===
-                key
-                  ? 'active'
-                  : ''
-              }"
-              onclick="
-                go('${key}')
-              ">
+            <span class="tag">
 
-              ${icon}
+              ${escapeHtml(
+                tag
+              )}
 
-              <small>
-                ${label}
-              </small>
-
-            </button>
+            </span>
 
           `
         )
         .join('')}
 
-    </nav>
-
-  `;
-
-}
-
-
-/* =========================================================
-   LAYOUT
-   ========================================================= */
-
-function layout(body) {
-
-  return `
-
-    <div class="shell">
-
-      <main class="phone">
-
-        <div class="content">
-
-          ${languageSelector()}
-
-          ${body}
-
-        </div>
-
-        ${nav()}
-
-        ${
-          state.toast
-            ? `
-
-              <div class="toast">
-
-                ${escapeHtml(
-                  state.toast
-                )}
-
-              </div>
-
-            `
-            : ''
-        }
-
-      </main>
-
     </div>
 
   `;
@@ -2055,261 +3805,511 @@ function layout(body) {
 
 
 /* =========================================================
-   LOCAL LIBRARY HEADER
+   DOCUMENT STATUS HTML
    ========================================================= */
 
-function localLibraryControls() {
+function renderStatus(
+  document
+) {
+
+  const status =
+    getDocumentStatus(
+      document
+    );
 
   return `
 
-    <div
-      class="card"
-      style="
-        margin-bottom:20px
-      ">
+    <span
+      class="status ${
+        statusClass(
+          status
+        )
+      }">
 
-      <div
-        style="
-          display:flex;
-          justify-content:space-between;
-          align-items:flex-start;
-          gap:12px;
-          flex-wrap:wrap
-        ">
+      ${escapeHtml(
+        statusLabel(
+          status
+        )
+      )}
 
-        <div>
+    </span>
 
-          <h3
-            style="
-              margin:0
-            ">
+  `;
 
-            ${t('localBooks')}
+}
 
-          </h3>
 
-          <div
-            class="muted"
-            style="
-              margin-top:6px;
-              line-height:1.5
-            ">
+/* =========================================================
+   DOCUMENT SORTING
+   ========================================================= */
 
-            ${
-              state.localFolderName
-                ? `
-                  ${t('selectedFolder')}:
-                  <strong>
-                    ${escapeHtml(
-                      state.localFolderName
-                    )}
-                  </strong>
-                `
-                : t(
-                    'folderNotSelected'
-                  )
-            }
+function sortDocuments(
+  documents,
+  sort
+) {
 
-          </div>
+  const list =
+    [
+      ...documents
+    ];
 
-        </div>
+  list.sort(
+    (
+      a,
+      b
+    ) => {
 
-        <div
-          style="
-            display:flex;
-            gap:8px;
-            flex-wrap:wrap
-          ">
+      const aMeta =
+        getMetadata(
+          a
+        );
 
-          <button
-            type="button"
-            class="chip on"
-            onclick="
-              chooseBooksFolder()
-            ">
+      const bMeta =
+        getMetadata(
+          b
+        );
 
-            ${
-              state.localFolderName
-                ? t(
-                    'changeBooksFolder'
-                  )
-                : t(
-                    'chooseBooksFolder'
-                  )
-            }
+      if (
+        sort ===
+        'nameAsc'
+      ) {
 
-          </button>
-
-          ${
-            state.localFolderName
-              ? `
-
-                <button
-                  type="button"
-                  class="chip"
-                  onclick="
-                    refreshBooks()
-                  ">
-
-                  ${t(
-                    'refreshBooks'
-                  )}
-
-                </button>
-
-              `
-              : ''
+        return documentTitle(
+          a
+        ).localeCompare(
+          documentTitle(
+            b
+          ),
+          undefined,
+          {
+            sensitivity:
+              'base'
           }
+        );
 
-        </div>
-
-      </div>
-
-    </div>
-
-  `;
-
-}
-
-
-/* =========================================================
-   LIBRARY
-   ========================================================= */
-
-function library() {
-
-  return layout(`
-
-    <div class="eyebrow">
-
-      ${t('library')}
-
-    </div>
-
-    <h1>
-
-      ${t('appTitle')}
-
-    </h1>
-
-    ${localLibraryControls()}
-
-    <div class="section">
-
-      <div
-        style="
-          display:flex;
-          justify-content:space-between;
-          align-items:center;
-          margin-bottom:12px
-        ">
-
-        <h3>
-
-          ${t('books')}
-
-        </h3>
-
-        <span class="muted">
-
-          ${BOOKS.length}
-
-          ${t('titles')}
-
-        </span>
-
-      </div>
-
-      ${
-        BOOKS.length
-
-          ? `
-
-            <div class="grid">
-
-              ${BOOKS.map(
-                (
-                  book,
-                  index
-                ) => `
-
-                  <div
-                    class="book"
-                    onclick="
-                      openBook(
-                        ${index}
-                      )
-                    ">
-
-                    <div class="cover">
-
-                      <strong>
-
-                        ${escapeHtml(
-                          book.short
-                        )}
-
-                      </strong>
-
-                    </div>
-
-                  </div>
-
-                `
-              ).join('')}
-
-            </div>
-
-          `
-
-          : `
-
-            <div
-              class="muted"
-              style="
-                padding:20px 0
-              ">
-
-              ${t('noBooks')}
-
-            </div>
-
-          `
       }
 
-    </div>
+      if (
+        sort ===
+        'nameDesc'
+      ) {
 
-  `);
+        return documentTitle(
+          b
+        ).localeCompare(
+          documentTitle(
+            a
+          ),
+          undefined,
+          {
+            sensitivity:
+              'base'
+          }
+        );
+
+      }
+
+      if (
+        sort ===
+        'newest'
+      ) {
+
+        return (
+          new Date(
+            b.lastModified ||
+            0
+          ).getTime() -
+          new Date(
+            a.lastModified ||
+            0
+          ).getTime()
+        );
+
+      }
+
+      if (
+        sort ===
+        'oldest'
+      ) {
+
+        return (
+          new Date(
+            a.lastModified ||
+            0
+          ).getTime() -
+          new Date(
+            b.lastModified ||
+            0
+          ).getTime()
+        );
+
+      }
+
+      if (
+        sort ===
+        'largest'
+      ) {
+
+        return (
+          Number(
+            b.fileSize ||
+            0
+          ) -
+          Number(
+            a.fileSize ||
+            0
+          )
+        );
+
+      }
+
+      if (
+        sort ===
+        'smallest'
+      ) {
+
+        return (
+          Number(
+            a.fileSize ||
+            0
+          ) -
+          Number(
+            b.fileSize ||
+            0
+          )
+        );
+
+      }
+
+      const aStatus =
+        aMeta.status ||
+        'active';
+
+      const bStatus =
+        bMeta.status ||
+        'active';
+
+      if (
+        aStatus ===
+          'review' &&
+        bStatus !==
+          'review'
+      ) {
+
+        return -1;
+
+      }
+
+      if (
+        bStatus ===
+          'review' &&
+        aStatus !==
+          'review'
+      ) {
+
+        return 1;
+
+      }
+
+      return documentTitle(
+        a
+      ).localeCompare(
+        documentTitle(
+          b
+        ),
+        undefined,
+        {
+          sensitivity:
+            'base'
+        }
+      );
+
+    }
+  );
+
+  return list;
 
 }
 
 
 /* =========================================================
-   OPEN BOOK
+   GLOBAL FILTER HELPERS
    ========================================================= */
 
-function openBook(index) {
+function getCategories() {
 
-  const book =
-    BOOKS[index];
+  return [
+    ...new Set(
+      BOOKS.map(
+        document =>
+          getMetadata(
+            document
+          ).category ||
+          ''
+      )
+      .filter(
+        Boolean
+      )
+    )
+  ]
+    .sort(
+      (
+        a,
+        b
+      ) =>
+        a.localeCompare(
+          b,
+          undefined,
+          {
+            sensitivity:
+              'base'
+          }
+        )
+    );
 
-  if (
-    !book ||
-    !book.pdf
-  ) {
+}
 
-    return;
+
+function getDepartments() {
+
+  return [
+    ...new Set(
+      BOOKS.map(
+        document =>
+          getMetadata(
+            document
+          ).department ||
+          ''
+      )
+      .filter(
+        Boolean
+      )
+    )
+  ]
+    .sort(
+      (
+        a,
+        b
+      ) =>
+        a.localeCompare(
+          b,
+          undefined,
+          {
+            sensitivity:
+              'base'
+          }
+        )
+    );
+
+}
+
+
+function getFolders() {
+
+  return [
+    ...new Set(
+      BOOKS.map(
+        document =>
+          getPathParts(
+            document.path
+          )
+            .slice(
+              0,
+              -1
+            )
+            .join('/')
+      )
+      .filter(
+        Boolean
+      )
+    )
+  ]
+    .sort(
+      (
+        a,
+        b
+      ) =>
+        a.localeCompare(
+          b,
+          undefined,
+          {
+            sensitivity:
+              'base'
+          }
+        )
+    );
+
+}
+
+
+/* =========================================================
+   DOCUMENT MATCH
+   ========================================================= */
+
+function matchesDocumentQuery(
+  document,
+  query
+) {
+
+  if (!query) {
+
+    return true;
 
   }
 
-  state.book =
-    index;
+  const metadata =
+    getMetadata(
+      document
+    );
 
-  save();
+  const tagText =
+    Array.isArray(
+      metadata.tags
+    )
+      ? metadata.tags.join(' ')
+      : '';
 
-  openPdf(
-    book.pdf
+  const haystack =
+    normalizeSearchText(
+      [
+        document.title,
+        document.filename,
+        document.path,
+        metadata.category,
+        metadata.subcategory,
+        metadata.department,
+        metadata.owner,
+        metadata.author,
+        metadata.keywords,
+        tagText
+      ].join(' ')
+    );
+
+  return haystack.includes(
+    normalizeSearchText(
+      query
+    )
   );
+
+}
+
+
+/* =========================================================
+   NORMALIZE SEARCH TEXT
+   ========================================================= */
+
+function normalizeSearchText(
+  value
+) {
+
+  return String(
+    value ||
+    ''
+  )
+    .normalize(
+      'NFD'
+    )
+    .replace(
+      /[\u0300-\u036f]/g,
+      ''
+    )
+    .toLowerCase();
+
+}
+
+
+/* =========================================================
+   PDF.JS CONFIGURATION
+   ========================================================= */
+
+const PDFJS_VERSION =
+  '6.2.108';
+
+const SEARCH_DB_NAME =
+  'universal-ai-library-search-db';
+
+const SEARCH_DB_VERSION =
+  1;
+
+const SEARCH_STORE_NAME =
+  'pages';
+
+let pdfjsPromise =
+  null;
+
+
+/* =========================================================
+   GET PDF.JS
+   ========================================================= */
+
+async function getPdfJs() {
+
+  if (
+    !pdfjsPromise
+  ) {
+
+    pdfjsPromise =
+      import(
+        'https://cdn.jsdelivr.net/npm/pdfjs-dist@' +
+        PDFJS_VERSION +
+        '/build/pdf.min.mjs'
+      )
+      .then(
+        pdfjsLib => {
+
+          pdfjsLib
+            .GlobalWorkerOptions
+            .workerSrc =
+              'https://cdn.jsdelivr.net/npm/pdfjs-dist@' +
+              PDFJS_VERSION +
+              '/build/pdf.worker.min.mjs';
+
+          return pdfjsLib;
+
+        }
+      );
+
+  }
+
+  return pdfjsPromise;
+
+}
+
+
+/* =========================================================
+   GET PDF SOURCE
+   ========================================================= */
+
+async function getPdfSource(
+  pdfKey
+) {
+
+  if (
+    String(
+      pdfKey
+    ).startsWith(
+      'local://'
+    )
+  ) {
+
+    const handle =
+      LOCAL_BOOK_FILES.get(
+        pdfKey
+      );
+
+    if (!handle) {
+
+      throw new Error(
+        'Local PDF handle not found.'
+      );
+
+    }
+
+    return handle;
+
+  }
+
+  return pdfKey;
 
 }
 
@@ -2363,7 +4363,7 @@ async function openLocalPdf(
   } catch (error) {
 
     console.error(
-      'Could not open local PDF:',
+      'Could not open local PDF.',
       error
     );
 
@@ -2440,7 +4440,7 @@ async function openLocalPdfPage(
   } catch (error) {
 
     console.error(
-      'Could not open local PDF page:',
+      'Could not open local PDF page.',
       error
     );
 
@@ -2469,7 +4469,9 @@ function openPdf(
 ) {
 
   if (!file) {
+
     return;
+
   }
 
   const popup =
@@ -2527,7 +4529,7 @@ function openPdf(
 
   }
 
-  const target =
+  popup.location.href =
     page
       ? (
           file +
@@ -2538,357 +4540,11 @@ function openPdf(
         )
       : file;
 
-  popup.location.href =
-    target;
-
 }
 
 
 /* =========================================================
-   READER
-   ========================================================= */
-
-function reader() {
-
-  const book =
-    BOOKS[state.book];
-
-  if (!book) {
-
-    return layout(`
-
-      <h2>
-
-        ${t('reader')}
-
-      </h2>
-
-      <div class="muted">
-
-        ${t('noBooks')}
-
-      </div>
-
-    `);
-
-  }
-
-  return layout(`
-
-    <div class="top">
-
-      <button
-        type="button"
-        class="back"
-        onclick="
-          go('library')
-        ">
-
-        ‹
-
-      </button>
-
-      <div style="flex:1">
-
-        <strong>
-
-          ${escapeHtml(
-            book.short
-          )}
-
-        </strong>
-
-      </div>
-
-    </div>
-
-    <div class="section">
-
-      <div class="eyebrow">
-
-        ${t('reader')}
-
-      </div>
-
-      <h2>
-
-        ${escapeHtml(
-          book.short
-        )}
-
-      </h2>
-
-      <button
-        type="button"
-        class="primary"
-        onclick="
-          openPdf(
-            '${escapeAttribute(
-              book.pdf
-            )}'
-          )
-        ">
-
-        ${t('openPdf')}
-
-      </button>
-
-    </div>
-
-  `);
-
-}
-
-
-/* =========================================================
-   PDF SEARCH
-   ========================================================= */
-
-const PDFJS_VERSION =
-  '6.2.108';
-
-const SEARCH_DB_NAME =
-  'universal-ai-library-search-db';
-
-const SEARCH_DB_VERSION =
-  1;
-
-const SEARCH_STORE_NAME =
-  'pages';
-
-let pdfjsPromise =
-  null;
-
-let searchFocusFrame =
-  null;
-
-
-/* =========================================================
-   NORMALIZE SEARCH
-   ========================================================= */
-
-function normalizeSearchText(value) {
-
-  return String(
-    value || ''
-  )
-    .normalize('NFD')
-    .replace(
-      /[\u0300-\u036f]/g,
-      ''
-    )
-    .toLowerCase();
-
-}
-
-
-/* =========================================================
-   SEARCH SNIPPET
-   ========================================================= */
-
-function makeSearchSnippet(
-  result
-) {
-
-  const text =
-    String(
-      result.text ||
-      result.english ||
-      ''
-    )
-      .replace(
-        /\s+/g,
-        ' '
-      )
-      .trim();
-
-  if (
-    text.length <=
-    320
-  ) {
-
-    return text;
-
-  }
-
-  const query =
-    normalizeSearchText(
-      state.query
-    );
-
-  const normalized =
-    normalizeSearchText(
-      text
-    );
-
-  const position =
-    query
-      ? normalized.indexOf(
-          query
-        )
-      : -1;
-
-  if (
-    position >=
-    0
-  ) {
-
-    const start =
-      Math.max(
-        0,
-        position - 120
-      );
-
-    const end =
-      Math.min(
-        text.length,
-        start + 320
-      );
-
-    return (
-      (
-        start > 0
-          ? '…'
-          : ''
-      ) +
-      text.slice(
-        start,
-        end
-      ) +
-      (
-        end < text.length
-          ? '…'
-          : ''
-      )
-    );
-
-  }
-
-  return (
-    text.slice(
-      0,
-      320
-    ) +
-    '…'
-  );
-
-}
-
-
-/* =========================================================
-   PDF ENTRIES
-   ========================================================= */
-
-function getPdfEntries() {
-
-  return BOOKS
-    .filter(
-      book =>
-        book &&
-        book.pdf
-    )
-    .map(
-      book => ({
-
-        bookId:
-          book.id,
-
-        bookTitle:
-          book.short,
-
-        author:
-          book.author || '',
-
-        chapterTitle:
-          'PDF',
-
-        pdf:
-          book.pdf
-
-      })
-    );
-
-}
-
-
-/* =========================================================
-   PDF.JS
-   ========================================================= */
-
-async function getPdfJs() {
-
-  if (
-    !pdfjsPromise
-  ) {
-
-    pdfjsPromise =
-      import(
-        'https://cdn.jsdelivr.net/npm/pdfjs-dist@' +
-        PDFJS_VERSION +
-        '/build/pdf.min.mjs'
-      )
-      .then(
-        pdfjsLib => {
-
-          pdfjsLib
-            .GlobalWorkerOptions
-            .workerSrc =
-              'https://cdn.jsdelivr.net/npm/pdfjs-dist@' +
-              PDFJS_VERSION +
-              '/build/pdf.worker.min.mjs';
-
-          return pdfjsLib;
-
-        }
-      );
-
-  }
-
-  return pdfjsPromise;
-
-}
-
-
-/* =========================================================
-   GET LOCAL PDF FILE
-   ========================================================= */
-
-async function getPdfSource(
-  pdfKey
-) {
-
-  if (
-    String(
-      pdfKey
-    ).startsWith(
-      'local://'
-    )
-  ) {
-
-    const handle =
-      LOCAL_BOOK_FILES.get(
-        pdfKey
-      );
-
-    if (!handle) {
-
-      throw new Error(
-        'Local PDF file handle not found.'
-      );
-
-    }
-
-    return handle;
-
-  }
-
-  return pdfKey;
-
-}
-
-
-/* =========================================================
-   SEARCH DATABASE
+   SAVE SEARCH DATABASE OPEN
    ========================================================= */
 
 function openSearchDatabase() {
@@ -2900,10 +4556,7 @@ function openSearchDatabase() {
     ) => {
 
       if (
-        !(
-          'indexedDB' in
-          window
-        )
+        !('indexedDB' in window)
       ) {
 
         reject(
@@ -2980,7 +4633,7 @@ function openSearchDatabase() {
           reject(
             request.error ||
             new Error(
-              'IndexedDB error.'
+              'Search database error.'
             )
           );
 
@@ -3033,8 +4686,11 @@ function clearSearchDatabase() {
                 );
 
             transaction.oncomplete =
-              () =>
+              () => {
+
                 db.close();
+
+              };
 
             transaction.onerror =
               () =>
@@ -3052,7 +4708,7 @@ function clearSearchDatabase() {
 
 
 /* =========================================================
-   LOAD CACHE
+   LOAD SEARCH CACHE
    ========================================================= */
 
 function loadCachedSearchIndex() {
@@ -3159,6 +4815,7 @@ function saveSearchRows(
               function () {
 
                 db.close();
+
                 resolve();
 
               };
@@ -3184,15 +4841,11 @@ function saveSearchRows(
 
 
 /* =========================================================
-   SEARCH ROW
+   MAKE SEARCH ROW
    ========================================================= */
 
 function makeSearchRow(
-  bookId,
-  bookTitle,
-  author,
-  chapterTitle,
-  pdf,
+  document,
   page,
   text
 ) {
@@ -3208,46 +4861,66 @@ function makeSearchRow(
       )
       .trim();
 
+  const metadata =
+    getMetadata(
+      document
+    );
+
+  const tags =
+    Array.isArray(
+      metadata.tags
+    )
+      ? metadata.tags.join(' ')
+      : '';
+
   return {
 
     id:
-      bookId +
+      document.id +
       '|' +
-      pdf +
+      document.pdf +
       '|' +
       page,
 
-    bookId,
+    bookId:
+      document.id,
 
-    bookTitle,
+    bookTitle:
+      document.title,
 
-    author,
+    filename:
+      document.filename,
 
-    chapterTitle:
-      chapterTitle +
-      ' · page ' +
-      page,
+    path:
+      document.path,
 
-    ref:
-      'p. ' +
-      page,
+    category:
+      metadata.category,
+
+    department:
+      metadata.department,
+
+    pdf:
+      document.pdf,
 
     page,
 
-    pdf,
-
     text:
-      cleanText,
-
-    english:
       cleanText,
 
     normalized:
       normalizeSearchText(
         [
-          bookTitle,
-          author,
-          chapterTitle,
+          document.title,
+          document.filename,
+          document.path,
+          metadata.category,
+          metadata.subcategory,
+          metadata.department,
+          metadata.owner,
+          metadata.author,
+          metadata.keywords,
+          tags,
           cleanText
         ].join(' ')
       )
@@ -3266,26 +4939,33 @@ async function buildPdfSearchIndex() {
   const pdfjsLib =
     await getPdfJs();
 
-  const entries =
-    getPdfEntries();
-
-  const rows = [];
+  const rows =
+    [];
 
   for (
-    let entryIndex = 0;
-    entryIndex <
-      entries.length;
-    entryIndex++
+    let index = 0;
+    index <
+      BOOKS.length;
+    index++
   ) {
 
-    const entry =
-      entries[
-        entryIndex
+    const document =
+      BOOKS[
+        index
       ];
+
+    if (
+      !document ||
+      !document.pdf
+    ) {
+
+      continue;
+
+    }
 
     let pdfSource =
       await getPdfSource(
-        entry.pdf
+        document.pdf
       );
 
     if (
@@ -3312,6 +4992,9 @@ async function buildPdfSearchIndex() {
 
     const pdf =
       await loadingTask.promise;
+
+    document.pages =
+      pdf.numPages;
 
     for (
       let pageNumber = 1;
@@ -3346,11 +5029,7 @@ async function buildPdfSearchIndex() {
 
         rows.push(
           makeSearchRow(
-            entry.bookId,
-            entry.bookTitle,
-            entry.author,
-            entry.chapterTitle,
-            entry.pdf,
+            document,
             pageNumber,
             text
           )
@@ -3380,6 +5059,8 @@ async function buildPdfSearchIndex() {
 
   }
 
+  save();
+
   return {
     rows
   };
@@ -3407,22 +5088,12 @@ async function buildSearchIndex() {
   state.searchReady =
     false;
 
-  if (
-    state.screen ===
-    'search'
-  ) {
-
-    render();
-
-  }
+  render();
 
   try {
 
-    const expectedEntries =
-      getPdfEntries();
-
     if (
-      !expectedEntries.length
+      !BOOKS.length
     ) {
 
       state.searchIndex =
@@ -3446,7 +5117,7 @@ async function buildSearchIndex() {
     } catch (error) {
 
       console.warn(
-        'Could not load cached index:',
+        'Could not load search cache.',
         error
       );
 
@@ -3454,29 +5125,28 @@ async function buildSearchIndex() {
 
     const expectedIds =
       new Set(
-        expectedEntries.map(
-          entry =>
-            entry.bookId +
+        BOOKS.map(
+          document =>
+            document.id +
             '|' +
-            entry.pdf
+            document.pdf
         )
-      );
-
-    const cachedPdfRows =
-      cachedRows.filter(
-        row =>
-          row &&
-          row.pdf
       );
 
     const cachedIds =
       new Set(
-        cachedPdfRows.map(
-          row =>
-            row.bookId +
-            '|' +
-            row.pdf
-        )
+        cachedRows
+          .filter(
+            row =>
+              row &&
+              row.pdf
+          )
+          .map(
+            row =>
+              row.bookId +
+              '|' +
+              row.pdf
+          )
       );
 
     const cacheComplete =
@@ -3493,21 +5163,12 @@ async function buildSearchIndex() {
           )
       );
 
-    let pdfRows =
-      [];
-
     if (
       cacheComplete
     ) {
 
-      pdfRows =
-        cachedPdfRows;
-
-      console.log(
-        'Universal AI Library: cached search index used.',
-        pdfRows.length,
-        'pages.'
-      );
+      state.searchIndex =
+        cachedRows;
 
     } else {
 
@@ -3515,31 +5176,24 @@ async function buildSearchIndex() {
 
         await clearSearchDatabase();
 
-      } catch (error) {
-
-        console.warn(
-          'Could not clear old search index.',
-          error
-        );
-
-      }
+      } catch (error) {}
 
       const built =
         await buildPdfSearchIndex();
 
-      pdfRows =
+      state.searchIndex =
         built.rows;
 
       try {
 
         await saveSearchRows(
-          pdfRows
+          built.rows
         );
 
       } catch (error) {
 
         console.warn(
-          'Could not save search index.',
+          'Could not save search rows.',
           error
         );
 
@@ -3547,16 +5201,13 @@ async function buildSearchIndex() {
 
     }
 
-    state.searchIndex =
-      pdfRows;
-
     state.searchReady =
       true;
 
   } catch (error) {
 
     console.error(
-      'Search index error:',
+      'Search index build error.',
       error
     );
 
@@ -3567,7 +5218,7 @@ async function buildSearchIndex() {
       false;
 
     toast(
-      t('searching')
+      t('searchError')
     );
 
   } finally {
@@ -3575,14 +5226,7 @@ async function buildSearchIndex() {
     state.searchLoading =
       false;
 
-    if (
-      state.screen ===
-      'search'
-    ) {
-
-      render();
-
-    }
+    render();
 
   }
 
@@ -3590,7 +5234,7 @@ async function buildSearchIndex() {
 
 
 /* =========================================================
-   SEARCH INPUT
+   SEARCH QUERY
    ========================================================= */
 
 function setSearchQuery(
@@ -3600,113 +5244,4243 @@ function setSearchQuery(
   state.query =
     value;
 
+  save();
+
   render();
-
-  if (
-    searchFocusFrame !==
-      null
-  ) {
-
-    cancelAnimationFrame(
-      searchFocusFrame
-    );
-
-  }
-
-  searchFocusFrame =
-    requestAnimationFrame(
-      () => {
-
-        searchFocusFrame =
-          null;
-
-        const input =
-          document.querySelector(
-            '.search'
-          );
-
-        if (input) {
-
-          input.focus();
-
-          const end =
-            input.value.length;
-
-          input.setSelectionRange(
-            end,
-            end
-          );
-
-        }
-
-      }
-    );
 
 }
 
 
 /* =========================================================
-   SEARCH FILTER
+   SEARCH SORT
    ========================================================= */
 
-function setSearchFilter(
+function setSearchSort(
   value
 ) {
 
-  state.filter =
+  state.searchSort =
     value;
 
   save();
+
   render();
 
 }
 
 
 /* =========================================================
-   VISIBLE SEARCH RESULTS
+   FILTERS
    ========================================================= */
 
-function getVisibleSearchResults() {
+function setSearchFilter(
+  field,
+  value
+) {
+
+  if (
+    field ===
+    'status'
+  ) {
+
+    state.searchStatus =
+      value;
+
+  }
+
+  if (
+    field ===
+    'category'
+  ) {
+
+    state.searchCategory =
+      value;
+
+  }
+
+  if (
+    field ===
+    'department'
+  ) {
+
+    state.searchDepartment =
+      value;
+
+  }
+
+  if (
+    field ===
+    'folder'
+  ) {
+
+    state.searchFolder =
+      value;
+
+  }
+
+  if (
+    field ===
+    'dateFrom'
+  ) {
+
+    state.searchDateFrom =
+      value;
+
+  }
+
+  if (
+    field ===
+    'dateTo'
+  ) {
+
+    state.searchDateTo =
+      value;
+
+  }
+
+  save();
+
+  render();
+
+}
+
+
+/* =========================================================
+   CLEAR FILTERS
+   ========================================================= */
+
+function clearFilters() {
+
+  state.searchStatus =
+    'all';
+
+  state.searchCategory =
+    'all';
+
+  state.searchDepartment =
+    'all';
+
+  state.searchFolder =
+    'all';
+
+  state.searchDateFrom =
+    '';
+
+  state.searchDateTo =
+    '';
+
+  state.searchSort =
+    'relevance';
+
+  save();
+
+  render();
+
+}
+
+
+/* =========================================================
+   WORK DATE
+   ========================================================= */
+
+function formatWorkDate(
+  value
+) {
+
+  return formatDateTime(
+    value
+  );
+
+}
+
+
+/* =========================================================
+   MARKDOWN
+   ========================================================= */
+
+function markdownToHtml(
+  text
+) {
+
+  let html =
+    escapeHtml(
+      text
+    );
+
+  html =
+    html.replace(
+      /^### (.*)$/gm,
+      '<h3>$1</h3>'
+    );
+
+  html =
+    html.replace(
+      /^## (.*)$/gm,
+      '<h2>$1</h2>'
+    );
+
+  html =
+    html.replace(
+      /^# (.*)$/gm,
+      '<h1>$1</h1>'
+    );
+
+  html =
+    html.replace(
+      /\*\*(.*?)\*\*/g,
+      '<strong>$1</strong>'
+    );
+
+  const blocks =
+    html
+      .split(
+        /\n\s*\n/
+      )
+      .map(
+        block =>
+          block.trim()
+      )
+      .filter(
+        Boolean
+      );
+
+  return blocks
+    .map(
+      block => {
+
+        if (
+          block.startsWith(
+            '<h1>'
+          ) ||
+          block.startsWith(
+            '<h2>'
+          ) ||
+          block.startsWith(
+            '<h3>'
+          )
+        ) {
+
+          return block;
+
+        }
+
+        return (
+          '<p>' +
+          block.replace(
+            /\n/g,
+            '<br>'
+          ) +
+          '</p>'
+        );
+
+      }
+    )
+    .join(
+      '\n'
+    );
+
+}
+
+:
+
+/* =========================================================
+   SIDEBAR NAVIGATION
+   ========================================================= */
+
+function sidebarNav() {
+
+  const items = [
+
+    {
+      key:
+        'dashboard',
+
+      icon:
+        '▦',
+
+      label:
+        t('dashboard')
+    },
+
+    {
+      key:
+        'documents',
+
+      icon:
+        '▤',
+
+      label:
+        t('documents')
+    },
+
+    {
+      key:
+        'search',
+
+      icon:
+        '⌕',
+
+      label:
+        t('search')
+    },
+
+    {
+      key:
+        'categories',
+
+      icon:
+        '▦',
+
+      label:
+        t('categories')
+    },
+
+    {
+      key:
+        'recent',
+
+      icon:
+        '◷',
+
+      label:
+        t('recent')
+    },
+
+    {
+      key:
+        'favorites',
+
+      icon:
+        '★',
+
+      label:
+        t('favorites'),
+
+      count:
+        state.favorites.length
+    },
+
+    {
+      key:
+        'review',
+
+      icon:
+        '✓',
+
+      label:
+        t('review'),
+
+      count:
+        getReviewDocuments().length
+    },
+
+    {
+      key:
+        'archive',
+
+      icon:
+        '▱',
+
+      label:
+        t('archive')
+    }
+
+  ];
+
+  const aiItems = [
+
+    {
+      key:
+        'ai',
+
+      icon:
+        '✦',
+
+      label:
+        t('ai')
+    },
+
+    {
+      key:
+        'saved',
+
+      icon:
+        '◈',
+
+      label:
+        t('saved'),
+
+      count:
+        state.works.length
+    }
+
+  ];
+
+  return `
+
+    <aside
+      class="dms-sidebar">
+
+      <div
+        class="dms-brand">
+
+        <div
+          class="dms-brand-mark">
+
+          <div
+            class="dms-brand-icon">
+
+            DMS
+
+          </div>
+
+          <div>
+
+            <div
+              class="dms-brand-title">
+
+              ${escapeHtml(
+                state.lang ===
+                'sl'
+                  ? 'Dokumentacija'
+                  : 'Documentation'
+              )}
+
+            </div>
+
+            <div
+              class="dms-brand-subtitle">
+
+              ${escapeHtml(
+                t('appTitle')
+              )}
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <nav
+        class="dms-nav">
+
+        <div
+          class="dms-nav-section">
+
+          ${t('overview')}
+
+        </div>
+
+        ${items
+          .map(
+            item =>
+              sidebarNavItem(
+                item
+              )
+          )
+          .join('')}
+
+        <div
+          class="dms-nav-section">
+
+          ${t('ai')}
+
+        </div>
+
+        ${aiItems
+          .map(
+            item =>
+              sidebarNavItem(
+                item
+              )
+          )
+          .join('')}
+
+        <div
+          class="dms-nav-section">
+
+          ${t('settings')}
+
+        </div>
+
+        <button
+          type="button"
+          class="${
+            state.screen ===
+            'settings'
+              ? 'active'
+              : ''
+          }"
+          onclick="
+            go('settings')
+          ">
+
+          <span
+            class="dms-nav-icon">
+
+            ⚙
+
+          </span>
+
+          <span
+            class="dms-nav-label">
+
+            ${t('settings')}
+
+          </span>
+
+        </button>
+
+      </nav>
+
+      <div
+        class="dms-sidebar-footer">
+
+        <div
+          class="dms-user-box">
+
+          <div
+            class="dms-user-avatar">
+
+            D
+
+          </div>
+
+          <div
+            class="dms-user-name">
+
+            <strong>
+
+              DMS
+
+            </strong>
+
+            <span>
+
+              ${t('localOnly')}
+
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </aside>
+
+  `;
+
+}
+
+
+function sidebarNavItem(
+  item
+) {
+
+  return `
+
+    <button
+      type="button"
+      class="${
+        state.screen ===
+        item.key
+          ? 'active'
+          : ''
+      }"
+      onclick="
+        go('${item.key}')
+      ">
+
+      <span
+        class="dms-nav-icon">
+
+        ${item.icon}
+
+      </span>
+
+      <span
+        class="dms-nav-label">
+
+        ${escapeHtml(
+          item.label
+        )}
+
+      </span>
+
+      ${
+        item.count !==
+        undefined
+          ? `
+
+            <span
+              class="dms-nav-count">
+
+              ${Number(
+                item.count
+              )}
+
+            </span>
+
+          `
+          : ''
+      }
+
+    </button>
+
+  `;
+
+}
+
+
+/* =========================================================
+   LANGUAGE SELECTOR
+   ========================================================= */
+
+function languageSelector() {
+
+  return `
+
+    <div
+      class="language-selector">
+
+      <button
+        type="button"
+        class="chip ${
+          state.lang ===
+          'sl'
+            ? 'on'
+            : ''
+        }"
+        onclick="
+          setLanguage('sl')
+        ">
+
+        🇸🇮 SL
+
+      </button>
+
+      <button
+        type="button"
+        class="chip ${
+          state.lang ===
+          'en'
+            ? 'on'
+            : ''
+        }"
+        onclick="
+          setLanguage('en')
+        ">
+
+        🇬🇧 EN
+
+      </button>
+
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   TOPBAR
+   ========================================================= */
+
+function topbar() {
+
+  const titleMap = {
+
+    dashboard:
+      t('dashboard'),
+
+    documents:
+      t('documents'),
+
+    search:
+      t('search'),
+
+    categories:
+      t('categories'),
+
+    recent:
+      t('recent'),
+
+    favorites:
+      t('favorites'),
+
+    review:
+      t('review'),
+
+    archive:
+      t('archive'),
+
+    ai:
+      t('ai'),
+
+    saved:
+      t('saved'),
+
+    settings:
+      t('settings'),
+
+    document:
+      t('documentDetails'),
+
+    result:
+      t('ai')
+
+  };
+
+  const pageTitle =
+    titleMap[
+      state.screen
+    ] ||
+    t('documents');
+
+  return `
+
+    <header
+      class="dms-topbar">
+
+      <div
+        class="dms-topbar-left">
+
+        <div
+          class="dms-page-context">
+
+          <div
+            class="eyebrow">
+
+            ${t('appTitle')}
+
+          </div>
+
+          <h1
+            class="dms-page-title">
+
+            ${escapeHtml(
+              pageTitle
+            )}
+
+          </h1>
+
+        </div>
+
+      </div>
+
+      <div
+        class="dms-topbar-search">
+
+        <span
+          class="search-icon">
+
+          ⌕
+
+        </span>
+
+        <input
+          type="search"
+          value="${escapeAttribute(
+            state.query
+          )}"
+          oninput="
+            setSearchQuery(
+              this.value
+            )
+          "
+          onkeydown="
+            if(event.key==='Enter'){
+              go('search');
+            }
+          "
+          placeholder="${t(
+            'searchDocuments'
+          )}"
+        >
+
+      </div>
+
+      <div
+        class="dms-topbar-actions">
+
+        <button
+          type="button"
+          class="btn btn-icon btn-secondary"
+          title="${t(
+            'refresh'
+          )}"
+          onclick="
+            refreshBooks()
+          ">
+
+          ↻
+
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-icon btn-secondary"
+          title="${t(
+            'language'
+          )}"
+          onclick="
+            setLanguage(
+              state.lang === 'sl'
+                ? 'en'
+                : 'sl'
+            )
+          ">
+
+          ${state.lang ===
+          'sl'
+            ? 'SL'
+            : 'EN'}
+
+        </button>
+
+      </div>
+
+    </header>
+
+  `;
+
+}
+
+
+/* =========================================================
+   DMS LAYOUT
+   ========================================================= */
+
+function dmsLayout(
+  body
+) {
+
+  return `
+
+    <div
+      class="dms-layout">
+
+      ${sidebarNav()}
+
+      <div
+        class="dms-main">
+
+        ${topbar()}
+
+        <main
+          class="content">
+
+          ${body}
+
+        </main>
+
+      </div>
+
+      ${
+        state.toast
+          ? `
+
+            <div
+              class="toast">
+
+              ${escapeHtml(
+                state.toast
+              )}
+
+            </div>
+
+          `
+          : ''
+      }
+
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+function pageHeader(
+  eyebrow,
+  title,
+  description = '',
+  actions = ''
+) {
+
+  return `
+
+    <div
+      class="page-header">
+
+      <div
+        class="page-header-copy">
+
+        ${
+          eyebrow
+            ? `
+
+              <div
+                class="eyebrow">
+
+                ${escapeHtml(
+                  eyebrow
+                )}
+
+              </div>
+
+            `
+            : ''
+        }
+
+        <h1>
+
+          ${escapeHtml(
+            title
+          )}
+
+        </h1>
+
+        ${
+          description
+            ? `
+
+              <p
+                class="page-description">
+
+                ${escapeHtml(
+                  description
+                )}
+
+              </p>
+
+            `
+            : ''
+        }
+
+      </div>
+
+      ${
+        actions
+          ? `
+
+            <div
+              class="page-header-actions">
+
+              ${actions}
+
+            </div>
+
+          `
+          : ''
+      }
+
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   DOCUMENT ICON
+   ========================================================= */
+
+function documentIcon() {
+
+  return `
+
+    <span
+      class="document-file-icon">
+
+      PDF
+
+    </span>
+
+  `;
+
+}
+
+
+/* =========================================================
+   DOCUMENT ROW
+   ========================================================= */
+
+function documentRow(
+  document,
+  options = {}
+) {
+
+  if (!document) {
+    return '';
+  }
+
+  const metadata =
+    getMetadata(
+      document
+    );
+
+  const isFavorite =
+    state.favorites.includes(
+      document.id
+    );
+
+  const selected =
+    state.selectedDocumentIds.includes(
+      document.id
+    );
+
+  const compact =
+    options.compact ||
+    false;
+
+  return `
+
+    <tr
+      onclick="
+        openDocumentDetails(
+          '${escapeAttribute(
+            document.id
+          )}'
+        )
+      ">
+
+      <td
+        onclick="
+          event.stopPropagation()
+        ">
+
+        <input
+          type="checkbox"
+          class="document-checkbox"
+          ${
+            selected
+              ? 'checked'
+              : ''
+          }
+          onchange="
+            toggleDocumentSelection(
+              '${escapeAttribute(
+                document.id
+              )}'
+            )
+          "
+        >
+
+      </td>
+
+      <td>
+
+        <div
+          class="document-name">
+
+          ${documentIcon()}
+
+          <div
+            class="document-name-copy">
+
+            <strong>
+
+              ${escapeHtml(
+                documentTitle(
+                  document
+                )
+              )}
+
+            </strong>
+
+            <span>
+
+              ${escapeHtml(
+                document.filename ||
+                ''
+              )}
+
+            </span>
+
+          </div>
+
+        </div>
+
+      </td>
+
+      ${
+        compact
+          ? ''
+          : `
+
+            <td>
+
+              ${escapeHtml(
+                metadata.category ||
+                '—'
+              )}
+
+            </td>
+
+            <td>
+
+              ${escapeHtml(
+                metadata.department ||
+                '—'
+              )}
+
+            </td>
+
+            <td>
+
+              ${renderStatus(
+                document
+              )}
+
+            </td>
+
+            <td>
+
+              ${formatDate(
+                document.lastModified
+              )}
+
+            </td>
+
+            <td>
+
+              ${formatFileSize(
+                document.fileSize
+              )}
+
+            </td>
+
+          `
+      }
+
+      <td>
+
+        <div
+          class="document-actions"
+          onclick="
+            event.stopPropagation()
+          ">
+
+          <button
+            type="button"
+            class="favorite-mark ${
+              isFavorite
+                ? 'active'
+                : ''
+            }"
+            title="${
+              isFavorite
+                ? t(
+                    'removeFavorite'
+                  )
+                : t(
+                    'markFavorite'
+                  )
+            }"
+            onclick="
+              toggleFavorite(
+                '${escapeAttribute(
+                  document.id
+                )}'
+              )
+            ">
+
+            ${
+              isFavorite
+                ? '★'
+                : '☆'
+            }
+
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-sm btn-ghost"
+            onclick="
+              openDocument(
+                '${escapeAttribute(
+                  document.id
+                )}'
+              )
+            ">
+
+            ${t('open')}
+
+          </button>
+
+        </div>
+
+      </td>
+
+    </tr>
+
+  `;
+
+}
+
+
+/* =========================================================
+   DOCUMENT TABLE
+   ========================================================= */
+
+function documentTable(
+  documents,
+  options = {}
+) {
+
+  if (
+    !Array.isArray(
+      documents
+    ) ||
+    !documents.length
+  ) {
+
+    return `
+
+      <div
+        class="document-table-wrap">
+
+        <div
+          class="document-empty">
+
+          <strong>
+
+            ${t('noDocuments')}
+
+          </strong>
+
+          <span>
+
+            ${t('localDocuments')}
+
+          </span>
+
+        </div>
+
+      </div>
+
+    `;
+
+  }
+
+  const compact =
+    options.compact ||
+    false;
+
+  return `
+
+    <div
+      class="document-table-wrap">
+
+      <table
+        class="document-table">
+
+        <thead>
+
+          <tr>
+
+            <th>
+
+              &nbsp;
+
+            </th>
+
+            <th>
+
+              ${t('title')}
+
+            </th>
+
+            ${
+              compact
+                ? ''
+                : `
+
+                  <th>
+
+                    ${t(
+                      'category'
+                    )}
+
+                  </th>
+
+                  <th>
+
+                    ${t(
+                      'department'
+                    )}
+
+                  </th>
+
+                  <th>
+
+                    ${t(
+                      'status'
+                    )}
+
+                  </th>
+
+                  <th>
+
+                    ${t(
+                      'lastModified'
+                    )}
+
+                  </th>
+
+                  <th>
+
+                    ${t(
+                      'fileSize'
+                    )}
+
+                  </th>
+
+                `
+            }
+
+            <th>
+
+              ${t('actions')}
+
+            </th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          ${documents
+            .map(
+              document =>
+                documentRow(
+                  document,
+                  options
+                )
+            )
+            .join('')}
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   DOCUMENT FILTERING
+   ========================================================= */
+
+function filterDocuments(
+  documents,
+  options = {}
+) {
+
+  const list =
+    Array.isArray(
+      documents
+    )
+      ? documents
+      : [];
 
   const query =
     normalizeSearchText(
       state.query.trim()
     );
 
-  let results =
-    state.searchIndex;
+  const includeArchived =
+    options.includeArchived ===
+    true;
 
-  if (
-    query
-  ) {
+  let filtered =
+    list.filter(
+      document => {
 
-    results =
-      results.filter(
-        item => {
+        if (
+          !document
+        ) {
 
-          const text =
-            item.normalized ||
-            normalizeSearchText(
-              [
-                item.bookTitle,
-                item.author,
-                item.chapterTitle,
-                item.ref,
-                item.text,
-                item.english
-              ].join(' ')
-            );
-
-          return text.includes(
-            query
-          );
+          return false;
 
         }
+
+        const status =
+          getDocumentStatus(
+            document
+          );
+
+        if (
+          !includeArchived &&
+          status ===
+            'archived'
+        ) {
+
+          return false;
+
+        }
+
+        if (
+          query &&
+          !matchesDocumentQuery(
+            document,
+            query
+          )
+        ) {
+
+          return false;
+
+        }
+
+        return true;
+
+      }
+    );
+
+  if (
+    state.activeCategory
+  ) {
+
+    filtered =
+      filtered.filter(
+        document =>
+          getMetadata(
+            document
+          ).category ===
+          state.activeCategory
       );
 
   }
 
-  return results;
+  if (
+    state.activeDepartment
+  ) {
+
+    filtered =
+      filtered.filter(
+        document =>
+          getMetadata(
+            document
+          ).department ===
+          state.activeDepartment
+      );
+
+  }
+
+  if (
+    state.activeStatus !==
+    'all'
+  ) {
+
+    filtered =
+      filtered.filter(
+        document =>
+          getDocumentStatus(
+            document
+          ) ===
+          state.activeStatus
+      );
+
+  }
+
+  return filtered;
+
+}
+
+
+/* =========================================================
+   REVIEW DOCUMENTS
+   ========================================================= */
+
+function getReviewDocuments() {
+
+  return BOOKS.filter(
+    document => {
+
+      const metadata =
+        getMetadata(
+          document
+        );
+
+      const status =
+        getDocumentStatus(
+          document
+        );
+
+      if (
+        status ===
+        'review'
+      ) {
+
+        return true;
+
+      }
+
+      if (
+        metadata.reviewDate
+      ) {
+
+        const reviewDate =
+          new Date(
+            metadata.reviewDate
+          );
+
+        if (
+          !Number.isNaN(
+            reviewDate.getTime()
+          )
+        ) {
+
+          return reviewDate <=
+            new Date();
+
+        }
+
+      }
+
+      return false;
+
+    }
+  );
+
+}
+
+
+/* =========================================================
+   ARCHIVED DOCUMENTS
+   ========================================================= */
+
+function getArchivedDocuments() {
+
+  return BOOKS.filter(
+    document =>
+      getDocumentStatus(
+        document
+      ) ===
+      'archived'
+  );
+
+}
+
+
+/* =========================================================
+   ACTIVE DOCUMENTS
+   ========================================================= */
+
+function getActiveDocuments() {
+
+  return BOOKS.filter(
+    document =>
+      getDocumentStatus(
+        document
+      ) !==
+      'archived'
+  );
+
+}
+
+
+/* =========================================================
+   EXPIRED DOCUMENTS
+   ========================================================= */
+
+function getExpiredDocuments() {
+
+  return BOOKS.filter(
+    document =>
+      getDocumentStatus(
+        document
+      ) ===
+      'expired'
+  );
+
+}
+
+
+/* =========================================================
+   FAVORITE DOCUMENTS
+   ========================================================= */
+
+function getFavoriteDocuments() {
+
+  const favoriteSet =
+    new Set(
+      state.favorites
+    );
+
+  return BOOKS.filter(
+    document =>
+      favoriteSet.has(
+        document.id
+      )
+  )
+    .filter(
+      document =>
+        getDocumentStatus(
+          document
+        ) !==
+        'archived'
+    );
+
+}
+
+
+/* =========================================================
+   RECENT DOCUMENTS
+   ========================================================= */
+
+function getRecentDocuments() {
+
+  const map =
+    new Map(
+      BOOKS.map(
+        document => [
+          document.id,
+          document
+        ]
+      )
+    );
+
+  return state.recent
+    .map(
+      id =>
+        map.get(
+          id
+        )
+    )
+    .filter(
+      Boolean
+    );
+
+}
+
+
+/* =========================================================
+   CATEGORY DOCUMENTS
+   ========================================================= */
+
+function getCategoryDocuments(
+  category
+) {
+
+  return BOOKS.filter(
+    document =>
+      getMetadata(
+        document
+      ).category ===
+      category
+  );
+
+}
+
+
+/* =========================================================
+   DASHBOARD STATISTICS
+   ========================================================= */
+
+function getDashboardStats() {
+
+  const all =
+    BOOKS;
+
+  const active =
+    getActiveDocuments();
+
+  const archived =
+    getArchivedDocuments();
+
+  const review =
+    getReviewDocuments();
+
+  const expired =
+    getExpiredDocuments();
+
+  const categories =
+    new Set(
+      all.map(
+        document =>
+          getMetadata(
+            document
+          ).category ||
+          ''
+      )
+      .filter(
+        Boolean
+      )
+    );
+
+  const departments =
+    new Set(
+      all.map(
+        document =>
+          getMetadata(
+            document
+          ).department ||
+          ''
+      )
+      .filter(
+        Boolean
+      )
+    );
+
+  const totalPages =
+    all.reduce(
+      (
+        total,
+        document
+      ) =>
+        total +
+        Number(
+          document.pages ||
+          0
+        ),
+      0
+    );
+
+  const totalSize =
+    all.reduce(
+      (
+        total,
+        document
+      ) =>
+        total +
+        Number(
+          document.fileSize ||
+          0
+        ),
+      0
+    );
+
+  return {
+
+    total:
+      all.length,
+
+    active:
+      active.length,
+
+    archived:
+      archived.length,
+
+    review:
+      review.length,
+
+    expired:
+      expired.length,
+
+    categories:
+      categories.size,
+
+    departments:
+      departments.size,
+
+    pages:
+      totalPages,
+
+    size:
+      totalSize
+
+  };
+
+}
+
+
+/* =========================================================
+   STAT CARD
+   ========================================================= */
+
+function statCard(
+  label,
+  value,
+  icon,
+  sub = ''
+) {
+
+  return `
+
+    <div
+      class="stat-card">
+
+      <div
+        class="stat-card-head">
+
+        <span
+          class="stat-label">
+
+          ${escapeHtml(
+            label
+          )}
+
+        </span>
+
+        <span
+          class="stat-icon">
+
+          ${icon}
+
+        </span>
+
+      </div>
+
+      <div
+        class="stat-value">
+
+        ${escapeHtml(
+          String(
+            value
+          )
+        )}
+
+      </div>
+
+      ${
+        sub
+          ? `
+
+            <div
+              class="stat-sub">
+
+              ${escapeHtml(
+                sub
+              )}
+
+            </div>
+
+          `
+          : ''
+      }
+
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   DASHBOARD
+   ========================================================= */
+
+function dashboard() {
+
+  const stats =
+    getDashboardStats();
+
+  const recent =
+    getRecentDocuments()
+      .slice(
+        0,
+        7
+      );
+
+  const review =
+    getReviewDocuments()
+      .slice(
+        0,
+        7
+      );
+
+  const categories =
+    getCategories()
+      .slice(
+        0,
+        8
+      );
+
+  const actions = `
+
+    <button
+      type="button"
+      class="btn btn-primary"
+      onclick="
+        go('documents')
+      ">
+
+      ${t('documents')}
+
+    </button>
+
+    <button
+      type="button"
+      class="btn btn-secondary"
+      onclick="
+        chooseBooksFolder()
+      ">
+
+      ${t('changeFolder')}
+
+    </button>
+
+  `;
+
+  return dmsLayout(`
+
+    ${pageHeader(
+      t('overview'),
+      t('dashboard'),
+      state.localFolderName
+        ? (
+            state.lang ===
+            'sl'
+              ? (
+                  'Repozitorij: ' +
+                  state.localFolderName
+                )
+              : (
+                  'Repository: ' +
+                  state.localFolderName
+                )
+          )
+        : t(
+            'folderNotSelected'
+          ),
+      actions
+    )}
+
+    <div
+      class="dashboard-grid">
+
+      ${statCard(
+        t('totalDocuments'),
+        stats.total,
+        '▤'
+      )}
+
+      ${statCard(
+        t('activeDocuments'),
+        stats.active,
+        '●'
+      )}
+
+      ${statCard(
+        t('reviewCount'),
+        stats.review,
+        '✓'
+      )}
+
+      ${statCard(
+        t('archivedDocuments'),
+        stats.archived,
+        '▱'
+      )}
+
+    </div>
+
+    <div
+      class="section dashboard-columns">
+
+      <section
+        class="dashboard-section">
+
+        <div
+          class="card">
+
+          <div
+            class="card-header">
+
+            <div
+              class="card-header-title">
+
+              <strong>
+
+                ${t(
+                  'recentDocuments'
+                )}
+
+              </strong>
+
+              <span>
+
+                ${recent.length}
+
+              </span>
+
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-sm btn-ghost"
+              onclick="
+                go('recent')
+              ">
+
+              ${t('recent')}
+
+            </button>
+
+          </div>
+
+          ${
+            recent.length
+              ? `
+
+                ${documentTable(
+                  recent,
+                  {
+                    compact:
+                      true
+                  }
+                )}
+
+              `
+              : `
+
+                <div
+                  class="document-empty">
+
+                  <strong>
+
+                    ${t(
+                      'noRecent'
+                    )}
+
+                  </strong>
+
+                </div>
+
+              `
+          }
+
+        </div>
+
+      </section>
+
+
+      <section
+        class="dashboard-section">
+
+        <div
+          class="card">
+
+          <div
+            class="card-header">
+
+            <div
+              class="card-header-title">
+
+              <strong>
+
+                ${t(
+                  'reviewQueue'
+                )}
+
+              </strong>
+
+              <span>
+
+                ${review.length}
+
+              </span>
+
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-sm btn-ghost"
+              onclick="
+                go('review')
+              ">
+
+              ${t('review')}
+
+            </button>
+
+          </div>
+
+          ${
+            review.length
+              ? `
+
+                <div
+                  class="review-list"
+                  style="
+                    padding:0 16px
+                  ">
+
+                  ${review
+                    .map(
+                      document => {
+
+                        const metadata =
+                          getMetadata(
+                            document
+                          );
+
+                        return `
+
+                          <div
+                            class="review-item">
+
+                            ${documentIcon()}
+
+                            <div
+                              class="review-item-main">
+
+                              <div
+                                class="review-item-title">
+
+                                ${escapeHtml(
+                                  documentTitle(
+                                    document
+                                  )
+                                )}
+
+                              </div>
+
+                              <div
+                                class="review-item-meta">
+
+                                ${
+                                  metadata.reviewDate
+                                    ? (
+                                        formatDate(
+                                          metadata.reviewDate
+                                        )
+                                      )
+                                    : t(
+                                        'needsReview'
+                                      )
+                                }
+
+                              </div>
+
+                            </div>
+
+                            ${renderStatus(
+                              document
+                            )}
+
+                          </div>
+
+                        `;
+
+                      }
+                    )
+                    .join('')}
+
+                </div>
+
+              `
+              : `
+
+                <div
+                  class="document-empty">
+
+                  <strong>
+
+                    ${t(
+                      'noReview'
+                    )}
+
+                  </strong>
+
+                </div>
+
+              `
+          }
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <div
+      class="section dashboard-columns equal">
+
+      <section
+        class="dashboard-section">
+
+        <div
+          class="card">
+
+          <div
+            class="card-header">
+
+            <div
+              class="card-header-title">
+
+              <strong>
+
+                ${t(
+                  'categoryOverview'
+                )}
+
+              </strong>
+
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-sm btn-ghost"
+              onclick="
+                go('categories')
+              ">
+
+              ${t(
+                'categories'
+              )}
+
+            </button>
+
+          </div>
+
+          <div
+            class="card-body">
+
+            ${
+              categories.length
+                ? `
+
+                  <div
+                    class="category-grid"
+                    style="
+                      grid-template-columns:1fr 1fr
+                    ">
+
+                    ${categories
+                      .map(
+                        category => {
+
+                          const count =
+                            getCategoryDocuments(
+                              category
+                            ).length;
+
+                          return `
+
+                            <button
+                              type="button"
+                              class="category-card"
+                              style="
+                                text-align:left
+                              "
+                              onclick="
+                                openCategory(
+                                  '${escapeAttribute(
+                                    category
+                                  )}'
+                                )
+                              ">
+
+                              <div
+                                class="category-icon">
+
+                                ▦
+
+                              </div>
+
+                              <div
+                                class="category-name">
+
+                                ${escapeHtml(
+                                  category
+                                )}
+
+                              </div>
+
+                              <div
+                                class="category-meta">
+
+                                ${count}
+
+                                ${t(
+                                  'documentsInCategory'
+                                )}
+
+                              </div>
+
+                            </button>
+
+                          `;
+
+                        }
+                      )
+                      .join('')}
+
+                  </div>
+
+                `
+                : `
+
+                  <div
+                    class="muted">
+
+                    ${t(
+                      'noCategories'
+                    )}
+
+                  </div>
+
+                `
+            }
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <section
+        class="dashboard-section">
+
+        <div
+          class="card">
+
+          <div
+            class="card-header">
+
+            <div
+              class="card-header-title">
+
+              <strong>
+
+                ${t(
+                  'recentActivity'
+                )}
+
+              </strong>
+
+            </div>
+
+          </div>
+
+          <div
+            class="card-body">
+
+            ${renderActivityList(
+              state.activity.slice(
+                0,
+                8
+              )
+            )}
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  `);
+
+}
+
+
+/* =========================================================
+   ACTIVITY LIST
+   ========================================================= */
+
+function renderActivityList(
+  items
+) {
+
+  if (
+    !Array.isArray(
+      items
+    ) ||
+    !items.length
+  ) {
+
+    return `
+
+      <div
+        class="muted">
+
+        ${t('noRecent')}
+
+      </div>
+
+    `;
+
+  }
+
+  return `
+
+    <div
+      class="activity-list">
+
+      ${items
+        .map(
+          item => `
+
+            <div
+              class="activity-item">
+
+              <div
+                class="activity-dot">
+              </div>
+
+              <div
+                class="activity-copy">
+
+                <strong>
+
+                  ${escapeHtml(
+                    item.label
+                  )}
+
+                </strong>
+
+                <span>
+
+                  ${escapeHtml(
+                    item.documentTitle ||
+                    ''
+                  )}
+
+                </span>
+
+              </div>
+
+              <div
+                class="activity-time">
+
+                ${formatDateTime(
+                  item.createdAt
+                )}
+
+              </div>
+
+            </div>
+
+          `
+        )
+        .join('')}
+
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   DOCUMENTS TOOLBAR
+   ========================================================= */
+
+function documentsToolbar(
+  documents
+) {
+
+  const allIds =
+    documents.map(
+      document =>
+        document.id
+    );
+
+  const allSelected =
+    allIds.length >
+      0 &&
+    allIds.every(
+      id =>
+        state.selectedDocumentIds.includes(
+          id
+        )
+    );
+
+  return `
+
+    <div
+      class="document-toolbar">
+
+      <div
+        class="document-toolbar-left">
+
+        <button
+          type="button"
+          class="btn btn-secondary btn-sm"
+          onclick="
+            toggleAllDocuments()
+          ">
+
+          ${
+            allSelected
+              ? t('unselectAll')
+              : t('selectAll')
+          }
+
+        </button>
+
+        <span
+          class="document-count">
+
+          ${documents.length}
+
+          ${t('results')}
+
+        </span>
+
+        ${
+          state.selectedDocumentIds.length
+            ? `
+
+              <span
+                class="status status-info">
+
+                ${state.selectedDocumentIds.length}
+
+                ${t(
+                  'selectedDocuments'
+                )}
+
+              </span>
+
+            `
+            : ''
+        }
+
+      </div>
+
+      <div
+        class="document-toolbar-right">
+
+        <button
+          type="button"
+          class="btn btn-primary btn-sm"
+          onclick="
+            go('ai')
+          ">
+
+          ✦
+
+          ${t('ai')}
+
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-secondary btn-sm"
+          onclick="
+            refreshBooks()
+          ">
+
+          ↻
+
+          ${t('refresh')}
+
+        </button>
+
+      </div>
+
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   DOCUMENTS SEARCH PANEL
+   ========================================================= */
+
+function documentsSearchPanel() {
+
+  const categories =
+    getCategories();
+
+  const departments =
+    getDepartments();
+
+  const folders =
+    getFolders();
+
+  return `
+
+    <div
+      class="search-panel">
+
+      <div
+        class="search-row">
+
+        <input
+          class="search"
+          value="${escapeAttribute(
+            state.query
+          )}"
+          oninput="
+            setSearchQuery(
+              this.value
+            )
+          "
+          placeholder="${t(
+            'searchFullText'
+          )}"
+        >
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="
+            go('search')
+          ">
+
+          ⌕
+
+          ${t('search')}
+
+        </button>
+
+      </div>
+
+      <div
+        class="advanced-filters">
+
+        <div
+          class="filter-group">
+
+          <label
+            class="filter-label">
+
+            ${t('status')}
+
+          </label>
+
+          <select
+            class="select-input"
+            onchange="
+              setSearchFilter(
+                'status',
+                this.value
+              )
+            ">
+
+            ${[
+              [
+                'all',
+                t(
+                  'allStatuses'
+                )
+              ],
+              [
+                'active',
+                t(
+                  'active'
+                )
+              ],
+              [
+                'draft',
+                t(
+                  'draft'
+                )
+              ],
+              [
+                'review',
+                t(
+                  'inReview'
+                )
+              ],
+              [
+                'approved',
+                t(
+                  'approved'
+                )
+              ],
+              [
+                'valid',
+                t(
+                  'valid'
+                )
+              ],
+              [
+                'expired',
+                t(
+                  'expired'
+                )
+              ],
+              [
+                'archived',
+                t(
+                  'archived'
+                )
+              ]
+            ]
+              .map(
+                (
+                  [
+                    value,
+                    label
+                  ]
+                ) => `
+
+                  <option
+                    value="${escapeAttribute(
+                      value
+                    )}"
+                    ${
+                      state.searchStatus ===
+                      value
+                        ? 'selected'
+                        : ''
+                    }>
+
+                    ${escapeHtml(
+                      label
+                    )}
+
+                  </option>
+
+                `
+              )
+              .join('')}
+
+          </select>
+
+        </div>
+
+
+        <div
+          class="filter-group">
+
+          <label
+            class="filter-label">
+
+            ${t(
+              'category'
+            )}
+
+          </label>
+
+          <select
+            class="select-input"
+            onchange="
+              setSearchFilter(
+                'category',
+                this.value
+              )
+            ">
+
+            <option
+              value="all">
+
+              ${t(
+                'allCategories'
+              )}
+
+            </option>
+
+            ${categories
+              .map(
+                category => `
+
+                  <option
+                    value="${escapeAttribute(
+                      category
+                    )}"
+                    ${
+                      state.searchCategory ===
+                      category
+                        ? 'selected'
+                        : ''
+                    }>
+
+                    ${escapeHtml(
+                      category
+                    )}
+
+                  </option>
+
+                `
+              )
+              .join('')}
+
+          </select>
+
+        </div>
+
+
+        <div
+          class="filter-group">
+
+          <label
+            class="filter-label">
+
+            ${t(
+              'department'
+            )}
+
+          </label>
+
+          <select
+            class="select-input"
+            onchange="
+              setSearchFilter(
+                'department',
+                this.value
+              )
+            ">
+
+            <option
+              value="all">
+
+              ${t(
+                'allDepartments'
+              )}
+
+            </option>
+
+            ${departments
+              .map(
+                department => `
+
+                  <option
+                    value="${escapeAttribute(
+                      department
+                    )}"
+                    ${
+                      state.searchDepartment ===
+                      department
+                        ? 'selected'
+                        : ''
+                    }>
+
+                    ${escapeHtml(
+                      department
+                    )}
+
+                  </option>
+
+                `
+              )
+              .join('')}
+
+          </select>
+
+        </div>
+
+
+        <div
+          class="filter-group">
+
+          <label
+            class="filter-label">
+
+            ${t('folder')}
+
+          </label>
+
+          <select
+            class="select-input"
+            onchange="
+              setSearchFilter(
+                'folder',
+                this.value
+              )
+            ">
+
+            <option
+              value="all">
+
+              ${t(
+                'allFolders'
+              )}
+
+            </option>
+
+            ${folders
+              .map(
+                folder => `
+
+                  <option
+                    value="${escapeAttribute(
+                      folder
+                    )}"
+                    ${
+                      state.searchFolder ===
+                      folder
+                        ? 'selected'
+                        : ''
+                    }>
+
+                    ${escapeHtml(
+                      folder
+                    )}
+
+                  </option>
+
+                `
+              )
+              .join('')}
+
+          </select>
+
+        </div>
+
+
+        <div
+          class="filter-group">
+
+          <label
+            class="filter-label">
+
+            ${t(
+              'dateFrom'
+            )}
+
+          </label>
+
+          <input
+            type="date"
+            class="input"
+            value="${escapeAttribute(
+              state.searchDateFrom
+            )}"
+            onchange="
+              setSearchFilter(
+                'dateFrom',
+                this.value
+              )
+            "
+          >
+
+        </div>
+
+
+        <div
+          class="filter-group">
+
+          <label
+            class="filter-label">
+
+            ${t(
+              'dateTo'
+            )}
+
+          </label>
+
+          <input
+            type="date"
+            class="input"
+            value="${escapeAttribute(
+              state.searchDateTo
+            )}"
+            onchange="
+              setSearchFilter(
+                'dateTo',
+                this.value
+              )
+            "
+          >
+
+        </div>
+
+
+        <div
+          class="filter-group">
+
+          <label
+            class="filter-label">
+
+            ${t(
+              'sortBy'
+            )}
+
+          </label>
+
+          <select
+            class="select-input"
+            onchange="
+              setSearchSort(
+                this.value
+              )
+            ">
+
+            ${[
+              [
+                'relevance',
+                t(
+                  'relevance'
+                )
+              ],
+              [
+                'nameAsc',
+                t(
+                  'nameAsc'
+                )
+              ],
+              [
+                'nameDesc',
+                t(
+                  'nameDesc'
+                )
+              ],
+              [
+                'newest',
+                t(
+                  'newest'
+                )
+              ],
+              [
+                'oldest',
+                t(
+                  'oldest'
+                )
+              ],
+              [
+                'largest',
+                t(
+                  'largest'
+                )
+              ],
+              [
+                'smallest',
+                t(
+                  'smallest'
+                )
+              ]
+            ]
+              .map(
+                (
+                  [
+                    value,
+                    label
+                  ]
+                ) => `
+
+                  <option
+                    value="${value}"
+                    ${
+                      state.searchSort ===
+                      value
+                        ? 'selected'
+                        : ''
+                    }>
+
+                    ${escapeHtml(
+                      label
+                    )}
+
+                  </option>
+
+                `
+              )
+              .join('')}
+
+          </select>
+
+        </div>
+
+      </div>
+
+      <div
+        class="filter-actions">
+
+        <button
+          type="button"
+          class="btn btn-secondary btn-sm"
+          onclick="
+            clearFilters()
+          ">
+
+          ${t(
+            'clearFilters'
+          )}
+
+        </button>
+
+      </div>
+
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   DOCUMENTS SCREEN
+   ========================================================= */
+
+function documents() {
+
+  if (
+    !BOOKS.length
+  ) {
+
+    return dmsLayout(`
+
+      ${pageHeader(
+        t('documents'),
+        t('documents'),
+        t('folderNotSelected'),
+        `
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="
+              chooseBooksFolder()
+            ">
+
+            📁
+
+            ${t(
+              'chooseFolder'
+            )}
+
+          </button>
+        `
+      )}
+
+      <div
+        class="card">
+
+        <div
+          class="document-empty">
+
+          <strong>
+
+            ${t(
+              'noDocuments'
+            )}
+
+          </strong>
+
+          <span>
+
+            ${t(
+              'chooseFolder'
+            )}
+
+          </span>
+
+        </div>
+
+      </div>
+
+    `);
+
+  }
+
+  const documentsList =
+    sortDocuments(
+      filterDocuments(
+        BOOKS,
+        {
+          includeArchived:
+            false
+        }
+      ),
+      state.searchSort
+    );
+
+  return dmsLayout(`
+
+    ${pageHeader(
+      t('documents'),
+      t('documents'),
+      state.localFolderName
+        ? (
+            state.lang ===
+            'sl'
+              ? (
+                  'Repozitorij vsebuje ' +
+                  BOOKS.length +
+                  ' dokumentov.'
+                )
+              : (
+                  'Repository contains ' +
+                  BOOKS.length +
+                  ' documents.'
+                )
+          )
+        : '',
+      `
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="
+            chooseBooksFolder()
+          ">
+
+          📁
+
+          ${t(
+            'changeFolder'
+          )}
+
+        </button>
+      `
+    )}
+
+    ${documentsSearchPanel()}
+
+    <div
+      class="section">
+
+      ${documentsToolbar(
+        documentsList
+      )}
+
+      ${documentTable(
+        documentsList
+      )}
+
+    </div>
+
+  `);
+
+}
+
+/* =========================================================
+   SEARCH INDEX RESULTS
+   ========================================================= */
+
+function getSearchResults() {
+
+  const query =
+    normalizeSearchText(
+      state.query.trim()
+    );
+
+  let rows =
+    Array.isArray(
+      state.searchIndex
+    )
+      ? state.searchIndex
+      : [];
+
+  if (
+    !query
+  ) {
+
+    return [];
+
+  }
+
+  rows =
+    rows.filter(
+      row => {
+
+        if (
+          !row ||
+          !row.bookId
+        ) {
+
+          return false;
+
+        }
+
+        const document =
+          getDocumentById(
+            row.bookId
+          );
+
+        if (!document) {
+          return false;
+        }
+
+        if (
+          getDocumentStatus(
+            document
+          ) ===
+          'archived' &&
+          state.searchStatus !==
+            'archived'
+        ) {
+
+          return false;
+
+        }
+
+        return (
+          row.normalized ||
+          normalizeSearchText(
+            [
+              row.bookTitle,
+              row.filename,
+              row.path,
+              row.category,
+              row.department,
+              row.text
+            ].join(' ')
+          )
+        ).includes(
+          query
+        );
+
+      }
+    );
+
+  return rows;
+
+}
+
+
+/* =========================================================
+   SEARCH RESULT SCORING
+   ========================================================= */
+
+function scoreSearchResult(
+  row
+) {
+
+  const query =
+    normalizeSearchText(
+      state.query.trim()
+    );
+
+  if (!query) {
+
+    return 0;
+
+  }
+
+  const document =
+    getDocumentById(
+      row.bookId
+    );
+
+  if (!document) {
+
+    return 0;
+
+  }
+
+  const metadata =
+    getMetadata(
+      document
+    );
+
+  const title =
+    normalizeSearchText(
+      document.title
+    );
+
+  const filename =
+    normalizeSearchText(
+      document.filename
+    );
+
+  const category =
+    normalizeSearchText(
+      metadata.category
+    );
+
+  const department =
+    normalizeSearchText(
+      metadata.department
+    );
+
+  const folder =
+    normalizeSearchText(
+      document.path
+    );
+
+  const text =
+    normalizeSearchText(
+      row.text
+    );
+
+  let score =
+    0;
+
+  if (
+    title ===
+    query
+  ) {
+
+    score +=
+      100;
+
+  } else if (
+    title.includes(
+      query
+    )
+  ) {
+
+    score +=
+      50;
+
+  }
+
+  if (
+    filename.includes(
+      query
+    )
+  ) {
+
+    score +=
+      35;
+
+  }
+
+  if (
+    category.includes(
+      query
+    )
+  ) {
+
+    score +=
+      25;
+
+  }
+
+  if (
+    department.includes(
+      query
+    )
+  ) {
+
+    score +=
+      20;
+
+  }
+
+  if (
+    folder.includes(
+      query
+    )
+  ) {
+
+    score +=
+      10;
+
+  }
+
+  if (
+    text.includes(
+      query
+    )
+  ) {
+
+    score +=
+      15;
+
+  }
+
+  const words =
+    query
+      .split(/\s+/)
+      .filter(
+        Boolean
+      );
+
+  words.forEach(
+    word => {
+
+      if (
+        title.includes(
+          word
+        )
+      ) {
+
+        score +=
+          10;
+
+      }
+
+      if (
+        text.includes(
+          word
+        )
+      ) {
+
+        score +=
+          2;
+
+      }
+
+    }
+  );
+
+  return score;
+
+}
+
+
+/* =========================================================
+   ADVANCED SEARCH MATCH
+   ========================================================= */
+
+function matchesAdvancedSearch(
+  document
+) {
+
+  if (!document) {
+
+    return false;
+
+  }
+
+  const status =
+    getDocumentStatus(
+      document
+    );
+
+  const metadata =
+    getMetadata(
+      document
+    );
+
+  if (
+    state.searchStatus !==
+      'all' &&
+    status !==
+      state.searchStatus
+  ) {
+
+    return false;
+
+  }
+
+  if (
+    state.searchCategory !==
+      'all' &&
+    metadata.category !==
+      state.searchCategory
+  ) {
+
+    return false;
+
+  }
+
+  if (
+    state.searchDepartment !==
+      'all' &&
+    metadata.department !==
+      state.searchDepartment
+  ) {
+
+    return false;
+
+  }
+
+  if (
+    state.searchFolder !==
+      'all'
+  ) {
+
+    const folder =
+      getPathParts(
+        document.path
+      )
+        .slice(
+          0,
+          -1
+        )
+        .join('/');
+
+    if (
+      folder !==
+      state.searchFolder
+    ) {
+
+      return false;
+
+    }
+
+  }
+
+  if (
+    state.searchDateFrom
+  ) {
+
+    const from =
+      new Date(
+        state.searchDateFrom
+      );
+
+    const date =
+      new Date(
+        document.lastModified ||
+        0
+      );
+
+    if (
+      date <
+      from
+    ) {
+
+      return false;
+
+    }
+
+  }
+
+  if (
+    state.searchDateTo
+  ) {
+
+    const to =
+      new Date(
+        state.searchDateTo
+      );
+
+    to.setHours(
+      23,
+      59,
+      59,
+      999
+    );
+
+    const date =
+      new Date(
+        document.lastModified ||
+        0
+      );
+
+    if (
+      date >
+      to
+    ) {
+
+      return false;
+
+    }
+
+  }
+
+  return true;
+
+}
+
+
+/* =========================================================
+   FULL DOCUMENT SEARCH
+   ========================================================= */
+
+function getVisibleSearchDocuments() {
+
+  const query =
+    state.query.trim();
+
+  let documents =
+    BOOKS.filter(
+      document =>
+        matchesAdvancedSearch(
+          document
+        )
+    );
+
+  if (!query) {
+
+    return sortDocuments(
+      documents,
+      state.searchSort
+    );
+
+  }
+
+  const scored =
+    documents
+      .map(
+        document => {
+
+          let score =
+            0;
+
+          const metadata =
+            getMetadata(
+              document
+            );
+
+          const text =
+            normalizeSearchText(
+              [
+                document.title,
+                document.filename,
+                document.path,
+                metadata.category,
+                metadata.subcategory,
+                metadata.department,
+                metadata.owner,
+                metadata.author,
+                metadata.keywords,
+                Array.isArray(
+                  metadata.tags
+                )
+                  ? metadata.tags.join(
+                      ' '
+                    )
+                  : ''
+              ].join(' ')
+            );
+
+          const normalizedQuery =
+            normalizeSearchText(
+              query
+            );
+
+          if (
+            text.includes(
+              normalizedQuery
+            )
+          ) {
+
+            score +=
+              20;
+
+          }
+
+          if (
+            normalizeSearchText(
+              document.title
+            ).includes(
+              normalizedQuery
+            )
+          ) {
+
+            score +=
+              50;
+
+          }
+
+          if (
+            normalizeSearchText(
+              document.filename
+            ).includes(
+              normalizedQuery
+            )
+          ) {
+
+            score +=
+              35;
+
+          }
+
+          if (
+            normalizeSearchText(
+              metadata.category
+            ).includes(
+              normalizedQuery
+            )
+          ) {
+
+            score +=
+              25;
+
+          }
+
+          if (
+            normalizeSearchText(
+              metadata.department
+            ).includes(
+              normalizedQuery
+            )
+          ) {
+
+            score +=
+              20;
+
+          }
+
+          const matchingRows =
+            state.searchIndex.filter(
+              row =>
+                row.bookId ===
+                  document.id &&
+                (
+                  row.normalized ||
+                  normalizeSearchText(
+                    row.text
+                  )
+                ).includes(
+                  normalizedQuery
+                )
+            );
+
+          if (
+            matchingRows.length
+          ) {
+
+            score +=
+              Math.min(
+                matchingRows.length *
+                3,
+                30
+              );
+
+          }
+
+          return {
+
+            document,
+
+            score
+
+          };
+
+        }
+      )
+      .filter(
+        item =>
+          item.score >
+          0
+      );
+
+  scored.sort(
+    (
+      a,
+      b
+    ) => {
+
+      if (
+        state.searchSort ===
+        'relevance'
+      ) {
+
+        if (
+          b.score !==
+          a.score
+        ) {
+
+          return (
+            b.score -
+            a.score
+          );
+
+        }
+
+        return documentTitle(
+          a.document
+        ).localeCompare(
+          documentTitle(
+            b.document
+          ),
+          undefined,
+          {
+            sensitivity:
+              'base'
+          }
+        );
+
+      }
+
+      return 0;
+
+    }
+  );
+
+  if (
+    state.searchSort !==
+    'relevance'
+  ) {
+
+    return sortDocuments(
+      scored.map(
+        item =>
+          item.document
+      ),
+      state.searchSort
+    );
+
+  }
+
+  return scored.map(
+    item =>
+      item.document
+  );
+
+}
+
+
+/* =========================================================
+   SEARCH PAGE SOURCE MATCHES
+   ========================================================= */
+
+function getDocumentSearchMatches(
+  document
+) {
+
+  if (
+    !document ||
+    !state.query.trim()
+  ) {
+
+    return [];
+
+  }
+
+  const query =
+    normalizeSearchText(
+      state.query.trim()
+    );
+
+  return state.searchIndex
+    .filter(
+      row =>
+        row.bookId ===
+          document.id &&
+        (
+          row.normalized ||
+          normalizeSearchText(
+            row.text
+          )
+        ).includes(
+          query
+        )
+    )
+    .sort(
+      (
+        a,
+        b
+      ) =>
+        scoreSearchResult(
+          b
+        ) -
+        scoreSearchResult(
+          a
+        )
+    )
+    .slice(
+      0,
+      5
+    );
+
+}
+
+
+/* =========================================================
+   SEARCH SNIPPET
+   ========================================================= */
+
+function makeSearchSnippet(
+  row
+) {
+
+  const text =
+    String(
+      row?.text ||
+      ''
+    )
+      .replace(
+        /\s+/g,
+        ' '
+      )
+      .trim();
+
+  if (
+    text.length <=
+    300
+  ) {
+
+    return text;
+
+  }
+
+  const query =
+    normalizeSearchText(
+      state.query.trim()
+    );
+
+  const normalized =
+    normalizeSearchText(
+      text
+    );
+
+  const position =
+    query
+      ? normalized.indexOf(
+          query
+        )
+      : -1;
+
+  if (
+    position >=
+    0
+  ) {
+
+    const start =
+      Math.max(
+        0,
+        position -
+          120
+      );
+
+    const end =
+      Math.min(
+        text.length,
+        start +
+          300
+      );
+
+    return (
+      (
+        start >
+        0
+          ? '…'
+          : ''
+      ) +
+      text.slice(
+        start,
+        end
+      ) +
+      (
+        end <
+        text.length
+          ? '…'
+          : ''
+      )
+    );
+
+  }
+
+  return (
+    text.slice(
+      0,
+      300
+    ) +
+    '…'
+  );
+
+}
+
+
+/* =========================================================
+   SEARCH RESULT CARD
+   ========================================================= */
+
+function searchDocumentCard(
+  document
+) {
+
+  const matches =
+    getDocumentSearchMatches(
+      document
+    );
+
+  const metadata =
+    getMetadata(
+      document
+    );
+
+  const isFavorite =
+    state.favorites.includes(
+      document.id
+    );
+
+  return `
+
+    <div
+      class="card"
+      style="
+        margin-bottom:10px;
+        cursor:pointer
+      "
+      onclick="
+        openDocumentDetails(
+          '${escapeAttribute(
+            document.id
+          )}'
+        )
+      ">
+
+      <div
+        class="card-body">
+
+        <div
+          style="
+            display:flex;
+            align-items:flex-start;
+            gap:11px
+          ">
+
+          ${documentIcon()}
+
+          <div
+            style="
+              flex:1;
+              min-width:0
+            ">
+
+            <div
+              style="
+                display:flex;
+                align-items:flex-start;
+                justify-content:space-between;
+                gap:10px
+              ">
+
+              <div
+                style="
+                  min-width:0
+                ">
+
+                <h3
+                  style="
+                    overflow-wrap:anywhere
+                  ">
+
+                  ${escapeHtml(
+                    documentTitle(
+                      document
+                    )
+                  )}
+
+                </h3>
+
+                <div
+                  class="muted"
+                  style="
+                    margin-top:3px
+                  ">
+
+                  ${escapeHtml(
+                    document.path ||
+                    ''
+                  )}
+
+                </div>
+
+              </div>
+
+              <button
+                type="button"
+                class="favorite-mark ${
+                  isFavorite
+                    ? 'active'
+                    : ''
+                }"
+                onclick="
+                  event.stopPropagation();
+
+                  toggleFavorite(
+                    '${escapeAttribute(
+                      document.id
+                    )}'
+                  );
+                ">
+
+                ${
+                  isFavorite
+                    ? '★'
+                    : '☆'
+                }
+
+              </button>
+
+            </div>
+
+            <div
+              style="
+                display:flex;
+                flex-wrap:wrap;
+                gap:7px;
+                margin-top:9px
+              ">
+
+              ${renderStatus(
+                document
+              )}
+
+              <span
+                class="tag">
+
+                ${escapeHtml(
+                  metadata.category ||
+                  t('unknown')
+                )}
+
+              </span>
+
+              ${
+                metadata.department
+                  ? `
+
+                    <span
+                      class="tag">
+
+                      ${escapeHtml(
+                        metadata.department
+                      )}
+
+                    </span>
+
+                  `
+                  : ''
+              }
+
+            </div>
+
+            ${
+              matches.length
+                ? `
+
+                  <div
+                    class="ai-source-list"
+                    style="
+                      margin-top:12px
+                    ">
+
+                    ${matches
+                      .map(
+                        row => `
+
+                          <div
+                            class="ai-source-item"
+                            onclick="
+                              event.stopPropagation();
+
+                              openDocument(
+                                '${escapeAttribute(
+                                  document.id
+                                )}'
+                              );
+                            ">
+
+                            <strong>
+
+                              ${t(
+                                'snippet'
+                              )}
+
+                              ·
+
+                              ${t(
+                                'page'
+                              )}
+
+                              ${Number(
+                                row.page
+                              )}
+
+                            </strong>
+
+                            <span>
+
+                              ${escapeHtml(
+                                makeSearchSnippet(
+                                  row
+                                )
+                              )}
+
+                            </span>
+
+                          </div>
+
+                        `
+                      )
+                      .join('')}
+
+                  </div>
+
+                `
+                : ''
+            }
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  `;
 
 }
 
@@ -3718,6 +9492,55 @@ function getVisibleSearchResults() {
 function search() {
 
   if (
+    !BOOKS.length
+  ) {
+
+    return dmsLayout(`
+
+      ${pageHeader(
+        t('search'),
+        t('search'),
+        t('folderNotSelected'),
+        `
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="
+              chooseBooksFolder()
+            ">
+
+            📁
+
+            ${t(
+              'chooseFolder'
+            )}
+
+          </button>
+        `
+      )}
+
+      <div class="card">
+
+        <div
+          class="document-empty">
+
+          <strong>
+
+            ${t(
+              'noDocuments'
+            )}
+
+          </strong>
+
+        </div>
+
+      </div>
+
+    `);
+
+  }
+
+  if (
     !state.searchReady &&
     !state.searchLoading
   ) {
@@ -3726,205 +9549,464 @@ function search() {
 
   }
 
-  if (
-    !state.searchReady
-  ) {
+  const documents =
+    getVisibleSearchDocuments();
 
-    return layout(`
+  return dmsLayout(`
 
-      <h2>
+    ${pageHeader(
+      t('search'),
+      t('search'),
+      t(
+        'searchFullText'
+      )
+    )}
 
-        ${t('search')}
+    ${documentsSearchPanel()}
 
-      </h2>
+    ${
+      state.searchLoading
+        ? `
 
-      <input
-        class="search"
-        value="${escapeAttribute(
-          state.query
-        )}"
-        oninput="
-          setSearchQuery(
-            this.value
-          )
-        "
-        placeholder="${t(
-          'acrossBooks'
-        )}">
+          <div
+            class="card"
+            style="
+              margin-top:13px
+            ">
+
+            <div
+              class="working">
+
+              <div
+                class="dot">
+              </div>
+
+              <div
+                style="
+                  margin-top:15px
+                ">
+
+                ${t(
+                  'preparingSearch'
+                )}
+
+              </div>
+
+              <div
+                class="muted"
+                style="
+                  margin-top:6px
+                ">
+
+                ${BOOKS.length}
+
+                ${t(
+                  'documents'
+                )}
+
+              </div>
+
+            </div>
+
+          </div>
+
+        `
+        : ''
+    }
+
+    ${
+      !state.searchReady &&
+      !state.searchLoading
+        ? `
+
+          <div
+            class="alert alert-warning"
+            style="
+              margin-top:13px
+            ">
+
+            ${t(
+              'searchError'
+            )}
+
+          </div>
+
+        `
+        : ''
+    }
+
+    <div
+      class="section">
 
       <div
-        class="muted"
-        style="
-          margin-top:20px
-        ">
+        class="document-toolbar">
 
-        ${
-          state.searchLoading
-            ? t(
-                'preparingSearch'
-              )
-            : t(
-                'searching'
-              )
-        }
+        <div
+          class="document-toolbar-left">
+
+          <span
+            class="document-count">
+
+            ${documents.length}
+
+            ${t('results')}
+
+          </span>
+
+        </div>
+
+        <div
+          class="document-toolbar-right">
+
+          ${
+            state.query
+              ? `
+
+                <span
+                  class="tag">
+
+                  "${escapeHtml(
+                    state.query
+                  )}"
+
+                </span>
+
+              `
+              : ''
+          }
+
+        </div>
 
       </div>
 
-    `);
+      ${
+        documents.length
+          ? documents
+              .slice(
+                0,
+                100
+              )
+              .map(
+                document =>
+                  searchDocumentCard(
+                    document
+                  )
+              )
+              .join('')
+          : `
 
-  }
+            <div
+              class="card">
 
-  const results =
-    getVisibleSearchResults();
+              <div
+                class="document-empty">
 
-  return layout(`
+                <strong>
 
-    <h2>
+                  ${
+                    state.query
+                      ? t(
+                          'noDocuments'
+                        )
+                      : t(
+                          'searchFullText'
+                        )
+                  }
 
-      ${t('search')}
+                </strong>
 
-    </h2>
+              </div>
 
-    <input
-      class="search"
-      value="${escapeAttribute(
-        state.query
-      )}"
-      oninput="
-        setSearchQuery(
-          this.value
-        )
-      "
-      placeholder="${t(
-        'acrossBooks'
-      )}">
+            </div>
 
-    <div
-      class="muted"
-      style="
-        margin-top:8px;
-        margin-bottom:16px
-      ">
-
-      ${t(
-        'searchHint'
-      )}
-
-    </div>
-
-    <div
-      class="muted"
-      style="
-        margin-bottom:8px
-      ">
-
-      ${results.length}
-
-      ${t(
-        'passages'
-      )}
+          `
+      }
 
     </div>
+
+  `);
+
+}
+
+
+/* =========================================================
+   CATEGORIES SCREEN
+   ========================================================= */
+
+function categories() {
+
+  const categoriesList =
+    getCategories();
+
+  return dmsLayout(`
+
+    ${pageHeader(
+      t('categories'),
+      t('categories'),
+      t(
+        'categoryOverview'
+      )
+    )}
 
     ${
-      results.length
+      categoriesList.length
+        ? `
 
-        ? results
-            .slice(
-              0,
-              100
-            )
-            .map(
-              (
-                result,
-                index
-              ) => `
+          <div
+            class="category-grid">
 
-                <div
-                  class="result"
-                  onclick="
-                    openSearchResult(
-                      ${index}
-                    )
-                  ">
+            ${categoriesList
+              .map(
+                category => {
 
-                  <div
-                    class="booktitle">
+                  const documents =
+                    getCategoryDocuments(
+                      category
+                    );
 
-                    ${escapeHtml(
-                      result.bookTitle
-                    )}
+                  const active =
+                    state.activeCategory ===
+                    category;
 
-                    ·
+                  return `
 
-                    ${escapeHtml(
-                      result.ref
-                    )}
+                    <button
+                      type="button"
+                      class="category-card"
+                      style="
+                        text-align:left;
+                        ${
+                          active
+                            ? 'border-color:#8eafe0;box-shadow:0 0 0 3px #2563eb12'
+                            : ''
+                        }
+                      "
+                      onclick="
+                        openCategory(
+                          '${escapeAttribute(
+                            category
+                          )}'
+                        )
+                      ">
 
-                  </div>
+                      <div
+                        class="category-icon">
 
-                  <div
-                    class="muted">
+                        ▦
 
-                    ${escapeHtml(
-                      result.chapterTitle
-                    )}
+                      </div>
 
-                  </div>
+                      <div
+                        class="category-name">
 
-                  <div
-                    style="
-                      font-size:13px;
-                      line-height:1.55;
-                      margin-top:4px
-                    ">
-
-                    ${escapeHtml(
-                      makeSearchSnippet(
-                        result
-                      )
-                    )}
-
-                  </div>
-
-                  <button
-                    type="button"
-                    class="chip on"
-                    style="
-                      margin-top:10px
-                    "
-                    onclick="
-                      event.stopPropagation();
-
-                      openPdf(
-                        '${escapeAttribute(
-                          result.pdf
-                        )}',
-                        ${Number(
-                          result.page
+                        ${escapeHtml(
+                          category
                         )}
-                      );
-                    ">
 
-                    ${t(
-                      'openPage'
-                    )}
+                      </div>
 
-                  </button>
+                      <div
+                        class="category-meta">
 
-                </div>
+                        ${documents.length}
 
-              `
-            )
-            .join('')
+                        ${t(
+                          'documentsInCategory'
+                        )}
 
+                      </div>
+
+                    </button>
+
+                  `;
+
+                }
+              )
+              .join('')}
+
+          </div>
+
+        `
         : `
 
-          <div class="muted">
+          <div class="card">
 
-            ${t(
-              'noResults'
+            <div
+              class="document-empty">
+
+              <strong>
+
+                ${t(
+                  'noCategories'
+                )}
+
+              </strong>
+
+            </div>
+
+          </div>
+
+        `
+    }
+
+    ${
+      state.activeCategory
+        ? `
+
+          <div
+            class="section">
+
+            <div
+              class="document-toolbar">
+
+              <div
+                class="document-toolbar-left">
+
+                <strong
+                  style="
+                    font-size:12px
+                  ">
+
+                  ${escapeHtml(
+                    state.activeCategory
+                  )}
+
+                </strong>
+
+                <span
+                  class="tag">
+
+                  ${
+                    getCategoryDocuments(
+                      state.activeCategory
+                    ).length
+                  }
+
+                </span>
+
+              </div>
+
+              <div
+                class="document-toolbar-right">
+
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm"
+                  onclick="
+                    clearActiveCategory()
+                  ">
+
+                  ${t(
+                    'reset'
+                  )}
+
+                </button>
+
+              </div>
+
+            </div>
+
+            ${documentTable(
+              getCategoryDocuments(
+                state.activeCategory
+              )
             )}
+
+          </div>
+
+        `
+        : ''
+    }
+
+  `);
+
+}
+
+
+/* =========================================================
+   OPEN CATEGORY
+   ========================================================= */
+
+function openCategory(
+  category
+) {
+
+  state.activeCategory =
+    category;
+
+  state.activeStatus =
+    'all';
+
+  state.activeDepartment =
+    '';
+
+  save();
+
+  go('categories');
+
+}
+
+
+/* =========================================================
+   CLEAR ACTIVE CATEGORY
+   ========================================================= */
+
+function clearActiveCategory() {
+
+  state.activeCategory =
+    '';
+
+  save();
+
+  render();
+
+}
+
+
+/* =========================================================
+   RECENT SCREEN
+   ========================================================= */
+
+function recent() {
+
+  const documents =
+    getRecentDocuments();
+
+  return dmsLayout(`
+
+    ${pageHeader(
+      t('recent'),
+      t('recentDocuments'),
+      t(
+        'recentDocuments'
+      )
+    )}
+
+    ${
+      documents.length
+        ? `
+
+          ${documentTable(
+            documents
+          )}
+
+        `
+        : `
+
+          <div class="card">
+
+            <div
+              class="document-empty">
+
+              <strong>
+
+                ${t(
+                  'noRecent'
+                )}
+
+              </strong>
+
+            </div>
 
           </div>
 
@@ -3937,161 +10019,2063 @@ function search() {
 
 
 /* =========================================================
-   OPEN SEARCH RESULT
+   FAVORITES SCREEN
    ========================================================= */
 
-function openSearchResult(
-  index
+function favorites() {
+
+  const documents =
+    getFavoriteDocuments();
+
+  return dmsLayout(`
+
+    ${pageHeader(
+      t('favorites'),
+      t('favorites'),
+      t(
+        'favoriteCount'
+      )
+    )}
+
+    ${
+      documents.length
+        ? `
+
+          ${documentTable(
+            documents
+          )}
+
+        `
+        : `
+
+          <div class="card">
+
+            <div
+              class="document-empty">
+
+              <strong>
+
+                ${t(
+                  'noFavorites'
+                )}
+
+              </strong>
+
+            </div>
+
+          </div>
+
+        `
+    }
+
+  `);
+
+}
+
+
+/* =========================================================
+   REVIEW SCREEN
+   ========================================================= */
+
+function review() {
+
+  const documents =
+    getReviewDocuments();
+
+  return dmsLayout(`
+
+    ${pageHeader(
+      t('review'),
+      t('reviewQueue'),
+      t(
+        'reviewQueue'
+      )
+    )}
+
+    ${
+      documents.length
+        ? `
+
+          <div class="review-list">
+
+            ${documents
+              .map(
+                document => {
+
+                  const metadata =
+                    getMetadata(
+                      document
+                    );
+
+                  const reviewDate =
+                    metadata.reviewDate ||
+                    '';
+
+                  const isOverdue =
+                    reviewDate &&
+                    new Date(
+                      reviewDate
+                    ) <
+                      new Date();
+
+                  return `
+
+                    <div
+                      class="review-item">
+
+                      ${documentIcon()}
+
+                      <div
+                        class="review-item-main">
+
+                        <div
+                          class="review-item-title">
+
+                          ${escapeHtml(
+                            documentTitle(
+                              document
+                            )
+                          )}
+
+                        </div>
+
+                        <div
+                          class="review-item-meta">
+
+                          ${escapeHtml(
+                            metadata.category ||
+                            ''
+                          )}
+
+                          ${
+                            metadata.department
+                              ? (
+                                  ' · ' +
+                                  escapeHtml(
+                                    metadata.department
+                                  )
+                                )
+                              : ''
+                          }
+
+                        </div>
+
+                      </div>
+
+                      <div
+                        class="${
+                          isOverdue
+                            ? 'review-item-date overdue'
+                            : 'review-item-date'
+                        }">
+
+                        ${
+                          reviewDate
+                            ? formatDate(
+                                reviewDate
+                              )
+                            : t(
+                                'needsReview'
+                              )
+                        }
+
+                      </div>
+
+                      ${renderStatus(
+                        document
+                      )}
+
+                      <button
+                        type="button"
+                        class="btn btn-secondary btn-sm"
+                        onclick="
+                          openDocumentDetails(
+                            '${escapeAttribute(
+                              document.id
+                            )}'
+                          )
+                        ">
+
+                        ${t(
+                          'details'
+                        )}
+
+                      </button>
+
+                    </div>
+
+                  `;
+
+                }
+              )
+              .join('')}
+
+          </div>
+
+        `
+        : `
+
+          <div class="card">
+
+            <div
+              class="document-empty">
+
+              <strong>
+
+                ${t(
+                  'noReview'
+                )}
+
+              </strong>
+
+            </div>
+
+          </div>
+
+        `
+    }
+
+  `);
+
+}
+
+
+/* =========================================================
+   ARCHIVE SCREEN
+   ========================================================= */
+
+function archive() {
+
+  const documents =
+    getArchivedDocuments();
+
+  return dmsLayout(`
+
+    ${pageHeader(
+      t('archive'),
+      t('archive'),
+      t(
+        'archivedDocuments'
+      )
+    )}
+
+    ${
+      documents.length
+        ? `
+
+          <div class="document-table-wrap">
+
+            <table
+              class="document-table">
+
+              <thead>
+
+                <tr>
+
+                  <th>
+
+                    &nbsp;
+
+                  </th>
+
+                  <th>
+
+                    ${t('title')}
+
+                  </th>
+
+                  <th>
+
+                    ${t('category')}
+
+                  </th>
+
+                  <th>
+
+                    ${t('department')}
+
+                  </th>
+
+                  <th>
+
+                    ${t('status')}
+
+                  </th>
+
+                  <th>
+
+                    ${t('lastModified')}
+
+                  </th>
+
+                  <th>
+
+                    ${t('actions')}
+
+                  </th>
+
+                </tr>
+
+              </thead>
+
+              <tbody>
+
+                ${documents
+                  .map(
+                    document =>
+                      archivedDocumentRow(
+                        document
+                      )
+                  )
+                  .join('')}
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        `
+        : `
+
+          <div class="card">
+
+            <div
+              class="document-empty">
+
+              <strong>
+
+                ${t(
+                  'noArchive'
+                )}
+
+              </strong>
+
+            </div>
+
+          </div>
+
+        `
+    }
+
+  `);
+
+}
+
+
+/* =========================================================
+   ARCHIVED DOCUMENT ROW
+   ========================================================= */
+
+function archivedDocumentRow(
+  document
 ) {
 
-  const results =
-    getVisibleSearchResults();
+  const metadata =
+    getMetadata(
+      document
+    );
 
-  const result =
-    results[
-      index
-    ];
+  return `
 
-  if (!result) {
-    return;
-  }
+    <tr
+      onclick="
+        openDocumentDetails(
+          '${escapeAttribute(
+            document.id
+          )}'
+        )
+      ">
 
-  openPdf(
-    result.pdf,
-    result.page
+      <td>
+
+        ${documentIcon()}
+
+      </td>
+
+      <td>
+
+        <div
+          class="document-name-copy">
+
+          <strong>
+
+            ${escapeHtml(
+              documentTitle(
+                document
+              )
+            )}
+
+          </strong>
+
+          <span>
+
+            ${escapeHtml(
+              document.filename ||
+              ''
+            )}
+
+          </span>
+
+        </div>
+
+      </td>
+
+      <td>
+
+        ${escapeHtml(
+          metadata.category ||
+          '—'
+        )}
+
+      </td>
+
+      <td>
+
+        ${escapeHtml(
+          metadata.department ||
+          '—'
+        )}
+
+      </td>
+
+      <td>
+
+        ${renderStatus(
+          document
+        )}
+
+      </td>
+
+      <td>
+
+        ${formatDate(
+          document.lastModified
+        )}
+
+      </td>
+
+      <td>
+
+        <div
+          class="document-actions"
+          onclick="
+            event.stopPropagation()
+          ">
+
+          <button
+            type="button"
+            class="btn btn-secondary btn-sm"
+            onclick="
+              restoreDocument(
+                '${escapeAttribute(
+                  document.id
+                )}'
+              )
+            ">
+
+            ${t(
+              'restoreDocument'
+            )}
+
+          </button>
+
+        </div>
+
+      </td>
+
+    </tr>
+
+  `;
+
+}
+
+
+/* =========================================================
+   SELECTED DOCUMENT HELPERS
+   ========================================================= */
+
+function getSelectedDocuments() {
+
+  const selected =
+    new Set(
+      state.selectedDocumentIds
+    );
+
+  return BOOKS.filter(
+    document =>
+      selected.has(
+        document.id
+      )
+  );
+
+}
+
+
+function getSelectedAiDocuments() {
+
+  const selected =
+    new Set(
+      state.selectedAiDocuments
+    );
+
+  return BOOKS.filter(
+    document =>
+      selected.has(
+        document.id
+      )
   );
 
 }
 
 
 /* =========================================================
-   SOURCE SELECTION
+   CLEAR DOCUMENT SELECTION
    ========================================================= */
 
-function toggleLectureSource(
-  index
-) {
+function clearDocumentSelection() {
 
-  if (
-    state.sources.includes(
-      index
-    )
-  ) {
-
-    state.sources =
-      state.sources.filter(
-        item =>
-          item !== index
-      );
-
-  } else {
-
-    state.sources = [
-      ...state.sources,
-      index
-    ];
-
-  }
+  state.selectedDocumentIds =
+    [];
 
   save();
+
   render();
 
 }
 
 
 /* =========================================================
-   SELECT ALL / UNSELECT ALL
+   OPEN DOCUMENT DETAILS
    ========================================================= */
 
-function toggleAllLectureSources() {
+function openDocumentDetails(
+  documentId
+) {
 
-  if (!BOOKS.length) {
+  const document =
+    getDocumentById(
+      documentId
+    );
+
+  if (!document) {
     return;
   }
 
-  const allSelected =
-    state.sources.length ===
-      BOOKS.length;
+  state.documentId =
+    document.id;
 
-  state.sources =
-    allSelected
-      ? []
-      : BOOKS.map(
-          (
-            book,
-            index
-          ) => index
-        );
+  state.sourceDocumentId =
+    document.id;
 
   save();
+
+  state.screen =
+    'document';
+
   render();
+
+  window.scrollTo({
+    top:
+      0,
+    behavior:
+      'smooth'
+  });
 
 }
 
 
 /* =========================================================
-   FORM INPUTS
+   DOCUMENT DETAILS
    ========================================================= */
 
-function setLectureTopic(
-  value
-) {
+function documentDetails() {
 
-  state.lectureTopic =
-    value;
+  const document =
+    getDocumentById(
+      state.documentId
+    );
 
-  save();
+  if (!document) {
 
-}
+    go('documents');
 
-function setLectureLength(
-  value
-) {
+    return '';
 
-  state.lectureLength =
-    String(value);
+  }
 
-  save();
-  render();
+  const metadata =
+    getMetadata(
+      document
+    );
 
-}
+  const isFavorite =
+    state.favorites.includes(
+      document.id
+    );
 
-function setAssistantPrompt(
-  value
-) {
+  const status =
+    getDocumentStatus(
+      document
+    );
 
-  state.assistantPrompt =
-    value;
+  const tags =
+    metadata.tags ||
+    [];
 
-  save();
+  return dmsLayout(`
 
-}
+    <div
+      class="top">
 
-function setArticleTopic(
-  value
-) {
+      <button
+        type="button"
+        class="back"
+        onclick="
+          go('documents')
+        ">
 
-  state.articleTopic =
-    value;
+        ‹
 
-  save();
+      </button>
 
-}
+      <div
+        style="
+          min-width:0
+        ">
 
-function setAskPrompt(
-  value
-) {
+        <div
+          class="eyebrow">
 
-  state.askPrompt =
-    value;
+          ${t('documents')}
 
-  save();
+        </div>
+
+        <strong
+          style="
+            display:block;
+            margin-top:3px;
+            font-size:15px;
+            overflow-wrap:anywhere
+          ">
+
+          ${escapeHtml(
+            documentTitle(
+              document
+            )
+          )}
+
+        </strong>
+
+      </div>
+
+    </div>
+
+
+    <div
+      class="document-detail">
+
+      <div
+        class="document-detail-main">
+
+        <div
+          class="document-hero">
+
+          <div
+            class="document-hero-top">
+
+            <div
+              class="document-large-icon">
+
+              PDF
+
+            </div>
+
+            <div
+              class="document-hero-copy">
+
+              <h1>
+
+                ${escapeHtml(
+                  documentTitle(
+                    document
+                  )
+                )}
+
+              </h1>
+
+              <div
+                class="document-id">
+
+                ${escapeHtml(
+                  document.id
+                )}
+
+              </div>
+
+              <div
+                style="
+                  margin-top:8px
+                ">
+
+                ${renderStatus(
+                  document
+                )}
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div
+            class="document-hero-actions">
+
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="
+                openDocument(
+                  '${escapeAttribute(
+                    document.id
+                  )}'
+                )
+              ">
+
+              ${t(
+                'openPdf'
+              )}
+
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="
+                toggleFavorite(
+                  '${escapeAttribute(
+                    document.id
+                  )}'
+                )
+              ">
+
+              ${
+                isFavorite
+                  ? '★'
+                  : '☆'
+              }
+
+              ${
+                isFavorite
+                  ? t(
+                      'removeFavorite'
+                    )
+                  : t(
+                      'markFavorite'
+                    )
+              }
+
+            </button>
+
+            ${
+              status ===
+                'archived'
+                ? `
+
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    onclick="
+                      restoreDocument(
+                        '${escapeAttribute(
+                          document.id
+                        )}'
+                      )
+                    ">
+
+                    ${t(
+                      'restoreDocument'
+                    )}
+
+                  </button>
+
+                `
+                : `
+
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    onclick="
+                      updateDocumentStatus(
+                        '${escapeAttribute(
+                          document.id
+                        )}',
+                        'archived'
+                      )
+                    ">
+
+                    ${t(
+                      'markArchived'
+                    )}
+
+                  </button>
+
+                `
+            }
+
+          </div>
+
+
+          <div
+            class="metadata-list">
+
+            ${metadataItem(
+              t('filename'),
+              document.filename
+            )}
+
+            ${metadataItem(
+              t('folder'),
+              document.path
+            )}
+
+            ${metadataItem(
+              t('category'),
+              metadata.category
+            )}
+
+            ${metadataItem(
+              t('subcategory'),
+              metadata.subcategory
+            )}
+
+            ${metadataItem(
+              t('department'),
+              metadata.department
+            )}
+
+            ${metadataItem(
+              t('owner'),
+              metadata.owner
+            )}
+
+            ${metadataItem(
+              t('author'),
+              metadata.author
+            )}
+
+            ${metadataItem(
+              t('version'),
+              metadata.version
+            )}
+
+            ${metadataItem(
+              t('fileSize'),
+              formatFileSize(
+                document.fileSize
+              )
+            )}
+
+            ${metadataItem(
+              t('pages'),
+              document.pages
+                ? String(
+                    document.pages
+                  )
+                : '—'
+            )}
+
+            ${metadataItem(
+              t('lastModified'),
+              formatDate(
+                document.lastModified
+              )
+            )}
+
+            ${metadataItem(
+              t('documentDate'),
+              formatDate(
+                metadata.documentDate
+              )
+            )}
+
+          </div>
+
+
+          ${
+            tags.length
+              ? `
+
+                <div
+                  style="
+                    margin-top:17px
+                  ">
+
+                  <div
+                    class="metadata-label">
+
+                    ${t(
+                      'tags'
+                    )}
+
+                  </div>
+
+                  <div
+                    style="
+                      margin-top:7px
+                    ">
+
+                    ${renderTags(
+                      tags
+                    )}
+
+                  </div>
+
+                </div>
+
+              `
+              : ''
+          }
+
+        </div>
+
+
+        <div
+          class="detail-section">
+
+          <div
+            class="detail-section-header">
+
+            <div>
+
+              <strong
+                style="
+                  font-size:12px
+                ">
+
+                ${t(
+                  'ai'
+                )}
+
+              </strong>
+
+              <span
+                class="muted"
+                style="
+                  display:block;
+                  margin-top:3px
+                ">
+
+                ${t(
+                  'aiDescription'
+                )}
+
+              </span>
+
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-primary btn-sm"
+              onclick="
+                startAiForDocument(
+                  '${escapeAttribute(
+                    document.id
+                  )}'
+                )
+              ">
+
+              ✦
+
+              ${t('ai')}
+
+            </button>
+
+          </div>
+
+          <div
+            class="detail-section-body">
+
+            <div
+              class="ai-tool-grid">
+
+              ${aiActionButton(
+                'summary',
+                '▤',
+                t('aiSummary'),
+                state.lang ===
+                'sl'
+                  ? 'Ustvari zgoščen povzetek vsebine.'
+                  : 'Create a concise content summary.'
+              )}
+
+              ${aiActionButton(
+                'analysis',
+                '⌕',
+                t('aiAnalysis'),
+                state.lang ===
+                'sl'
+                  ? 'Analiziraj ključne točke, tveganja in ugotovitve.'
+                  : 'Analyze key points, risks and findings.'
+              )}
+
+              ${aiActionButton(
+                'extract',
+                '⇩',
+                t('aiExtract'),
+                state.lang ===
+                'sl'
+                  ? 'Izlušči pomembne podatke in strukturirane informacije.'
+                  : 'Extract important data and structured information.'
+              )}
+
+              ${aiActionButton(
+                'ask',
+                '?',
+                t('askDocumentation'),
+                state.lang ===
+                'sl'
+                  ? 'Postavi vprašanje o dokumentu.'
+                  : 'Ask a question about the document.'
+              )}
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="detail-section">
+
+          <div
+            class="detail-section-header">
+
+            <strong>
+
+              ${t(
+                'notes'
+              )}
+
+            </strong>
+
+          </div>
+
+          <div
+            class="detail-section-body">
+
+            ${
+              metadata.notes
+                ? `
+                    <div
+                      class="ai-answer">
+
+                      ${markdownToHtml(
+                        metadata.notes
+                      )}
+
+                    </div>
+                  `
+                : `
+                    <div class="muted">
+
+                      —
+
+                    </div>
+                  `
+            }
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <aside
+        class="document-detail-side">
+
+        <div
+          class="detail-section"
+          style="
+            margin-top:0
+          ">
+
+          <div
+            class="detail-section-header">
+
+            <strong>
+
+              ${t(
+                'metadata'
+              )}
+
+            </strong>
+
+          </div>
+
+          <div
+            class="detail-section-body">
+
+            ${metadataForm(
+              document
+            )}
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="detail-section">
+
+          <div
+            class="detail-section-header">
+
+            <strong>
+
+              ${t(
+                'fileInformation'
+              )}
+
+            </strong>
+
+          </div>
+
+          <div
+            class="detail-section-body">
+
+            ${metadataItem(
+              t('type'),
+              document.type
+            )}
+
+            ${metadataItem(
+              t('fileSize'),
+              formatFileSize(
+                document.fileSize
+              )
+            )}
+
+            ${metadataItem(
+              t('pages'),
+              document.pages
+                ? String(
+                    document.pages
+                  )
+                : '—'
+            )}
+
+            ${metadataItem(
+              t('folder'),
+              document.path
+            )}
+
+          </div>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  `);
 
 }
 
 
 /* =========================================================
-   AI PASSAGE FINDER
+   METADATA ITEM
+   ========================================================= */
+
+function metadataItem(
+  label,
+  value
+) {
+
+  return `
+
+    <div
+      class="metadata-item">
+
+      <span
+        class="metadata-label">
+
+        ${escapeHtml(
+          label
+        )}
+
+      </span>
+
+      <span
+        class="metadata-value">
+
+        ${escapeHtml(
+          value ===
+            undefined ||
+          value ===
+            null ||
+          value ===
+            ''
+            ? '—'
+            : String(
+                value
+              )
+        )}
+
+      </span>
+
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   AI ACTION BUTTON
+   ========================================================= */
+
+function aiActionButton(
+  action,
+  icon,
+  title,
+  description
+) {
+
+  return `
+
+    <button
+      type="button"
+      class="ai-tool"
+      onclick="
+        startAiAction(
+          '${escapeAttribute(
+            action
+          )}',
+          '${escapeAttribute(
+            state.documentId
+          )}'
+        )
+      ">
+
+      <span
+        class="ai-tool-icon">
+
+        ${icon}
+
+      </span>
+
+      <strong>
+
+        ${escapeHtml(
+          title
+        )}
+
+      </strong>
+
+      <span>
+
+        ${escapeHtml(
+          description
+        )}
+
+      </span>
+
+    </button>
+
+  `;
+
+}
+
+
+/* =========================================================
+   METADATA FORM
+   ========================================================= */
+
+function metadataForm(
+  document
+) {
+
+  const metadata =
+    getMetadata(
+      document
+    );
+
+  const categories =
+    getCategories();
+
+  const departments =
+    getDepartments();
+
+  return `
+
+    <div
+      class="formgrid">
+
+      <div
+        class="form-field">
+
+        <label
+          for="metadata-category">
+
+          ${t(
+            'category'
+          )}
+
+        </label>
+
+        <input
+          id="metadata-category"
+          class="input"
+          list="metadata-category-list"
+          value="${escapeAttribute(
+            metadata.category
+          )}"
+        >
+
+        <datalist
+          id="metadata-category-list">
+
+          ${categories
+            .map(
+              category => `
+
+                <option
+                  value="${escapeAttribute(
+                    category
+                  )}">
+                </option>
+
+              `
+            )
+            .join('')}
+
+        </datalist>
+
+      </div>
+
+
+      <div
+        class="form-field">
+
+        <label
+          for="metadata-subcategory">
+
+          ${t(
+            'subcategory'
+          )}
+
+        </label>
+
+        <input
+          id="metadata-subcategory"
+          class="input"
+          value="${escapeAttribute(
+            metadata.subcategory
+          )}"
+        >
+
+      </div>
+
+
+      <div
+        class="form-field">
+
+        <label
+          for="metadata-department">
+
+          ${t(
+            'department'
+          )}
+
+        </label>
+
+        <input
+          id="metadata-department"
+          class="input"
+          list="metadata-department-list"
+          value="${escapeAttribute(
+            metadata.department
+          )}"
+        >
+
+        <datalist
+          id="metadata-department-list">
+
+          ${departments
+            .map(
+              department => `
+
+                <option
+                  value="${escapeAttribute(
+                    department
+                  )}">
+                </option>
+
+              `
+            )
+            .join('')}
+
+        </datalist>
+
+      </div>
+
+
+      <div
+        class="form-field">
+
+        <label
+          for="metadata-owner">
+
+          ${t(
+            'owner'
+          )}
+
+        </label>
+
+        <input
+          id="metadata-owner"
+          class="input"
+          value="${escapeAttribute(
+            metadata.owner
+          )}"
+        >
+
+      </div>
+
+
+      <div
+        class="form-field">
+
+        <label
+          for="metadata-author">
+
+          ${t(
+            'author'
+          )}
+
+        </label>
+
+        <input
+          id="metadata-author"
+          class="input"
+          value="${escapeAttribute(
+            metadata.author
+          )}"
+        >
+
+      </div>
+
+
+      <div
+        class="form-field">
+
+        <label
+          for="metadata-version">
+
+          ${t(
+            'version'
+          )}
+
+        </label>
+
+        <input
+          id="metadata-version"
+          class="input"
+          value="${escapeAttribute(
+            metadata.version
+          )}"
+        >
+
+      </div>
+
+
+      <div
+        class="form-field">
+
+        <label
+          for="metadata-document-date">
+
+          ${t(
+            'documentDate'
+          )}
+
+        </label>
+
+        <input
+          id="metadata-document-date"
+          type="date"
+          class="input"
+          value="${escapeAttribute(
+            metadata.documentDate
+          )}"
+        >
+
+      </div>
+
+
+      <div
+        class="form-field">
+
+        <label
+          for="metadata-status">
+
+          ${t(
+            'status'
+          )}
+
+        </label>
+
+        <select
+          id="metadata-status"
+          class="select-input">
+
+          ${[
+            [
+              'active',
+              t('active')
+            ],
+            [
+              'draft',
+              t('draft')
+            ],
+            [
+              'review',
+              t('inReview')
+            ],
+            [
+              'approved',
+              t('approved')
+            ],
+            [
+              'valid',
+              t('valid')
+            ],
+            [
+              'expired',
+              t('expired')
+            ],
+            [
+              'archived',
+              t('archived')
+            ]
+          ]
+            .map(
+              (
+                [
+                  value,
+                  label
+                ]
+              ) => `
+
+                <option
+                  value="${value}"
+                  ${
+                    metadata.status ===
+                    value
+                      ? 'selected'
+                      : ''
+                  }>
+
+                  ${escapeHtml(
+                    label
+                  )}
+
+                </option>
+
+              `
+            )
+            .join('')}
+
+        </select>
+
+      </div>
+
+
+      <div
+        class="form-field">
+
+        <label
+          for="metadata-review-date">
+
+          ${t(
+            'review'
+          )}
+
+        </label>
+
+        <input
+          id="metadata-review-date"
+          type="date"
+          class="input"
+          value="${escapeAttribute(
+            metadata.reviewDate
+          )}"
+        >
+
+      </div>
+
+
+      <div
+        class="form-field">
+
+        <label
+          for="metadata-expiry-date">
+
+          ${t(
+            'expired'
+          )}
+
+        </label>
+
+        <input
+          id="metadata-expiry-date"
+          type="date"
+          class="input"
+          value="${escapeAttribute(
+            metadata.expiryDate
+          )}"
+        >
+
+      </div>
+
+
+      <div
+        class="form-field full">
+
+        <label
+          for="metadata-tags">
+
+          ${t(
+            'tags'
+          )}
+
+        </label>
+
+        <input
+          id="metadata-tags"
+          class="input"
+          value="${escapeAttribute(
+            metadata.tags.join(
+              ', '
+            )
+          )}"
+          placeholder="tag1, tag2, tag3"
+        >
+
+      </div>
+
+
+      <div
+        class="form-field full">
+
+        <label
+          for="metadata-keywords">
+
+          ${t(
+            'keywords'
+          )}
+
+        </label>
+
+        <input
+          id="metadata-keywords"
+          class="input"
+          value="${escapeAttribute(
+            metadata.keywords
+          )}"
+        >
+
+      </div>
+
+
+      <div
+        class="form-field full">
+
+        <label
+          for="metadata-notes">
+
+          ${t(
+            'notes'
+          )}
+
+        </label>
+
+        <textarea
+          id="metadata-notes"
+          class="textarea"
+          style="
+            min-height:100px
+          "
+        >${escapeHtml(
+          metadata.notes
+        )}</textarea>
+
+      </div>
+
+    </div>
+
+    <button
+      type="button"
+      class="btn btn-primary btn-lg"
+      style="
+        width:100%;
+        margin-top:12px
+      "
+      onclick="
+        saveDocumentMetadata(
+          '${escapeAttribute(
+            document.id
+          )}'
+        )
+      ">
+
+      ${t(
+        'saveMetadata'
+      )}
+
+    </button>
+
+  `;
+
+}
+
+
+/* =========================================================
+   START AI FOR DOCUMENT
+   ========================================================= */
+
+function startAiForDocument(
+  documentId
+) {
+
+  const document =
+    getDocumentById(
+      documentId
+    );
+
+  if (!document) {
+    return;
+  }
+
+  state.selectedAiDocuments =
+    [
+      document.id
+    ];
+
+  state.screen =
+    'ai';
+
+  save();
+
+  render();
+
+}
+
+
+/* =========================================================
+   START AI ACTION
+   ========================================================= */
+
+function startAiAction(
+  action,
+  documentId
+) {
+
+  const document =
+    getDocumentById(
+      documentId
+    );
+
+  if (!document) {
+    return;
+  }
+
+  state.selectedAiDocuments =
+    [
+      document.id
+    ];
+
+  if (
+    action ===
+    'summary'
+  ) {
+
+    state.assistantPrompt =
+      state.lang ===
+      'sl'
+        ? 'Pripravi jasen in strukturiran povzetek tega dokumenta. Izpostavi namen dokumenta, glavne točke, pomembne ugotovitve, obveznosti, roke in ključne podatke.'
+        : 'Prepare a clear and structured summary of this document. Highlight its purpose, key points, important findings, obligations, deadlines and key data.';
+
+  }
+
+  else if (
+    action ===
+    'analysis'
+  ) {
+
+    state.assistantPrompt =
+      state.lang ===
+      'sl'
+        ? 'Analiziraj ta dokument. Izpostavi glavne ugotovitve, tveganja, pomembne obveznosti, nejasnosti, roke, odgovornosti in vse informacije, ki so pomembne za poslovno uporabo.'
+        : 'Analyze this document. Highlight the main findings, risks, important obligations, ambiguities, deadlines, responsibilities and all information relevant to business use.';
+
+  }
+
+  else if (
+    action ===
+    'extract'
+  ) {
+
+    state.assistantPrompt =
+      state.lang ===
+      'sl'
+        ? 'Iz dokumenta izlušči pomembne strukturirane podatke. Razdeli jih na jasne kategorije, kot so datumi, osebe, organizacije, zneski, obveznosti, roki, postopki, kontaktni podatki in drugi pomembni podatki.'
+        : 'Extract important structured information from this document. Organize it into clear categories such as dates, people, organizations, amounts, obligations, deadlines, procedures, contacts and other important data.';
+
+  }
+
+  else {
+
+    state.assistantPrompt =
+      '';
+
+  }
+
+  state.creationType =
+    'assistant';
+
+  state.generatedAssistant =
+    '';
+
+  state.assistantPassages =
+    [];
+
+  state.assistantError =
+    '';
+
+  state.screen =
+    'ai';
+
+  save();
+
+  render();
+
+}
+
+
+/* =========================================================
+   AI DOCUMENT SELECTOR
+   ========================================================= */
+
+function aiDocumentSelector() {
+
+  const selected =
+    new Set(
+      state.selectedAiDocuments
+    );
+
+  const documents =
+    getActiveDocuments();
+
+  if (
+    !documents.length
+  ) {
+
+    return `
+
+      <div
+        class="muted">
+
+        ${t(
+          'noDocuments'
+        )}
+
+      </div>
+
+    `;
+
+  }
+
+  const allSelected =
+    documents.length >
+      0 &&
+    documents.every(
+      document =>
+        selected.has(
+          document.id
+        )
+    );
+
+  return `
+
+    <div
+      class="card"
+      style="
+        margin-bottom:13px
+      ">
+
+      <div
+        class="card-header">
+
+        <div
+          class="card-header-title">
+
+          <strong>
+
+            ${t(
+              'chooseDocuments'
+            )}
+
+          </strong>
+
+          <span>
+
+            ${selected.size}
+
+            ${t(
+              'selectedDocuments'
+            )}
+
+          </span>
+
+        </div>
+
+        <button
+          type="button"
+          class="btn btn-secondary btn-sm"
+          onclick="
+            toggleAllAiDocuments()
+          ">
+
+          ${
+            allSelected
+              ? t(
+                  'unselectAll'
+                )
+              : t(
+                  'selectAll'
+                )
+          }
+
+        </button>
+
+      </div>
+
+      <div
+        class="source-selector-body">
+
+        ${documents
+          .map(
+            document => `
+
+              <label
+                class="source-select-row"
+                style="
+                  cursor:pointer
+                ">
+
+                <input
+                  type="checkbox"
+                  ${
+                    selected.has(
+                      document.id
+                    )
+                      ? 'checked'
+                      : ''
+                  }
+                  onchange="
+                    toggleAiDocument(
+                      '${escapeAttribute(
+                        document.id
+                      )}'
+                    )
+                  "
+                >
+
+                <span
+                  class="grow">
+
+                  <strong>
+
+                    ${escapeHtml(
+                      documentTitle(
+                        document
+                      )
+                    )}
+
+                  </strong>
+
+                  <span>
+
+                    ${escapeHtml(
+                      document.path ||
+                      ''
+                    )}
+
+                  </span>
+
+                </span>
+
+                ${renderStatus(
+                  document
+                )}
+
+              </label>
+
+            `
+          )
+          .join('')}
+
+      </div>
+
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   TOGGLE ALL AI DOCUMENTS
+   ========================================================= */
+
+function toggleAllAiDocuments() {
+
+  const documents =
+    getActiveDocuments();
+
+  const allIds =
+    documents.map(
+      document =>
+        document.id
+    );
+
+  const allSelected =
+    allIds.length >
+      0 &&
+    allIds.every(
+      id =>
+        state.selectedAiDocuments.includes(
+          id
+        )
+    );
+
+  state.selectedAiDocuments =
+    allSelected
+      ? []
+      : allIds;
+
+  save();
+
+  render();
+
+}
+
+/* =========================================================
+   FIND AI PASSAGES
    ========================================================= */
 
 function findAiPassages(
@@ -4106,29 +12090,38 @@ function findAiPassages(
       ).trim()
     );
 
-  const allowedBookIds =
+  const selectedIds =
+    state.selectedAiDocuments.length
+      ? state.selectedAiDocuments
+      : state.selectedDocumentIds;
+
+  const allowedIds =
     new Set(
-      state.sources
-        .map(
-          index =>
-            BOOKS[
-              index
-            ]?.id
-        )
-        .filter(
-          Boolean
-        )
+      selectedIds.length
+        ? selectedIds
+        : getActiveDocuments().map(
+            document =>
+              document.id
+          )
     );
 
   let candidates =
     state.searchIndex.filter(
       row =>
         row &&
-        row.pdf &&
-        allowedBookIds.has(
+        row.bookId &&
+        allowedIds.has(
           row.bookId
         )
     );
+
+  if (
+    !candidates.length
+  ) {
+
+    return [];
+
+  }
 
   const words =
     instruction
@@ -4152,16 +12145,50 @@ function findAiPassages(
     candidates.map(
       row => {
 
-        const text =
+        const document =
+          getDocumentById(
+            row.bookId
+          );
+
+        if (!document) {
+
+          return {
+
+            ...row,
+
+            aiScore:
+              0
+
+          };
+
+        }
+
+        const metadata =
+          getMetadata(
+            document
+          );
+
+        const rowText =
           row.normalized ||
           normalizeSearchText(
             [
-              row.bookTitle,
-              row.author,
-              row.chapterTitle,
-              row.ref,
-              row.text,
-              row.english
+              document.title,
+              document.filename,
+              document.path,
+              metadata.category,
+              metadata.subcategory,
+              metadata.department,
+              metadata.owner,
+              metadata.author,
+              metadata.keywords,
+              Array.isArray(
+                metadata.tags
+              )
+                ? metadata.tags.join(
+                    ' '
+                  )
+                : '',
+              row.text
             ].join(' ')
           );
 
@@ -4172,7 +12199,7 @@ function findAiPassages(
           word => {
 
             if (
-              text.includes(
+              rowText.includes(
                 word
               )
             ) {
@@ -4187,19 +12214,37 @@ function findAiPassages(
 
         if (
           instruction &&
-          text.includes(
+          rowText.includes(
             instruction
           )
         ) {
 
           score +=
-            5;
+            8;
 
         }
 
         const titleText =
           normalizeSearchText(
-            row.bookTitle ||
+            document.title ||
+            ''
+          );
+
+        const filenameText =
+          normalizeSearchText(
+            document.filename ||
+            ''
+          );
+
+        const categoryText =
+          normalizeSearchText(
+            metadata.category ||
+            ''
+          );
+
+        const departmentText =
+          normalizeSearchText(
+            metadata.department ||
             ''
           );
 
@@ -4208,6 +12253,39 @@ function findAiPassages(
 
             if (
               titleText.includes(
+                word
+              )
+            ) {
+
+              score +=
+                5;
+
+            }
+
+            if (
+              filenameText.includes(
+                word
+              )
+            ) {
+
+              score +=
+                3;
+
+            }
+
+            if (
+              categoryText.includes(
+                word
+              )
+            ) {
+
+              score +=
+                2;
+
+            }
+
+            if (
+              departmentText.includes(
                 word
               )
             ) {
@@ -4271,66 +12349,191 @@ function findAiPassages(
         }
       );
 
-  return candidates
-    .slice(
-      0,
-      24
-    )
-    .map(
-      row => {
+  /*
+   * AI dobi omejeno število najboljših odlomkov.
+   * Namen je preprečiti nepotrebno pošiljanje velike
+   * količine podatkov v Worker.
+   */
 
-        const rawText =
+  const selected =
+    candidates.slice(
+      0,
+      36
+    );
+
+  return selected.map(
+    row => {
+
+      const rawText =
+        String(
+          row.text ||
+          ''
+        )
+          .replace(
+            /\s+/g,
+            ' '
+          )
+          .trim();
+
+      const text =
+        rawText.length >
+        3000
+          ? (
+              rawText.slice(
+                0,
+                3000
+              ) +
+              '…'
+            )
+          : rawText;
+
+      return {
+
+        bookTitle:
+          row.bookTitle ||
+          '',
+
+        filename:
+          row.filename ||
+          '',
+
+        path:
+          row.path ||
+          '',
+
+        category:
+          row.category ||
+          '',
+
+        department:
+          row.department ||
+          '',
+
+        page:
+          row.page ||
+          '',
+
+        text
+
+      };
+
+    }
+  );
+
+}
+
+
+/* =========================================================
+   GET PASSAGES FOR DOCUMENTS
+   ========================================================= */
+
+function getPassagesForDocuments(
+  documents
+) {
+
+  if (
+    !Array.isArray(
+      documents
+    ) ||
+    !documents.length
+  ) {
+
+    return [];
+
+  }
+
+  const ids =
+    new Set(
+      documents.map(
+        document =>
+          document.id
+      )
+    );
+
+  const rows =
+    state.searchIndex
+      .filter(
+        row =>
+          row &&
+          ids.has(
+            row.bookId
+          )
+      );
+
+  /*
+   * Pri večjih dokumentih omejimo količino podatkov,
+   * vendar ohranimo strani iz različnih dokumentov.
+   */
+
+  const selected =
+    rows
+      .slice(
+        0,
+        36
+      );
+
+  return selected.map(
+    row => {
+
+      const document =
+        getDocumentById(
+          row.bookId
+        );
+
+      return {
+
+        bookTitle:
+          document?.title ||
+          row.bookTitle ||
+          '',
+
+        filename:
+          document?.filename ||
+          row.filename ||
+          '',
+
+        path:
+          document?.path ||
+          row.path ||
+          '',
+
+        category:
+          row.category ||
+          '',
+
+        department:
+          row.department ||
+          '',
+
+        page:
+          row.page ||
+          '',
+
+        text:
           String(
             row.text ||
-            row.english ||
             ''
           )
             .replace(
               /\s+/g,
               ' '
             )
-            .trim();
+            .trim()
+            .slice(
+              0,
+              3000
+            )
 
-        const text =
-          rawText.length >
-          2600
+      };
 
-            ? (
-                rawText.slice(
-                  0,
-                  2600
-                ) +
-                '…'
-              )
-
-            : rawText;
-
-        return {
-
-          bookTitle:
-            row.bookTitle ||
-            '',
-
-          author:
-            row.author ||
-            '',
-
-          page:
-            row.page ||
-            '',
-
-          text
-
-        };
-
-      }
-    );
+    }
+  );
 
 }
 
 
 /* =========================================================
-   SAVE GENERATED WORK
+   SAVE AI WORK
    ========================================================= */
 
 function saveGeneratedWork(
@@ -4340,7 +12543,7 @@ function saveGeneratedWork(
   const item = {
 
     id:
-      'work-' +
+      'dms-work-' +
       Date.now() +
       '-' +
       Math.random()
@@ -4353,36 +12556,12 @@ function saveGeneratedWork(
         ),
 
     type:
-      work.type,
+      work.type ||
+      'assistant',
 
     title:
       work.title ||
-      (
-        work.type ===
-        'assistant'
-
-          ? t(
-              'aiAssistant'
-            )
-
-          : work.type ===
-            'article'
-
-            ? t(
-                'articleWriting'
-              )
-
-            : work.type ===
-              'ask'
-
-              ? t(
-                  'askBooks'
-                )
-
-              : t(
-                  'aiLecture'
-                )
-      ),
+      t('ai'),
 
     prompt:
       work.prompt ||
@@ -4390,11 +12569,23 @@ function saveGeneratedWork(
 
     language:
       work.language ||
-      '',
+      (
+        state.lang ===
+        'sl'
+          ? 'Slovenščina'
+          : 'English'
+      ),
 
     length:
       work.length ||
       '',
+
+    documentIds:
+      Array.isArray(
+        work.documentIds
+      )
+        ? work.documentIds
+        : [],
 
     content:
       work.content ||
@@ -4423,13 +12614,10 @@ function saveGeneratedWork(
         item.id
     )
 
-  ];
-
-  state.works =
-    state.works.slice(
-      0,
-      30
-    );
+  ].slice(
+    0,
+    50
+  );
 
   save();
 
@@ -4439,38 +12627,332 @@ function saveGeneratedWork(
 
 
 /* =========================================================
-   FORMAT DATE
+   AI REQUEST
    ========================================================= */
 
-function formatWorkDate(
-  value
+async function callAI(
+  payload
 ) {
 
-  if (!value) {
-    return '';
-  }
-
-  try {
-
-    return new Date(
-      value
-    ).toLocaleString(
-      state.lang ===
-      'sl'
-        ? 'sl-SI'
-        : 'en-US',
+  const response =
+    await fetch(
+      AI_WORKER_URL,
       {
-        dateStyle:
-          'medium',
+        method:
+          'POST',
 
-        timeStyle:
-          'short'
+        headers: {
+          'Content-Type':
+            'application/json'
+        },
+
+        body:
+          JSON.stringify(
+            payload
+          )
+
       }
     );
 
+  let data =
+    null;
+
+  try {
+
+    data =
+      await response.json();
+
   } catch (error) {
 
-    return '';
+    data =
+      null;
+
+  }
+
+  if (
+    !response.ok ||
+    !data ||
+    !data.success
+  ) {
+
+    throw new Error(
+      data?.error ||
+      (
+        state.lang ===
+        'sl'
+          ? 'AI odgovora ni bilo mogoče ustvariti.'
+          : 'Could not create the AI response.'
+      )
+    );
+
+  }
+
+  return data;
+
+}
+
+
+/* =========================================================
+   AI ASSISTANT INPUT
+   ========================================================= */
+
+function setAssistantPrompt(
+  value
+) {
+
+  state.assistantPrompt =
+    value;
+
+  save();
+
+}
+
+
+/* =========================================================
+   BRIEF INPUT
+   ========================================================= */
+
+function setBriefTopic(
+  value
+) {
+
+  state.briefTopic =
+    value;
+
+  save();
+
+}
+
+
+function setBriefLength(
+  value
+) {
+
+  state.briefLength =
+    String(
+      value
+    );
+
+  save();
+
+  render();
+
+}
+
+
+/* =========================================================
+   ARTICLE INPUT
+   ========================================================= */
+
+function setArticleTopic(
+  value
+) {
+
+  state.articleTopic =
+    value;
+
+  save();
+
+}
+
+
+/* =========================================================
+   QUESTION INPUT
+   ========================================================= */
+
+function setAskPrompt(
+  value
+) {
+
+  state.askPrompt =
+    value;
+
+  save();
+
+}
+
+
+/* =========================================================
+   AI ASSISTANT GENERATION
+   ========================================================= */
+
+async function generateAssistant() {
+
+  if (
+    !state.assistantPrompt.trim()
+  ) {
+
+    toast(
+      state.lang ===
+      'sl'
+        ? 'Najprej napiši zahtevo.'
+        : 'Please enter a request.'
+    );
+
+    return;
+
+  }
+
+  const selectedDocuments =
+    getSelectedAiDocuments();
+
+  state.creationType =
+    'assistant';
+
+  state.assistantGenerating =
+    true;
+
+  state.generatedAssistant =
+    '';
+
+  state.assistantError =
+    '';
+
+  state.assistantPassages =
+    [];
+
+  state.screen =
+    'result';
+
+  save();
+
+  render();
+
+  try {
+
+    if (
+      BOOKS.length &&
+      !state.searchReady
+    ) {
+
+      await buildSearchIndex();
+
+    }
+
+    let passages =
+      [];
+
+    if (
+      selectedDocuments.length
+    ) {
+
+      passages =
+        findAiPassages(
+          state.assistantPrompt.trim()
+        );
+
+    }
+
+    state.assistantPassages =
+      passages;
+
+    save();
+
+    render();
+
+    const data =
+      await callAI({
+
+        type:
+          'assistant',
+
+        prompt:
+          state.assistantPrompt.trim(),
+
+        language:
+          state.lang ===
+          'sl'
+            ? 'Slovenščina'
+            : 'English',
+
+        passages
+
+      });
+
+    state.generatedAssistant =
+      String(
+        data.answer ||
+        data.content ||
+        ''
+      )
+        .trim();
+
+    if (
+      !state.generatedAssistant
+    ) {
+
+      throw new Error(
+        state.lang ===
+        'sl'
+          ? 'AI ni vrnil vsebine.'
+          : 'The AI returned no content.'
+      );
+
+    }
+
+    saveGeneratedWork({
+
+      type:
+        'assistant',
+
+      title:
+        state.assistantPrompt.trim(),
+
+      prompt:
+        state.assistantPrompt.trim(),
+
+      language:
+        state.lang ===
+        'sl'
+          ? 'Slovenščina'
+          : 'English',
+
+      documentIds:
+        selectedDocuments.map(
+          document =>
+            document.id
+        ),
+
+      content:
+        state.generatedAssistant,
+
+      passages:
+        state.assistantPassages
+
+    });
+
+    state.assistantGenerating =
+      false;
+
+    state.assistantError =
+      '';
+
+    save();
+
+    render();
+
+  } catch (error) {
+
+    console.error(
+      'DMS AI Assistant error:',
+      error
+    );
+
+    state.assistantGenerating =
+      false;
+
+    state.assistantError =
+      error?.message ||
+      (
+        state.lang ===
+        'sl'
+          ? 'AI odgovora ni bilo mogoče ustvariti.'
+          : 'Could not create the AI response.'
+      );
+
+    save();
+
+    render();
 
   }
 
@@ -4478,16 +12960,867 @@ function formatWorkDate(
 
 
 /* =========================================================
-   MARKDOWN TO HTML
+   STRUCTURED BRIEF GENERATION
    ========================================================= */
 
-function markdownToHtml(
+async function generateBrief() {
+
+  if (
+    !state.briefTopic.trim()
+  ) {
+
+    toast(
+      state.lang ===
+      'sl'
+        ? 'Najprej vpiši temo.'
+        : 'Please enter a topic.'
+    );
+
+    return;
+
+  }
+
+  const selectedDocuments =
+    getSelectedAiDocuments();
+
+  if (
+    !selectedDocuments.length
+  ) {
+
+    toast(
+      state.lang ===
+      'sl'
+        ? 'Najprej izberi vsaj en dokument.'
+        : 'Please select at least one document.'
+    );
+
+    return;
+
+  }
+
+  state.creationType =
+    'brief';
+
+  state.briefGenerating =
+    true;
+
+  state.generatedBrief =
+    '';
+
+  state.briefError =
+    '';
+
+  state.briefPassages =
+    [];
+
+  state.screen =
+    'result';
+
+  save();
+
+  render();
+
+  try {
+
+    if (
+      !state.searchReady
+    ) {
+
+      await buildSearchIndex();
+
+    }
+
+    const passages =
+      findAiPassages(
+        state.briefTopic.trim()
+      );
+
+    if (
+      !passages.length
+    ) {
+
+      throw new Error(
+        t('noRelevantPages')
+      );
+
+    }
+
+    state.briefPassages =
+      passages;
+
+    save();
+
+    render();
+
+    const data =
+      await callAI({
+
+        type:
+          'lecture',
+
+        topic:
+          state.briefTopic.trim(),
+
+        prompt:
+          state.briefTopic.trim(),
+
+        language:
+          state.lang ===
+          'sl'
+            ? 'Slovenščina'
+            : 'English',
+
+        length:
+          state.briefLength,
+
+        passages
+
+      });
+
+    state.generatedBrief =
+      String(
+        data.lecture ||
+        data.answer ||
+        data.content ||
+        ''
+      )
+        .trim();
+
+    if (
+      !state.generatedBrief
+    ) {
+
+      throw new Error(
+        state.lang ===
+        'sl'
+          ? 'Povzetka ni bilo mogoče ustvariti.'
+          : 'The briefing could not be created.'
+      );
+
+    }
+
+    saveGeneratedWork({
+
+      type:
+        'brief',
+
+      title:
+        state.briefTopic.trim(),
+
+      prompt:
+        state.briefTopic.trim(),
+
+      language:
+        state.lang ===
+        'sl'
+          ? 'Slovenščina'
+          : 'English',
+
+      length:
+        state.briefLength,
+
+      documentIds:
+        selectedDocuments.map(
+          document =>
+            document.id
+        ),
+
+      content:
+        state.generatedBrief,
+
+      passages:
+        state.briefPassages
+
+    });
+
+    state.briefGenerating =
+      false;
+
+    state.briefError =
+      '';
+
+    save();
+
+    render();
+
+  } catch (error) {
+
+    console.error(
+      'DMS briefing generation error:',
+      error
+    );
+
+    state.briefGenerating =
+      false;
+
+    state.briefError =
+      error?.message ||
+      (
+        state.lang ===
+        'sl'
+          ? 'Povzetka ni bilo mogoče ustvariti.'
+          : 'The briefing could not be created.'
+      );
+
+    save();
+
+    render();
+
+  }
+
+}
+
+
+/* =========================================================
+   LONG AI REPORT
+   ========================================================= */
+
+async function generateArticle() {
+
+  if (
+    !state.articleTopic.trim()
+  ) {
+
+    toast(
+      state.lang ===
+      'sl'
+        ? 'Najprej vpiši temo poročila.'
+        : 'Please enter a report topic.'
+    );
+
+    return;
+
+  }
+
+  const selectedDocuments =
+    getSelectedAiDocuments();
+
+  if (
+    !selectedDocuments.length
+  ) {
+
+    toast(
+      state.lang ===
+      'sl'
+        ? 'Najprej izberi vsaj en dokument.'
+        : 'Please select at least one document.'
+    );
+
+    return;
+
+  }
+
+  state.creationType =
+    'article';
+
+  state.articleGenerating =
+    true;
+
+  state.generatedArticle =
+    '';
+
+  state.articleError =
+    '';
+
+  state.articlePassages =
+    [];
+
+  state.screen =
+    'result';
+
+  save();
+
+  render();
+
+  try {
+
+    if (
+      !state.searchReady
+    ) {
+
+      await buildSearchIndex();
+
+    }
+
+    const passages =
+      findAiPassages(
+        state.articleTopic.trim()
+      );
+
+    if (
+      !passages.length
+    ) {
+
+      throw new Error(
+        t('noRelevantPages')
+      );
+
+    }
+
+    state.articlePassages =
+      passages;
+
+    save();
+
+    render();
+
+    const data =
+      await callAI({
+
+        type:
+          'article',
+
+        topic:
+          state.articleTopic.trim(),
+
+        prompt:
+          state.articleTopic.trim(),
+
+        language:
+          state.lang ===
+          'sl'
+            ? 'Slovenščina'
+            : 'English',
+
+        minWords:
+          10000,
+
+        passages
+
+      });
+
+    state.generatedArticle =
+      String(
+        data.article ||
+        data.answer ||
+        data.content ||
+        ''
+      )
+        .trim();
+
+    if (
+      !state.generatedArticle
+    ) {
+
+      throw new Error(
+        state.lang ===
+        'sl'
+          ? 'Poročila ni bilo mogoče ustvariti.'
+          : 'The report could not be created.'
+      );
+
+    }
+
+    saveGeneratedWork({
+
+      type:
+        'article',
+
+      title:
+        state.articleTopic.trim(),
+
+      prompt:
+        state.articleTopic.trim(),
+
+      language:
+        state.lang ===
+        'sl'
+          ? 'Slovenščina'
+          : 'English',
+
+      length:
+        '10000+',
+
+      documentIds:
+        selectedDocuments.map(
+          document =>
+            document.id
+        ),
+
+      content:
+        state.generatedArticle,
+
+      passages:
+        state.articlePassages
+
+    });
+
+    state.articleGenerating =
+      false;
+
+    state.articleError =
+      '';
+
+    save();
+
+    render();
+
+  } catch (error) {
+
+    console.error(
+      'DMS article generation error:',
+      error
+    );
+
+    state.articleGenerating =
+      false;
+
+    state.articleError =
+      error?.message ||
+      (
+        state.lang ===
+        'sl'
+          ? 'Poročila ni bilo mogoče ustvariti.'
+          : 'The report could not be created.'
+      );
+
+    save();
+
+    render();
+
+  }
+
+}
+
+
+/* =========================================================
+   ASK DOCUMENTATION
+   ========================================================= */
+
+async function generateAsk() {
+
+  if (
+    !state.askPrompt.trim()
+  ) {
+
+    toast(
+      state.lang ===
+      'sl'
+        ? 'Najprej napiši vprašanje.'
+        : 'Please enter a question.'
+    );
+
+    return;
+
+  }
+
+  const selectedDocuments =
+    getSelectedAiDocuments();
+
+  if (
+    !selectedDocuments.length
+  ) {
+
+    toast(
+      state.lang ===
+      'sl'
+        ? 'Najprej izberi vsaj en dokument.'
+        : 'Please select at least one document.'
+    );
+
+    return;
+
+  }
+
+  state.creationType =
+    'ask';
+
+  state.askGenerating =
+    true;
+
+  state.generatedAnswer =
+    '';
+
+  state.askError =
+    '';
+
+  state.askPassages =
+    [];
+
+  state.screen =
+    'result';
+
+  save();
+
+  render();
+
+  try {
+
+    if (
+      !state.searchReady
+    ) {
+
+      await buildSearchIndex();
+
+    }
+
+    const passages =
+      findAiPassages(
+        state.askPrompt.trim()
+      );
+
+    if (
+      !passages.length
+    ) {
+
+      throw new Error(
+        t('noRelevantPages')
+      );
+
+    }
+
+    state.askPassages =
+      passages;
+
+    save();
+
+    render();
+
+    const data =
+      await callAI({
+
+        type:
+          'ask',
+
+        prompt:
+          state.askPrompt.trim(),
+
+        language:
+          state.lang ===
+          'sl'
+            ? 'Slovenščina'
+            : 'English',
+
+        passages
+
+      });
+
+    state.generatedAnswer =
+      String(
+        data.answer ||
+        data.content ||
+        ''
+      )
+        .trim();
+
+    if (
+      !state.generatedAnswer
+    ) {
+
+      throw new Error(
+        state.lang ===
+        'sl'
+          ? 'Odgovora ni bilo mogoče ustvariti.'
+          : 'Could not create the answer.'
+      );
+
+    }
+
+    saveGeneratedWork({
+
+      type:
+        'ask',
+
+      title:
+        state.askPrompt.trim(),
+
+      prompt:
+        state.askPrompt.trim(),
+
+      language:
+        state.lang ===
+        'sl'
+          ? 'Slovenščina'
+          : 'English',
+
+      documentIds:
+        selectedDocuments.map(
+          document =>
+            document.id
+        ),
+
+      content:
+        state.generatedAnswer,
+
+      passages:
+        state.askPassages
+
+    });
+
+    state.askGenerating =
+      false;
+
+    state.askError =
+      '';
+
+    save();
+
+    render();
+
+  } catch (error) {
+
+    console.error(
+      'DMS documentation question error:',
+      error
+    );
+
+    state.askGenerating =
+      false;
+
+    state.askError =
+      error?.message ||
+      (
+        state.lang ===
+        'sl'
+          ? 'Odgovora ni bilo mogoče ustvariti.'
+          : 'Could not create the answer.'
+      );
+
+    save();
+
+    render();
+
+  }
+
+}
+
+
+/* =========================================================
+   SOURCE BLOCK
+   ========================================================= */
+
+function sourceBlock(
+  passages
+) {
+
+  if (
+    !Array.isArray(
+      passages
+    ) ||
+    !passages.length
+  ) {
+
+    return '';
+
+  }
+
+  const unique =
+    [];
+
+  const seen =
+    new Set();
+
+  passages.forEach(
+    passage => {
+
+      const key =
+        [
+          passage.bookTitle,
+          passage.page,
+          passage.text
+        ].join('|');
+
+      if (
+        !seen.has(
+          key
+        )
+      ) {
+
+        seen.add(
+          key
+        );
+
+        unique.push(
+          passage
+        );
+
+      }
+
+    }
+  );
+
+  return `
+
+    <div
+      class="detail-section">
+
+      <div
+        class="detail-section-header">
+
+        <div>
+
+          <strong>
+
+            ${t(
+              'sources'
+            )}
+
+          </strong>
+
+          <span
+            class="muted"
+            style="
+              display:block;
+              margin-top:3px
+            ">
+
+            ${unique.length}
+
+          </span>
+
+        </div>
+
+      </div>
+
+      <div
+        class="detail-section-body">
+
+        <div
+          class="ai-source-list"
+          style="
+            margin-top:0;
+            padding-top:0;
+            border-top:0
+          ">
+
+          ${unique
+            .map(
+              (
+                passage,
+                index
+              ) => `
+
+                <div
+                  class="ai-source-item">
+
+                  <strong>
+
+                    ${index + 1}.
+
+                    ${escapeHtml(
+                      passage.bookTitle ||
+                      ''
+                    )}
+
+                    ${
+                      passage.page
+                        ? (
+                            ' · ' +
+                            t(
+                              'page'
+                            ) +
+                            ' ' +
+                            escapeHtml(
+                              passage.page
+                            )
+                          )
+                        : ''
+                    }
+
+                  </strong>
+
+                  <span>
+
+                    ${escapeHtml(
+                      passage.text ||
+                      ''
+                    )}
+
+                  </span>
+
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-secondary"
+                    style="
+                      margin-top:7px
+                    "
+                    onclick="
+                      openSourcePassage(
+                        '${escapeAttribute(
+                          passage.bookTitle ||
+                          ''
+                        )}',
+                        '${escapeAttribute(
+                          passage.page ||
+                          ''
+                        )}'
+                      )
+                    ">
+
+                    ${t(
+                      'openPage'
+                    )}
+
+                  </button>
+
+                </div>
+
+              `
+            )
+            .join('')}
+
+        </div>
+
+      </div>
+
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   OPEN SOURCE PASSAGE
+   ========================================================= */
+
+function openSourcePassage(
+  bookTitle,
+  page
+) {
+
+  const document =
+    BOOKS.find(
+      item =>
+        item &&
+        documentTitle(
+          item
+        ) ===
+        bookTitle
+    );
+
+  if (
+    !document
+  ) {
+
+    return;
+
+  }
+
+  openPdf(
+    document.pdf,
+    Number(
+      page
+    ) || undefined
+  );
+
+}
+
+
+/* =========================================================
+   FORMAT AI TEXT
+   ========================================================= */
+
+function formatText(
   text
 ) {
 
   let html =
     escapeHtml(
-      text
+      String(
+        text ||
+        ''
+      )
     );
 
   html =
@@ -4516,8 +13849,20 @@ function markdownToHtml(
 
   html =
     html.replace(
-      /^---$/gm,
-      '<hr>'
+      /^\s*[-*]\s+(.*)$/gm,
+      '<li>$1</li>'
+    );
+
+  html =
+    html.replace(
+      /(<li>.*<\/li>\s*)+/gs,
+      '<ul>$&</ul>'
+    );
+
+  html =
+    html.replace(
+      /^\s*(\d+)\.\s+(.*)$/gm,
+      '<li>$2</li>'
     );
 
   const blocks =
@@ -4547,34 +13892,232 @@ function markdownToHtml(
           block.startsWith(
             '<h3>'
           ) ||
-          block ===
-            '<hr>'
+          block.startsWith(
+            '<ul>'
+          ) ||
+          block.startsWith(
+            '<ol>'
+          )
         ) {
 
           return block;
 
         }
 
-        return (
-          '<p>' +
-          block.replace(
-            /\n/g,
-            '<br>'
-          ) +
-          '</p>'
-        );
+        return `
+
+          <p
+            class="ai-answer">
+
+            ${block.replace(
+              /\n/g,
+              '<br>'
+            )}
+
+          </p>
+
+        `;
 
       }
     )
-    .join(
-      '\n'
-    );
+    .join('');
 
 }
 
 
 /* =========================================================
-   DOWNLOAD SAVED WORK
+   OPEN SAVED AI RESULT
+   ========================================================= */
+
+function openSavedWork(
+  index
+) {
+
+  const work =
+    state.works[
+      index
+    ];
+
+  if (!work) {
+    return;
+  }
+
+  state.creationType =
+    work.type ||
+    'assistant';
+
+  if (
+    work.type ===
+    'assistant'
+  ) {
+
+    state.assistantPrompt =
+      work.prompt ||
+      '';
+
+    state.generatedAssistant =
+      work.content ||
+      '';
+
+    state.assistantPassages =
+      Array.isArray(
+        work.passages
+      )
+        ? work.passages
+        : [];
+
+    state.assistantError =
+      '';
+
+  }
+
+  else if (
+    work.type ===
+    'brief'
+  ) {
+
+    state.briefTopic =
+      work.prompt ||
+      work.title ||
+      '';
+
+    state.generatedBrief =
+      work.content ||
+      '';
+
+    state.briefLength =
+      work.length ||
+      'standard';
+
+    state.briefPassages =
+      Array.isArray(
+        work.passages
+      )
+        ? work.passages
+        : [];
+
+    state.briefError =
+      '';
+
+  }
+
+  else if (
+    work.type ===
+    'article'
+  ) {
+
+    state.articleTopic =
+      work.prompt ||
+      work.title ||
+      '';
+
+    state.generatedArticle =
+      work.content ||
+      '';
+
+    state.articlePassages =
+      Array.isArray(
+        work.passages
+      )
+        ? work.passages
+        : [];
+
+    state.articleError =
+      '';
+
+  }
+
+  else if (
+    work.type ===
+    'ask'
+  ) {
+
+    state.askPrompt =
+      work.prompt ||
+      work.title ||
+      '';
+
+    state.generatedAnswer =
+      work.content ||
+      '';
+
+    state.askPassages =
+      Array.isArray(
+        work.passages
+      )
+        ? work.passages
+        : [];
+
+    state.askError =
+      '';
+
+  }
+
+  state.assistantGenerating =
+    false;
+
+  state.briefGenerating =
+    false;
+
+  state.articleGenerating =
+    false;
+
+  state.askGenerating =
+    false;
+
+  state.screen =
+    'result';
+
+  save();
+
+  render();
+
+  window.scrollTo({
+
+    top:
+      0,
+
+    behavior:
+      'smooth'
+
+  });
+
+}
+
+
+/* =========================================================
+   DELETE SAVED AI RESULT
+   ========================================================= */
+
+function removeSavedWork(
+  index
+) {
+
+  if (
+    index <
+      0 ||
+    index >=
+      state.works.length
+  ) {
+
+    return;
+
+  }
+
+  state.works.splice(
+    index,
+    1
+  );
+
+  save();
+
+  render();
+
+}
+
+
+/* =========================================================
+   DOWNLOAD AI RESULT
    ========================================================= */
 
 function downloadSavedWork(
@@ -4590,73 +14133,24 @@ function downloadSavedWork(
     return;
   }
 
-  const typeLabel =
-    work.type ===
-      'assistant'
-
-      ? (
-          state.lang ===
-          'sl'
-            ? 'AI pomočnik'
-            : 'AI Assistant'
-        )
-
-      : work.type ===
-        'article'
-
-        ? (
-            state.lang ===
-            'sl'
-              ? 'AI pisanje članka'
-              : 'AI Article Writing'
-          )
-
-        : work.type ===
-          'ask'
-
-          ? (
-              state.lang ===
-              'sl'
-                ? 'Vprašanje knjig'
-                : 'Book question'
-            )
-
-          : (
-              state.lang ===
-              'sl'
-                ? 'AI predavanje'
-                : 'AI Lecture'
-            );
-
   const title =
     String(
       work.title ||
-      typeLabel
-    ).trim();
-
-  const prompt =
-    String(
-      work.prompt ||
-      ''
-    ).trim();
+      t('ai')
+    )
+      .trim();
 
   const content =
     String(
       work.content ||
       ''
-    ).trim();
+    )
+      .trim();
 
   const contentHtml =
     markdownToHtml(
       content
     );
-
-  const promptHtml =
-    prompt
-      ? markdownToHtml(
-          prompt
-        )
-      : '';
 
   const sourceList =
     Array.isArray(
@@ -4666,6 +14160,7 @@ function downloadSavedWork(
           .map(
             passage =>
               `
+
                 <li>
 
                   ${escapeHtml(
@@ -4674,55 +14169,29 @@ function downloadSavedWork(
                   )}
 
                   ${
-                    passage.author
-                      ? ` — ${escapeHtml(
-                          passage.author
-                        )}`
-                      : ''
-                  }
-
-                  ${
                     passage.page
                       ? (
-                          state.lang ===
-                          'sl'
-                            ? ` · stran ${escapeHtml(
-                                passage.page
-                              )}`
-                            : ` · page ${escapeHtml(
-                                passage.page
-                              )}`
+                          ' · ' +
+                          escapeHtml(
+                            t('page')
+                          ) +
+                          ' ' +
+                          escapeHtml(
+                            passage.page
+                          )
                         )
                       : ''
                   }
 
                 </li>
+
               `
           )
-          .join(
-            '\n'
-          )
+          .join('')
       : '';
 
-  const sourceLabel =
-    state.lang ===
-    'sl'
-      ? 'Viri'
-      : 'Sources';
-
-  const questionLabel =
-    state.lang ===
-    'sl'
-      ? 'Vprašanje'
-      : 'Request';
-
-  const createdLabel =
-    state.lang ===
-    'sl'
-      ? 'Ustvarjeno'
-      : 'Created';
-
   const htmlDocument = `
+
 <!doctype html>
 
 <html
@@ -4744,9 +14213,11 @@ function downloadSavedWork(
 >
 
 <title>
+
 ${escapeHtml(
   title
 )}
+
 </title>
 
 <style>
@@ -4762,23 +14233,20 @@ body {
     0;
 
   padding:
-    40px 20px;
+    36px 20px;
 
   background:
-    #f5f2eb;
+    #f4f6f9;
 
   color:
-    #2d2924;
+    #172033;
 
   font-family:
     Arial,
     sans-serif;
 
   line-height:
-    1.78;
-
-  font-size:
-    16px;
+    1.75;
 
 }
 
@@ -4797,19 +14265,10 @@ body {
     #ffffff;
 
   padding:
-    52px 58px;
+    50px 58px;
 
-  border-radius:
-    18px;
-
-  box-shadow:
-    0 12px 40px
-    rgba(
-      0,
-      0,
-      0,
-      0.08
-    );
+  border:
+    1px solid #dfe5ec;
 
 }
 
@@ -4817,65 +14276,40 @@ h1,
 h2,
 h3 {
 
-  font-family:
-    Georgia,
-    serif;
-
-}
-
-h1 {
-
-  font-size:
-    2.1rem;
-
-}
-
-h2 {
-
-  margin-top:
-    36px;
-
-}
-
-h3 {
-
-  margin-top:
-    28px;
-
-}
-
-p {
-
-  margin:
-    0 0 18px;
+  color:
+    #172033;
 
 }
 
 .sources {
 
   margin-top:
-    44px;
+    45px;
 
   padding-top:
-    26px;
+    25px;
 
   border-top:
     1px solid
-    #ddd6ca;
+    #dfe5ec;
 
 }
 
-@media (
+li {
+
+  margin-bottom:
+    7px;
+
+}
+
+@media(
   max-width:700px
-) {
+){
 
   body {
 
     padding:
       0;
-
-    background:
-      #ffffff;
 
   }
 
@@ -4885,13 +14319,10 @@ p {
       100%;
 
     padding:
-      28px 20px;
+      25px 18px;
 
-    border-radius:
+    border:
       0;
-
-    box-shadow:
-      none;
 
   }
 
@@ -4903,7 +14334,8 @@ p {
 
 <body>
 
-<main class="page">
+<main
+  class="page">
 
   <h1>
 
@@ -4918,36 +14350,13 @@ p {
     <strong>
 
       ${escapeHtml(
-        typeLabel
+        work.type ||
+        t('ai')
       )}
 
     </strong>
 
   </p>
-
-  ${
-    prompt
-      ? `
-
-        <h3>
-
-          ${escapeHtml(
-            questionLabel
-          )}
-
-        </h3>
-
-        <div>
-
-          ${promptHtml}
-
-        </div>
-
-      `
-      : ''
-  }
-
-  <hr>
 
   <article>
 
@@ -4955,20 +14364,20 @@ p {
 
   </article>
 
-  <section class="sources">
+  ${
+    sourceList
+      ? `
 
-    <h2>
+        <section
+          class="sources">
 
-      ${escapeHtml(
-        sourceLabel
-      )}
+          <h2>
 
-    </h2>
+            ${escapeHtml(
+              t('sources')
+            )}
 
-    ${
-      sourceList
-
-        ? `
+          </h2>
 
           <ul>
 
@@ -4976,38 +14385,24 @@ p {
 
           </ul>
 
-        `
+        </section>
 
-        : `
-
-          <p>
-
-            ${
-              state.lang ===
-              'sl'
-                ? 'Viri niso navedeni.'
-                : 'No sources listed.'
-            }
-
-          </p>
-
-        `
-    }
-
-  </section>
+      `
+      : ''
+  }
 
   <p>
 
     <strong>
 
       ${escapeHtml(
-        createdLabel
+        t('created')
       )}:
 
     </strong>
 
     ${escapeHtml(
-      formatWorkDate(
+      formatDateTime(
         work.createdAt
       )
     )}
@@ -5019,6 +14414,7 @@ p {
 </body>
 
 </html>
+
   `.trim();
 
   const blob =
@@ -5052,7 +14448,7 @@ p {
         100
       )
       .trim() ||
-    'ai-book-library-work';
+    'dms-ai-result';
 
   const link =
     document.createElement(
@@ -5088,1449 +14484,659 @@ p {
   toast(
     state.lang ===
     'sl'
-      ? 'Delo je preneseno.'
-      : 'Work downloaded.'
+      ? 'Rezultat je prenesen.'
+      : 'Result downloaded.'
   );
+
+}
+
+/* =========================================================
+   AI SCREEN
+   ========================================================= */
+
+function ai() {
+
+  const selected =
+    getSelectedAiDocuments();
+
+  if (
+    state.assistantGenerating ||
+    state.briefGenerating ||
+    state.articleGenerating ||
+    state.askGenerating
+  ) {
+
+    return dmsLayout(`
+
+      <div
+        class="card">
+
+        <div
+          class="working">
+
+          <div
+            class="dot">
+          </div>
+
+          <h2
+            style="
+              margin-top:17px
+            ">
+
+            ${
+              state.assistantGenerating
+                ? t('preparing')
+
+                : state.briefGenerating
+                  ? (
+                      state.lang ===
+                      'sl'
+                        ? 'Pripravljam strukturirani povzetek…'
+                        : 'Preparing the structured briefing…'
+                    )
+
+                : state.articleGenerating
+                  ? (
+                      state.lang ===
+                      'sl'
+                        ? 'AI piše poročilo…'
+                        : 'AI is writing the report…'
+                    )
+
+                : t('preparing')
+            }
+
+          </h2>
+
+          <div
+            class="muted">
+
+            ${
+              selected.length
+                ? (
+                    selected.length +
+                    ' ' +
+                    t(
+                      'selectedDocuments'
+                    )
+                  )
+                : ''
+            }
+
+          </div>
+
+        </div>
+
+      </div>
+
+    `);
+
+  }
+
+
+  return dmsLayout(`
+
+    ${pageHeader(
+      t('ai'),
+      t('aiAssistant'),
+      t('aiDescription')
+    )}
+
+    ${aiDocumentSelector()}
+
+
+    <div
+      class="ai-layout">
+
+      <section
+        class="ai-panel">
+
+        <div
+          class="ai-panel-header">
+
+          <div>
+
+            <strong>
+
+              ${
+                state.creationType ===
+                'brief'
+                  ? t('lecture')
+
+                  : state.creationType ===
+                    'article'
+                    ? t(
+                        'articleWriting'
+                      )
+
+                  : state.creationType ===
+                    'ask'
+                    ? t(
+                        'askDocumentation'
+                      )
+
+                  : t(
+                      'aiAssistant'
+                    )
+              }
+
+            </strong>
+
+            <span>
+
+              ${
+                selected.length
+                  ? (
+                      selected.length +
+                      ' ' +
+                      t(
+                        'selectedDocuments'
+                      )
+                    )
+                  : (
+                      state.lang ===
+                      'sl'
+                        ? 'Izberi dokumente za delo z dokumentacijo.'
+                        : 'Select documents to work with documentation.'
+                    )
+              }
+
+            </span>
+
+          </div>
+
+          ${
+            selected.length
+              ? `
+
+                <span
+                  class="status status-info">
+
+                  ${selected.length}
+
+                </span>
+
+              `
+              : ''
+          }
+
+        </div>
+
+
+        <div
+          class="ai-panel-body">
+
+          ${aiModeButtons()}
+
+          ${
+            state.creationType ===
+            'brief'
+              ? aiBriefForm()
+
+              : state.creationType ===
+                'article'
+                ? aiArticleForm()
+
+              : state.creationType ===
+                'ask'
+                ? aiAskForm()
+
+              : aiAssistantForm()
+          }
+
+        </div>
+
+      </section>
+
+
+      <aside>
+
+        <div
+          class="ai-panel">
+
+          <div
+            class="ai-panel-header">
+
+            <div>
+
+              <strong>
+
+                ${t(
+                  'ai'
+                )}
+
+              </strong>
+
+              <span>
+
+                ${t(
+                  'aiDescription'
+                )}
+
+              </span>
+
+            </div>
+
+          </div>
+
+          <div
+            class="ai-panel-body">
+
+            <div
+              class="ai-tool-grid">
+
+              ${aiQuickTool(
+                'summary',
+                '▤',
+                t('aiSummary'),
+                state.lang ===
+                'sl'
+                  ? 'Povzetek izbranih dokumentov.'
+                  : 'Summarize selected documents.'
+              )}
+
+              ${aiQuickTool(
+                'analysis',
+                '⌕',
+                t('aiAnalysis'),
+                state.lang ===
+                'sl'
+                  ? 'Poslovna analiza dokumentacije.'
+                  : 'Business analysis of documentation.'
+              )}
+
+              ${aiQuickTool(
+                'extract',
+                '⇩',
+                t('aiExtract'),
+                state.lang ===
+                'sl'
+                  ? 'Izlušči podatke.'
+                  : 'Extract structured information.'
+              )}
+
+              ${aiQuickTool(
+                'question',
+                '?',
+                t('askDocumentation'),
+                state.lang ===
+                'sl'
+                  ? 'Vprašanja o dokumentih.'
+                  : 'Questions about documents.'
+              )}
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="detail-section">
+
+          <div
+            class="detail-section-header">
+
+            <strong>
+
+              ${t(
+                'sources'
+              )}
+
+            </strong>
+
+          </div>
+
+          <div
+            class="detail-section-body">
+
+            <div
+              class="muted"
+              style="
+                line-height:1.65
+              ">
+
+              ${
+                selected.length
+                  ? selected
+                      .map(
+                        document =>
+                          `
+                            <div
+                              style="
+                                padding:6px 0;
+                                border-bottom:1px solid #edf1f5
+                              ">
+
+                              ${escapeHtml(
+                                documentTitle(
+                                  document
+                                )
+                              )}
+
+                            </div>
+                          `
+                      )
+                      .join('')
+                  : (
+                      state.lang ===
+                      'sl'
+                        ? 'Dokumenti bodo uporabljeni kot vir za AI.'
+                        : 'Selected documents will be used as AI sources.'
+                    )
+              }
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  `);
 
 }
 
 
 /* =========================================================
-   OPEN SAVED WORK
+   AI MODE BUTTONS
    ========================================================= */
 
-function openSavedWork(
-  index
+function aiModeButtons() {
+
+  const modes = [
+
+    {
+      key:
+        'assistant',
+
+      label:
+        t('aiAssistant'),
+
+      icon:
+        '✦'
+    },
+
+    {
+      key:
+        'brief',
+
+      label:
+        t('lecture'),
+
+      icon:
+        '▤'
+    },
+
+    {
+      key:
+        'article',
+
+      label:
+        t('articleWriting'),
+
+      icon:
+        '▰'
+    },
+
+    {
+      key:
+        'ask',
+
+      label:
+        t('askDocumentation'),
+
+      icon:
+        '?'
+    }
+
+  ];
+
+  return `
+
+    <div
+      class="chips"
+      style="
+        margin-bottom:17px
+      ">
+
+      ${modes
+        .map(
+          mode => `
+
+            <button
+              type="button"
+              class="chip ${
+                state.creationType ===
+                mode.key
+                  ? 'on'
+                  : ''
+              }"
+              onclick="
+                setAiMode(
+                  '${mode.key}'
+                )
+              ">
+
+              ${mode.icon}
+
+              ${escapeHtml(
+                mode.label
+              )}
+
+            </button>
+
+          `
+        )
+        .join('')}
+
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   SET AI MODE
+   ========================================================= */
+
+function setAiMode(
+  mode
 ) {
 
-  const work =
-    state.works[
-      index
-    ];
+  const allowed = [
+    'assistant',
+    'brief',
+    'article',
+    'ask'
+  ];
 
-  if (!work) {
+  if (
+    !allowed.includes(
+      mode
+    )
+  ) {
+
     return;
+
+  }
+
+  state.creationType =
+    mode;
+
+  if (
+    mode ===
+    'summary'
+  ) {
+
+    state.creationType =
+      'assistant';
+
+  }
+
+  save();
+
+  render();
+
+}
+
+
+/* =========================================================
+   AI QUICK TOOL
+   ========================================================= */
+
+function aiQuickTool(
+  action,
+  icon,
+  title,
+  description
+) {
+
+  return `
+
+    <button
+      type="button"
+      class="ai-tool"
+      onclick="
+        runAiQuickAction(
+          '${escapeAttribute(
+            action
+          )}'
+        )
+      ">
+
+      <span
+        class="ai-tool-icon">
+
+        ${icon}
+
+      </span>
+
+      <strong>
+
+        ${escapeHtml(
+          title
+        )}
+
+      </strong>
+
+      <span>
+
+        ${escapeHtml(
+          description
+        )}
+
+      </span>
+
+    </button>
+
+  `;
+
+}
+
+
+/* =========================================================
+   RUN AI QUICK ACTION
+   ========================================================= */
+
+function runAiQuickAction(
+  action
+) {
+
+  const selected =
+    getSelectedAiDocuments();
+
+  if (
+    !selected.length
+  ) {
+
+    toast(
+      state.lang ===
+      'sl'
+        ? 'Najprej izberi vsaj en dokument.'
+        : 'Please select at least one document.'
+    );
+
+    return;
+
   }
 
   if (
-    work.type ===
-    'assistant'
+    action ===
+    'summary'
   ) {
 
     state.creationType =
       'assistant';
 
     state.assistantPrompt =
-      work.prompt ||
-      '';
-
-    state.generatedAssistant =
-      work.content ||
-      '';
-
-    state.assistantPassages =
-      Array.isArray(
-        work.passages
-      )
-        ? work.passages
-        : [];
-
-    state.assistantError =
-      '';
+      state.lang ===
+      'sl'
+        ? 'Pripravi jasen in strukturiran povzetek izbranih dokumentov. Za vsak dokument navedi namen, glavne točke, pomembne ugotovitve, obveznosti, roke in druge ključne informacije. Na koncu dodaj skupni povzetek.'
+        : 'Prepare a clear and structured summary of the selected documents. For each document identify its purpose, key points, important findings, obligations, deadlines and other key information. Finish with an overall summary.';
 
   }
 
   else if (
-    work.type ===
-    'article'
+    action ===
+    'analysis'
   ) {
 
     state.creationType =
-      'article';
+      'assistant';
 
-    state.articleTopic =
-      work.prompt ||
-      work.title ||
-      '';
-
-    state.generatedArticle =
-      work.content ||
-      '';
-
-    state.articlePassages =
-      Array.isArray(
-        work.passages
-      )
-        ? work.passages
-        : [];
-
-    state.articleError =
-      '';
+    state.assistantPrompt =
+      state.lang ===
+      'sl'
+        ? 'Analiziraj izbrane dokumente z vidika poslovne uporabe. Izpostavi ključne ugotovitve, tveganja, obveznosti, odgovornosti, roke, nejasnosti, morebitna nasprotja med dokumenti in pomembne informacije, ki jih mora poznati podjetje.'
+        : 'Analyze the selected documents from a business perspective. Highlight key findings, risks, obligations, responsibilities, deadlines, ambiguities, potential conflicts between documents and important information the company should know.';
 
   }
 
   else if (
-    work.type ===
-    'ask'
+    action ===
+    'extract'
   ) {
 
     state.creationType =
-      'ask';
+      'assistant';
 
-    state.askPrompt =
-      work.prompt ||
-      work.title ||
-      '';
-
-    state.generatedAnswer =
-      work.content ||
-      '';
-
-    state.askPassages =
-      Array.isArray(
-        work.passages
-      )
-        ? work.passages
-        : [];
-
-    state.askError =
-      '';
+    state.assistantPrompt =
+      state.lang ===
+      'sl'
+        ? 'Izlušči strukturirane podatke iz izbranih dokumentov. Uporabi jasne sklope za datume, osebe, organizacije, zneske, pogodbeno pomembne informacije, obveznosti, roke, postopke, kontaktne podatke, številke dokumentov in druge pomembne podatke. Ne ugibaj podatkov, ki niso navedeni.'
+        : 'Extract structured information from the selected documents. Use clear sections for dates, people, organizations, amounts, contractual information, obligations, deadlines, procedures, contacts, document numbers and other important data. Do not guess information that is not stated.';
 
   }
 
   else {
 
     state.creationType =
-      'lecture';
-
-    state.lectureTopic =
-      work.prompt ||
-      work.title ||
-      '';
-
-    state.generatedLecture =
-      work.content ||
-      '';
-
-    state.lectureLength =
-      String(
-        work.length ||
-        '20'
-      );
-
-    state.lecturePassages =
-      Array.isArray(
-        work.passages
-      )
-        ? work.passages
-        : [];
-
-    state.lectureError =
-      '';
+      'ask';
 
   }
 
-  state.lectureGenerating =
-    false;
-
-  state.assistantGenerating =
-    false;
-
-  state.articleGenerating =
-    false;
-
-  state.askGenerating =
-    false;
-
-  state.screen =
-    'result';
-
   save();
-  render();
 
-  window.scrollTo({
-
-    top:
-      0,
-
-    behavior:
-      'smooth'
-
-  });
-
-}
-
-
-/* =========================================================
-   REMOVE SAVED WORK
-   ========================================================= */
-
-function removeSavedWork(
-  index
-) {
-
-  if (
-    index <
-      0 ||
-    index >=
-      state.works.length
-  ) {
-
-    return;
-
-  }
-
-  state.works.splice(
-    index,
-    1
-  );
-
-  save();
   render();
 
 }
 
 
 /* =========================================================
-   AI LECTURE
+   ASSISTANT FORM
    ========================================================= */
 
-async function generate() {
+function aiAssistantForm() {
 
-  if (
-    !state.sources.length
-  ) {
+  return `
 
-    toast(
-      t('chooseAtLeastOne')
-    );
-
-    return;
-
-  }
-
-  if (
-    !state.lectureTopic.trim()
-  ) {
-
-    toast(
-      t('missingTopic')
-    );
-
-    return;
-
-  }
-
-  state.creationType =
-    'lecture';
-
-  state.lectureGenerating =
-    true;
-
-  state.generatedLecture =
-    '';
-
-  state.lectureError =
-    '';
-
-  state.lecturePassages =
-    [];
-
-  state.screen =
-    'result';
-
-  save();
-  render();
-
-  try {
-
-    if (
-      !BOOKS.length
-    ) {
-
-      throw new Error(
-        t('localFolderMissing')
-      );
-
-    }
-
-    if (
-      !state.searchReady
-    ) {
-
-      await buildSearchIndex();
-
-    }
-
-    const selected =
-      findAiPassages(
-        state.lectureTopic.trim()
-      );
-
-    if (
-      !selected.length
-    ) {
-
-      throw new Error(
-        t('noRelevantPages')
-      );
-
-    }
-
-    state.lecturePassages =
-      selected;
-
-    save();
-    render();
-
-    const response =
-      await fetch(
-        AI_WORKER_URL,
-        {
-          method:
-            'POST',
-
-          headers: {
-            'Content-Type':
-              'application/json'
-          },
-
-          body:
-            JSON.stringify({
-
-              type:
-                'lecture',
-
-              topic:
-                state.lectureTopic.trim(),
-
-              prompt:
-                state.lectureTopic.trim(),
-
-              language:
-                state.lang ===
-                'sl'
-                  ? 'Slovenščina'
-                  : 'English',
-
-              length:
-                state.lectureLength,
-
-              passages:
-                selected
-
-            })
-
-        }
-      );
-
-    const data =
-      await response.json();
-
-    if (
-      !response.ok ||
-      !data ||
-      !data.success
-    ) {
-
-      throw new Error(
-        data?.error ||
-        t('lectureError')
-      );
-
-    }
-
-    state.generatedLecture =
-      String(
-        data.lecture ||
-        data.content ||
-        ''
-      )
-        .trim();
-
-    if (
-      !state.generatedLecture
-    ) {
-
-      throw new Error(
-        t('lectureError')
-      );
-
-    }
-
-    saveGeneratedWork({
-
-      type:
-        'lecture',
-
-      title:
-        state.lectureTopic.trim(),
-
-      prompt:
-        state.lectureTopic.trim(),
-
-      language:
-        state.lang ===
-        'sl'
-          ? 'Slovenščina'
-          : 'English',
-
-      length:
-        state.lectureLength,
-
-      content:
-        state.generatedLecture,
-
-      passages:
-        state.lecturePassages
-
-    });
-
-    state.lectureGenerating =
-      false;
-
-    state.screen =
-      'result';
-
-    save();
-    render();
-
-  } catch (error) {
-
-    console.error(
-      'Lecture generation error:',
-      error
-    );
-
-    state.lectureGenerating =
-      false;
-
-    state.lectureError =
-      error?.message ||
-      t('lectureError');
-
-    state.screen =
-      'result';
-
-    save();
-    render();
-
-  }
-
-}
-
-
-/* =========================================================
-   AI ASSISTANT
-   ========================================================= */
-
-async function generateAssistant() {
-
-  if (
-    !state.assistantPrompt.trim()
-  ) {
-
-    toast(
-      t('missingAssistant')
-    );
-
-    return;
-
-  }
-
-  state.creationType =
-    'assistant';
-
-  state.assistantGenerating =
-    true;
-
-  state.generatedAssistant =
-    '';
-
-  state.assistantError =
-    '';
-
-  state.assistantPassages =
-    [];
-
-  state.screen =
-    'result';
-
-  save();
-  render();
-
-  try {
-
-    if (
-      BOOKS.length &&
-      !state.searchReady
-    ) {
-
-      await buildSearchIndex();
-
-    }
-
-    let selected =
-      [];
-
-    if (
-      state.searchReady &&
-      state.sources.length
-    ) {
-
-      selected =
-        findAiPassages(
-          state.assistantPrompt.trim()
-        );
-
-    }
-
-    state.assistantPassages =
-      selected;
-
-    save();
-    render();
-
-    const response =
-      await fetch(
-        AI_WORKER_URL,
-        {
-          method:
-            'POST',
-
-          headers: {
-            'Content-Type':
-              'application/json'
-          },
-
-          body:
-            JSON.stringify({
-
-              type:
-                'assistant',
-
-              prompt:
-                state.assistantPrompt.trim(),
-
-              language:
-                state.lang ===
-                'sl'
-                  ? 'Slovenščina'
-                  : 'English',
-
-              passages:
-                selected
-
-            })
-
-        }
-      );
-
-    const data =
-      await response.json();
-
-    if (
-      !response.ok ||
-      !data ||
-      !data.success
-    ) {
-
-      throw new Error(
-        data?.error ||
-        t('assistantError')
-      );
-
-    }
-
-    state.generatedAssistant =
-      String(
-        data.answer ||
-        data.content ||
-        ''
-      )
-        .trim();
-
-    if (
-      !state.generatedAssistant
-    ) {
-
-      throw new Error(
-        t('assistantError')
-      );
-
-    }
-
-    saveGeneratedWork({
-
-      type:
-        'assistant',
-
-      title:
-        state.assistantPrompt.trim(),
-
-      prompt:
-        state.assistantPrompt.trim(),
-
-      language:
-        state.lang ===
-        'sl'
-          ? 'Slovenščina'
-          : 'English',
-
-      content:
-        state.generatedAssistant,
-
-      passages:
-        state.assistantPassages
-
-    });
-
-    state.assistantGenerating =
-      false;
-
-    state.screen =
-      'result';
-
-    save();
-    render();
-
-  } catch (error) {
-
-    console.error(
-      'AI Assistant error:',
-      error
-    );
-
-    state.assistantGenerating =
-      false;
-
-    state.assistantError =
-      error?.message ||
-      t('assistantError');
-
-    state.screen =
-      'result';
-
-    save();
-    render();
-
-  }
-
-}
-
-
-/* =========================================================
-   AI ARTICLE WRITING
-   ========================================================= */
-
-async function generateArticle() {
-
-  if (
-    !state.articleTopic.trim()
-  ) {
-
-    toast(
-      t('missingArticle')
-    );
-
-    return;
-
-  }
-
-  state.creationType =
-    'article';
-
-  state.articleGenerating =
-    true;
-
-  state.generatedArticle =
-    '';
-
-  state.articleError =
-    '';
-
-  state.articlePassages =
-    [];
-
-  state.screen =
-    'result';
-
-  save();
-  render();
-
-  try {
-
-    if (
-      BOOKS.length &&
-      !state.searchReady
-    ) {
-
-      await buildSearchIndex();
-
-    }
-
-    let selected =
-      [];
-
-    if (
-      state.searchReady &&
-      state.sources.length
-    ) {
-
-      selected =
-        findAiPassages(
-          state.articleTopic.trim()
-        );
-
-    }
-
-    state.articlePassages =
-      selected;
-
-    save();
-    render();
-
-    const response =
-      await fetch(
-        AI_WORKER_URL,
-        {
-          method:
-            'POST',
-
-          headers: {
-            'Content-Type':
-              'application/json'
-          },
-
-          body:
-            JSON.stringify({
-
-              type:
-                'article',
-
-              topic:
-                state.articleTopic.trim(),
-
-              prompt:
-                state.articleTopic.trim(),
-
-              language:
-                state.lang ===
-                'sl'
-                  ? 'Slovenščina'
-                  : 'English',
-
-              minWords:
-                10000,
-
-              passages:
-                selected
-
-            })
-
-        }
-      );
-
-    const data =
-      await response.json();
-
-    if (
-      !response.ok ||
-      !data ||
-      !data.success
-    ) {
-
-      throw new Error(
-        data?.error ||
-        t('articleErrorGeneric')
-      );
-
-    }
-
-    state.generatedArticle =
-      String(
-        data.article ||
-        data.answer ||
-        data.content ||
-        ''
-      )
-        .trim();
-
-    if (
-      !state.generatedArticle
-    ) {
-
-      throw new Error(
-        t('articleErrorGeneric')
-      );
-
-    }
-
-    saveGeneratedWork({
-
-      type:
-        'article',
-
-      title:
-        state.articleTopic.trim(),
-
-      prompt:
-        state.articleTopic.trim(),
-
-      language:
-        state.lang ===
-        'sl'
-          ? 'Slovenščina'
-          : 'English',
-
-      length:
-        '10000+',
-
-      content:
-        state.generatedArticle,
-
-      passages:
-        state.articlePassages
-
-    });
-
-    state.articleGenerating =
-      false;
-
-    state.screen =
-      'result';
-
-    save();
-    render();
-
-  } catch (error) {
-
-    console.error(
-      'AI Article generation error:',
-      error
-    );
-
-    state.articleGenerating =
-      false;
-
-    state.articleError =
-      error?.message ||
-      t('articleErrorGeneric');
-
-    state.screen =
-      'result';
-
-    save();
-    render();
-
-  }
-
-}
-
-
-/* =========================================================
-   ASK THE BOOKS
-   ========================================================= */
-
-async function generateAsk() {
-
-  if (
-    !state.sources.length
-  ) {
-
-    toast(
-      t('chooseAtLeastOne')
-    );
-
-    return;
-
-  }
-
-  if (
-    !state.askPrompt.trim()
-  ) {
-
-    toast(
-      t('missingQuestion')
-    );
-
-    return;
-
-  }
-
-  state.creationType =
-    'ask';
-
-  state.askGenerating =
-    true;
-
-  state.generatedAnswer =
-    '';
-
-  state.askError =
-    '';
-
-  state.askPassages =
-    [];
-
-  state.screen =
-    'result';
-
-  save();
-  render();
-
-  try {
-
-    if (
-      !state.searchReady
-    ) {
-
-      await buildSearchIndex();
-
-    }
-
-    const selected =
-      findAiPassages(
-        state.askPrompt.trim()
-      );
-
-    if (
-      !selected.length
-    ) {
-
-      throw new Error(
-        t('noRelevantPages')
-      );
-
-    }
-
-    state.askPassages =
-      selected;
-
-    save();
-    render();
-
-    const response =
-      await fetch(
-        AI_WORKER_URL,
-        {
-          method:
-            'POST',
-
-          headers: {
-            'Content-Type':
-              'application/json'
-          },
-
-          body:
-            JSON.stringify({
-
-              type:
-                'ask',
-
-              prompt:
-                state.askPrompt.trim(),
-
-              language:
-                state.lang ===
-                'sl'
-                  ? 'Slovenščina'
-                  : 'English',
-
-              passages:
-                selected
-
-            })
-
-        }
-      );
-
-    const data =
-      await response.json();
-
-    if (
-      !response.ok ||
-      !data ||
-      !data.success
-    ) {
-
-      throw new Error(
-        data?.error ||
-        t('answerError')
-      );
-
-    }
-
-    state.generatedAnswer =
-      String(
-        data.answer ||
-        data.content ||
-        ''
-      )
-        .trim();
-
-    if (
-      !state.generatedAnswer
-    ) {
-
-      throw new Error(
-        t('answerError')
-      );
-
-    }
-
-    saveGeneratedWork({
-
-      type:
-        'ask',
-
-      title:
-        state.askPrompt.trim(),
-
-      prompt:
-        state.askPrompt.trim(),
-
-      language:
-        state.lang ===
-        'sl'
-          ? 'Slovenščina'
-          : 'English',
-
-      content:
-        state.generatedAnswer,
-
-      passages:
-        state.askPassages
-
-    });
-
-    state.askGenerating =
-      false;
-
-    state.screen =
-      'result';
-
-    save();
-    render();
-
-  } catch (error) {
-
-    console.error(
-      'Ask the Books error:',
-      error
-    );
-
-    state.askGenerating =
-      false;
-
-    state.askError =
-      error?.message ||
-      t('answerError');
-
-    state.screen =
-      'result';
-
-    save();
-    render();
-
-  }
-
-}
-
-
-/* =========================================================
-   CREATE SCREEN
-   ========================================================= */
-
-function create() {
-
-  const selectedCount =
-    state.sources.length;
-
-  if (
-    state.lectureGenerating
-  ) {
-
-    return layout(`
-
-      <div class="working">
-
-        <div class="dot"></div>
-
-        <h2
-          style="
-            margin-top:20px
-          ">
-
-          ${
-            state.lang ===
-            'sl'
-
-              ? 'AI pripravlja predavanje…'
-
-              : 'AI is preparing your lecture…'
-          }
-
-        </h2>
-
-        <div class="muted">
-
-          ${escapeHtml(
-            state.lectureTopic
-          )}
-
-        </div>
-
-      </div>
-
-    `);
-
-  }
-
-  if (
-    state.assistantGenerating
-  ) {
-
-    return layout(`
-
-      <div class="working">
-
-        <div class="dot"></div>
-
-        <h2
-          style="
-            margin-top:20px
-          ">
-
-          ${t(
-            'assistantPreparing'
-          )}
-
-        </h2>
-
-        <div class="muted">
-
-          ${escapeHtml(
-            state.assistantPrompt
-          )}
-
-        </div>
-
-      </div>
-
-    `);
-
-  }
-
-  if (
-    state.articleGenerating
-  ) {
-
-    return layout(`
-
-      <div class="working">
-
-        <div class="dot"></div>
-
-        <h2
-          style="
-            margin-top:20px
-          ">
-
-          ${t(
-            'articlePreparing'
-          )}
-
-        </h2>
-
-        <div class="muted">
-
-          ${escapeHtml(
-            state.articleTopic
-          )}
-
-        </div>
-
-        <div
-          class="muted"
-          style="
-            margin-top:10px
-          ">
-
-          ${t(
-            'articleMinimum'
-          )}
-
-        </div>
-
-      </div>
-
-    `);
-
-  }
-
-  if (
-    state.askGenerating
-  ) {
-
-    return layout(`
-
-      <div class="working">
-
-        <div class="dot"></div>
-
-        <h2
-          style="
-            margin-top:20px
-          ">
-
-          ${t(
-            'answerPreparing'
-          )}
-
-        </h2>
-
-        <div class="muted">
-
-          ${escapeHtml(
-            state.askPrompt
-          )}
-
-        </div>
-
-      </div>
-
-    `);
-
-  }
-
-  return layout(`
-
-    <div class="eyebrow">
-
-      ${t('create')}
-
-    </div>
-
-    <h1>
-
-      ${t('createWork')}
-
-    </h1>
-
-    ${
-      BOOKS.length
-        ? `
-
-          <div class="section card">
-
-            <div
-              style="
-                display:flex;
-                justify-content:space-between;
-                align-items:center;
-                gap:12px;
-                margin-bottom:14px;
-                flex-wrap:wrap
-              ">
-
-              <h3
-                style="
-                  margin:0
-                ">
-
-                ${t(
-                  'chooseBooks'
-                )}
-
-              </h3>
-
-              <div
-                style="
-                  display:flex;
-                  align-items:center;
-                  gap:10px;
-                  flex-wrap:wrap
-                ">
-
-                <span class="muted">
-
-                  ${selectedCount}
-
-                  ${t(
-                    'selectedBooks'
-                  )}
-
-                </span>
-
-                <button
-                  type="button"
-                  class="chip ${
-                    selectedCount ===
-                    BOOKS.length
-                      ? ''
-                      : 'on'
-                  }"
-                  onclick="
-                    toggleAllLectureSources()
-                  ">
-
-                  ${
-                    selectedCount ===
-                    BOOKS.length
-                      ? t(
-                          'unselectAll'
-                        )
-                      : t(
-                          'selectAll'
-                        )
-                  }
-
-                </button>
-
-              </div>
-
-            </div>
-
-            <div
-              style="
-                display:grid;
-                gap:10px
-              ">
-
-              ${BOOKS.map(
-                (
-                  book,
-                  index
-                ) => {
-
-                  const selected =
-                    state.sources.includes(
-                      index
-                    );
-
-                  return `
-
-                    <button
-                      type="button"
-                      class="select ${
-                        selected
-                          ? 'on'
-                          : ''
-                      }"
-                      style="
-                        text-align:left;
-                        padding:15px;
-                        display:flex;
-                        align-items:center;
-                        justify-content:space-between;
-                        gap:12px
-                      "
-                      onclick="
-                        toggleLectureSource(
-                          ${index}
-                        )
-                      ">
-
-                      <span>
-
-                        <strong>
-
-                          ${escapeHtml(
-                            book.short
-                          )}
-
-                        </strong>
-
-                      </span>
-
-                      <span
-                        style="
-                          font-size:20px
-                        ">
-
-                        ${
-                          selected
-                            ? '✓'
-                            : '○'
-                        }
-
-                      </span>
-
-                    </button>
-
-                  `;
-
-                }
-              ).join('')}
-
-            </div>
-
-          </div>
-
-        `
-
-        : `
-
-          <div class="section card">
-
-            <div class="muted">
-
-              ${t('noBooks')}
-
-            </div>
-
-            <button
-              type="button"
-              class="primary"
-              style="
-                margin-top:16px
-              "
-              onclick="
-                chooseBooksFolder()
-              ">
-
-              📁
-
-              ${t(
-                'chooseBooksFolder'
-              )}
-
-            </button>
-
-          </div>
-
-        `
-    }
-
-
-    <div
-      class="card"
-      style="
-        margin-top:24px
-      ">
-
-      <h2
-        style="
-          margin:0
-        ">
-
-        ${t('aiAssistant')}
-
-      </h2>
-
-      <p
-        class="muted"
-        style="
-          margin-top:8px;
-          margin-bottom:18px
-        ">
-
-        ${t(
-          'assistantDescription'
-        )}
-
-      </p>
+    <div>
 
       <h3>
 
@@ -6543,8 +15149,8 @@ function create() {
       <textarea
         class="textarea"
         style="
-          margin-top:10px;
-          min-height:220px
+          margin-top:9px;
+          min-height:230px
         "
         oninput="
           setAssistantPrompt(
@@ -6557,265 +15163,50 @@ function create() {
           state.assistantPrompt
         )}</textarea>
 
-      <button
-        type="button"
-        class="primary"
+      <div
+        class="filter-actions"
         style="
-          margin-top:16px
-        "
-        onclick="
-          generateAssistant()
+          justify-content:flex-start
         ">
 
-        ✦
+        <button
+          type="button"
+          class="btn btn-primary btn-lg"
+          onclick="
+            generateAssistant()
+          ">
 
-        ${t(
-          'assistantButton'
-        )}
+          ✦
 
-      </button>
+          ${t(
+            'askAI'
+          )}
+
+        </button>
+
+      </div>
 
     </div>
 
+  `;
 
-    ${
-      BOOKS.length
-        ? `
-
-          <div
-            class="card"
-            style="
-              margin-top:32px
-            ">
-
-            <h2
-              style="
-                margin:0
-              ">
-
-              ${t(
-                'aiLecture'
-              )}
-
-            </h2>
-
-            <p
-              class="muted"
-              style="
-                margin-top:8px;
-                margin-bottom:18px
-              ">
-
-              ${t(
-                'lectureDescription'
-              )}
-
-            </p>
-
-            <h3>
-
-              ${t(
-                'lectureTopic'
-              )}
-
-            </h3>
-
-            <textarea
-              class="textarea"
-              style="
-                margin-top:10px;
-                min-height:130px
-              "
-              oninput="
-                setLectureTopic(
-                  this.value
-                )
-              "
-              placeholder="${t(
-                'lectureTopicPlaceholder'
-              )}">${escapeHtml(
-                state.lectureTopic
-              )}</textarea>
-
-            <h3>
-
-              ${t(
-                'lectureLength'
-              )}
-
-            </h3>
-
-            <div
-              class="formgrid"
-              style="
-                margin-top:10px
-              ">
-
-              ${[
-                [
-                  '10',
-                  t('minutes10')
-                ],
-                [
-                  '20',
-                  t('minutes20')
-                ],
-                [
-                  '40',
-                  t('minutes40')
-                ],
-                [
-                  '60',
-                  t('minutes60')
-                ],
-                [
-                  '120',
-                  t('minutes120')
-                ]
-              ]
-                .map(
-                  (
-                    [
-                      value,
-                      label
-                    ]
-                  ) => `
-
-                    <button
-                      type="button"
-                      class="select ${
-                        String(
-                          state.lectureLength
-                        ) ===
-                        String(
-                          value
-                        )
-                          ? 'on'
-                          : ''
-                      }"
-                      onclick="
-                        setLectureLength(
-                          '${value}'
-                        )
-                      ">
-
-                      ${label}
-
-                    </button>
-
-                  `
-                )
-                .join('')}
-
-            </div>
-
-            <h3>
-
-              ${t(
-                'lectureLanguage'
-              )}
-
-            </h3>
-
-            <div
-              class="chips"
-              style="
-                margin-top:10px
-              ">
-
-              <button
-                type="button"
-                class="chip ${
-                  state.lang ===
-                  'sl'
-                    ? 'on'
-                    : ''
-                }"
-                onclick="
-                  setLanguage('sl')
-                ">
-
-                🇸🇮 Slovenščina
-
-              </button>
-
-              <button
-                type="button"
-                class="chip ${
-                  state.lang ===
-                  'en'
-                    ? 'on'
-                    : ''
-                }"
-                onclick="
-                  setLanguage('en')
-                ">
-
-                🇬🇧 English
-
-              </button>
-
-            </div>
-
-            <button
-              type="button"
-              class="primary"
-              style="
-                margin-top:18px
-              "
-              onclick="
-                generate()
-              ">
-
-              ✦
-
-              ${t(
-                'createLecture'
-              )}
-
-            </button>
-
-          </div>
-
-        `
-        : ''
-    }
+}
 
 
-    <div
-      class="card"
-      style="
-        margin-top:32px
-      ">
+/* =========================================================
+   BRIEF FORM
+   ========================================================= */
 
-      <h2
-        style="
-          margin:0
-        ">
+function aiBriefForm() {
 
-        ${t(
-          'articleWriting'
-        )}
+  return `
 
-      </h2>
-
-      <p
-        class="muted"
-        style="
-          margin-top:8px;
-          margin-bottom:18px
-        ">
-
-        ${t(
-          'articleDescription'
-        )}
-
-      </p>
+    <div>
 
       <h3>
 
         ${t(
-          'articleTopic'
+          'topic'
         )}
 
       </h3>
@@ -6823,7 +15214,131 @@ function create() {
       <textarea
         class="textarea"
         style="
-          margin-top:10px;
+          margin-top:9px;
+          min-height:150px
+        "
+        oninput="
+          setBriefTopic(
+            this.value
+          )
+        "
+        placeholder="${t(
+          'topicPlaceholder'
+        )}">${escapeHtml(
+          state.briefTopic
+        )}</textarea>
+
+
+      <h3
+        style="
+          margin-top:15px
+        ">
+
+        ${t(
+          'length'
+        )}
+
+      </h3>
+
+      <div
+        class="chips"
+        style="
+          margin-top:9px
+        ">
+
+        ${[
+          [
+            'short',
+            t('short')
+          ],
+          [
+            'standard',
+            t('standard')
+          ],
+          [
+            'detailed',
+            t('detailed')
+          ]
+        ]
+          .map(
+            (
+              [
+                value,
+                label
+              ]
+            ) => `
+
+              <button
+                type="button"
+                class="chip ${
+                  state.briefLength ===
+                  value
+                    ? 'on'
+                    : ''
+                }"
+                onclick="
+                  setBriefLength(
+                    '${value}'
+                  )
+                ">
+
+                ${label}
+
+              </button>
+
+            `
+          )
+          .join('')}
+
+      </div>
+
+      <button
+        type="button"
+        class="btn btn-primary btn-lg"
+        style="
+          margin-top:12px
+        "
+        onclick="
+          generateBrief()
+        ">
+
+        ✦
+
+        ${t(
+          'createBrief'
+        )}
+
+      </button>
+
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   ARTICLE FORM
+   ========================================================= */
+
+function aiArticleForm() {
+
+  return `
+
+    <div>
+
+      <h3>
+
+        ${t(
+          'topic'
+        )}
+
+      </h3>
+
+      <textarea
+        class="textarea"
+        style="
+          margin-top:9px;
           min-height:220px
         "
         oninput="
@@ -6837,25 +15352,11 @@ function create() {
           state.articleTopic
         )}</textarea>
 
-      <h3>
-
-        ${t(
-          'articleLength'
-        )}
-
-      </h3>
-
       <div
-        class="muted"
+        class="alert alert-info"
         style="
-          margin-top:10px;
-          padding:12px 14px;
-          border:1px solid rgba(0,0,0,0.08);
-          border-radius:10px;
-          line-height:1.5
+          margin-top:11px
         ">
-
-        📝
 
         ${t(
           'articleMinimum'
@@ -6865,9 +15366,9 @@ function create() {
 
       <button
         type="button"
-        class="primary"
+        class="btn btn-primary btn-lg"
         style="
-          margin-top:16px
+          margin-top:12px
         "
         onclick="
           generateArticle()
@@ -6876,113 +15377,1022 @@ function create() {
         ✦
 
         ${t(
-          'createArticle'
+          'writeReport'
         )}
 
       </button>
 
     </div>
 
+  `;
 
-    ${
-      BOOKS.length
-        ? `
+}
 
-          <div
-            class="section card"
+
+/* =========================================================
+   ASK FORM
+   ========================================================= */
+
+function aiAskForm() {
+
+  return `
+
+    <div>
+
+      <div
+        class="alert alert-info"
+        style="
+          margin-bottom:13px
+        ">
+
+        ${t(
+          'sourceMaterialOnly'
+        )}
+
+      </div>
+
+      <h3>
+
+        ${t(
+          'question'
+        )}
+
+      </h3>
+
+      <textarea
+        class="textarea"
+        style="
+          margin-top:9px;
+          min-height:220px
+        "
+        oninput="
+          setAskPrompt(
+            this.value
+          )
+        "
+        placeholder="${t(
+          'questionPlaceholder'
+        )}">${escapeHtml(
+          state.askPrompt
+        )}</textarea>
+
+      <button
+        type="button"
+        class="btn btn-primary btn-lg"
+        style="
+          margin-top:12px
+        "
+        onclick="
+          generateAsk()
+        ">
+
+        ?
+
+        ${t(
+          'askAI'
+        )}
+
+      </button>
+
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   AI RESULT SCREEN
+   ========================================================= */
+
+function result() {
+
+  if (
+    state.assistantGenerating
+  ) {
+
+    return aiGeneratingScreen(
+      state.assistantPrompt
+    );
+
+  }
+
+  if (
+    state.briefGenerating
+  ) {
+
+    return aiGeneratingScreen(
+      state.briefTopic
+    );
+
+  }
+
+  if (
+    state.articleGenerating
+  ) {
+
+    return aiGeneratingScreen(
+      state.articleTopic
+    );
+
+  }
+
+  if (
+    state.askGenerating
+  ) {
+
+    return aiGeneratingScreen(
+      state.askPrompt
+    );
+
+  }
+
+
+  if (
+    state.creationType ===
+    'brief'
+  ) {
+
+    return resultPage(
+      t('lecture'),
+      state.briefTopic,
+      state.generatedBrief,
+      state.briefError,
+      state.briefPassages,
+      'generateBrief'
+    );
+
+  }
+
+
+  if (
+    state.creationType ===
+    'article'
+  ) {
+
+    return resultPage(
+      t('articleWriting'),
+      state.articleTopic,
+      state.generatedArticle,
+      state.articleError,
+      state.articlePassages,
+      'generateArticle'
+    );
+
+  }
+
+
+  if (
+    state.creationType ===
+    'ask'
+  ) {
+
+    return resultPage(
+      t('askDocumentation'),
+      state.askPrompt,
+      state.generatedAnswer,
+      state.askError,
+      state.askPassages,
+      'generateAsk'
+    );
+
+  }
+
+
+  return resultPage(
+    t('aiAssistant'),
+    state.assistantPrompt,
+    state.generatedAssistant,
+    state.assistantError,
+    state.assistantPassages,
+    'generateAssistant'
+  );
+
+}
+
+
+/* =========================================================
+   AI GENERATING SCREEN
+   ========================================================= */
+
+function aiGeneratingScreen(
+  subject
+) {
+
+  return dmsLayout(`
+
+    <div
+      class="card">
+
+      <div
+        class="working">
+
+        <div
+          class="dot">
+        </div>
+
+        <h2
+          style="
+            margin-top:18px
+          ">
+
+          ${t(
+            'preparing'
+          )}
+
+        </h2>
+
+        ${
+          subject
+            ? `
+
+              <div
+                class="muted"
+                style="
+                  max-width:650px;
+                  margin:0 auto;
+                  line-height:1.6
+                ">
+
+                ${escapeHtml(
+                  subject
+                )}
+
+              </div>
+
+            `
+            : ''
+        }
+
+      </div>
+
+    </div>
+
+  `);
+
+}
+
+
+/* =========================================================
+   RESULT PAGE
+   ========================================================= */
+
+function resultPage(
+  title,
+  subject,
+  content,
+  error,
+  passages,
+  retryFunction
+) {
+
+  return dmsLayout(`
+
+    <div
+      class="top">
+
+      <button
+        type="button"
+        class="back"
+        onclick="
+          go('ai')
+        ">
+
+        ‹
+
+      </button>
+
+      <div
+        style="
+          min-width:0
+        ">
+
+        <div
+          class="eyebrow">
+
+          ${t('ai')}
+
+        </div>
+
+        <strong
+          style="
+            display:block;
+            font-size:15px;
+            margin-top:3px;
+            overflow-wrap:anywhere
+          ">
+
+          ${escapeHtml(
+            title
+          )}
+
+        </strong>
+
+      </div>
+
+    </div>
+
+
+    <div
+      class="document-detail">
+
+      <section
+        class="document-detail-main">
+
+        <div
+          class="document-hero">
+
+          <h1
             style="
-              margin-top:32px
+              overflow-wrap:anywhere
             ">
 
-            <h2
-              style="
-                margin:0
-              ">
+            ${escapeHtml(
+              subject ||
+              title
+            )}
+
+          </h1>
+
+          ${
+            error
+              ? `
+
+                <div
+                  class="alert alert-danger"
+                  style="
+                    margin-top:13px
+                  ">
+
+                  ${escapeHtml(
+                    error
+                  )}
+
+                </div>
+
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  style="
+                    margin-top:12px
+                  "
+                  onclick="
+                    ${retryFunction}()
+                  ">
+
+                  ${t(
+                    'openResult'
+                  )}
+
+                </button>
+
+              `
+              : `
+
+                <div
+                  class="detail-section"
+                  style="
+                    margin-top:16px
+                  ">
+
+                  <div
+                    class="detail-section-body">
+
+                    ${
+                      content
+                        ? `
+                            <div
+                              class="ai-answer">
+
+                              ${formatText(
+                                content
+                              )}
+
+                            </div>
+                          `
+                        : `
+
+                            <div
+                              class="muted">
+
+                              ${t(
+                                'noDocuments'
+                              )}
+
+                            </div>
+
+                          `
+                    }
+
+                  </div>
+
+                </div>
+
+              `
+          }
+
+        </div>
+
+        ${
+          passages?.length
+            ? sourceBlock(
+                passages
+              )
+            : ''
+        }
+
+      </section>
+
+
+      <aside
+        class="document-detail-side">
+
+        <div
+          class="detail-section"
+          style="
+            margin-top:0
+          ">
+
+          <div
+            class="detail-section-header">
+
+            <strong>
 
               ${t(
-                'askBooks'
+                'actions'
               )}
 
-            </h2>
+            </strong>
 
-            <p
-              class="muted"
-              style="
-                margin-top:8px;
-                margin-bottom:18px
-              ">
+          </div>
 
-              ${t(
-                'askDescription'
-              )}
-
-            </p>
-
-            <div
-              class="muted"
-              style="
-                margin-bottom:18px;
-                padding:10px 12px;
-                border:1px solid rgba(0,0,0,0.08);
-                border-radius:10px;
-                line-height:1.5
-              ">
-
-              🔒
-
-              ${t(
-                'sourceMaterialOnly'
-              )}
-
-            </div>
-
-            <h3>
-
-              ${t(
-                'askQuestion'
-              )}
-
-            </h3>
-
-            <textarea
-              class="textarea"
-              style="
-                margin-top:10px;
-                min-height:220px
-              "
-              oninput="
-                setAskPrompt(
-                  this.value
-                )
-              "
-              placeholder="${t(
-                'askQuestionPlaceholder'
-              )}">${escapeHtml(
-                state.askPrompt
-              )}</textarea>
+          <div
+            class="detail-section-body">
 
             <button
               type="button"
-              class="primary"
+              class="btn btn-secondary"
               style="
-                margin-top:16px
+                width:100%
               "
               onclick="
-                generateAsk()
+                go('ai')
               ">
 
-              ✦
+              ←
 
               ${t(
-                'askBooksButton'
+                'ai'
               )}
 
             </button>
 
+            ${
+              content
+                ? `
+
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    style="
+                      width:100%;
+                      margin-top:7px
+                    "
+                    onclick="
+                      downloadCurrentAiResult()
+                    ">
+
+                    ↓
+
+                    ${t(
+                      'download'
+                    )}
+
+                  </button>
+
+                `
+                : ''
+            }
+
+          </div>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  `);
+
+}
+
+
+/* =========================================================
+   DOWNLOAD CURRENT AI RESULT
+   ========================================================= */
+
+function getCurrentAiContent() {
+
+  if (
+    state.creationType ===
+    'brief'
+  ) {
+
+    return {
+
+      title:
+        state.briefTopic ||
+        t('lecture'),
+
+      content:
+        state.generatedBrief,
+
+      type:
+        'brief',
+
+      passages:
+        state.briefPassages
+
+    };
+
+  }
+
+  if (
+    state.creationType ===
+    'article'
+  ) {
+
+    return {
+
+      title:
+        state.articleTopic ||
+        t('articleWriting'),
+
+      content:
+        state.generatedArticle,
+
+      type:
+        'article',
+
+      passages:
+        state.articlePassages
+
+    };
+
+  }
+
+  if (
+    state.creationType ===
+    'ask'
+  ) {
+
+    return {
+
+      title:
+        state.askPrompt ||
+        t('askDocumentation'),
+
+      content:
+        state.generatedAnswer,
+
+      type:
+        'ask',
+
+      passages:
+        state.askPassages
+
+    };
+
+  }
+
+  return {
+
+    title:
+      state.assistantPrompt ||
+      t('aiAssistant'),
+
+    content:
+      state.generatedAssistant,
+
+    type:
+      'assistant',
+
+    passages:
+      state.assistantPassages
+
+  };
+
+}
+
+
+function downloadCurrentAiResult() {
+
+  const current =
+    getCurrentAiContent();
+
+  if (
+    !current.content
+  ) {
+
+    return;
+
+  }
+
+  const temp = {
+
+    ...current,
+
+    language:
+      state.lang ===
+      'sl'
+        ? 'Slovenščina'
+        : 'English',
+
+    createdAt:
+      new Date().toISOString()
+
+  };
+
+  state.works = [
+
+    temp,
+
+    ...state.works
+
+  ];
+
+  const contentHtml =
+    markdownToHtml(
+      current.content
+    );
+
+  const sourceList =
+    Array.isArray(
+      current.passages
+    )
+      ? current.passages
+          .map(
+            passage => `
+
+              <li>
+
+                ${escapeHtml(
+                  passage.bookTitle ||
+                  ''
+                )}
+
+                ${
+                  passage.page
+                    ? (
+                        ' · ' +
+                        escapeHtml(
+                          t('page')
+                        ) +
+                        ' ' +
+                        escapeHtml(
+                          passage.page
+                        )
+                      )
+                    : ''
+                }
+
+              </li>
+
+            `
+          )
+          .join('')
+      : '';
+
+  const htmlDocument = `
+
+<!doctype html>
+
+<html
+  lang="${
+    state.lang ===
+    'sl'
+      ? 'sl'
+      : 'en'
+  }"
+>
+
+<head>
+
+<meta charset="utf-8">
+
+<meta
+  name="viewport"
+  content="width=device-width,initial-scale=1"
+>
+
+<title>
+
+${escapeHtml(
+  current.title
+)}
+
+</title>
+
+<style>
+
+body{
+
+  margin:
+    0;
+
+  padding:
+    40px 20px;
+
+  background:
+    #f4f6f9;
+
+  color:
+    #172033;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  line-height:
+    1.75;
+
+}
+
+.page{
+
+  width:
+    min(
+      920px,
+      100%
+    );
+
+  margin:
+    0 auto;
+
+  padding:
+    50px 58px;
+
+  background:
+    #fff;
+
+  border:
+    1px solid
+    #dfe5ec;
+
+}
+
+h1,
+h2,
+h3{
+
+  color:
+    #172033;
+
+}
+
+.sources{
+
+  margin-top:
+    45px;
+
+  padding-top:
+    25px;
+
+  border-top:
+    1px solid
+    #dfe5ec;
+
+}
+
+@media(
+  max-width:700px
+){
+
+  body{
+
+    padding:
+      0;
+
+  }
+
+  .page{
+
+    width:
+      100%;
+
+    padding:
+      25px 18px;
+
+    border:
+      0;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<main
+  class="page">
+
+  <h1>
+
+    ${escapeHtml(
+      current.title
+    )}
+
+  </h1>
+
+  <article>
+
+    ${contentHtml}
+
+  </article>
+
+  ${
+    sourceList
+      ? `
+
+        <section
+          class="sources">
+
+          <h2>
+
+            ${escapeHtml(
+              t('sources')
+            )}
+
+          </h2>
+
+          <ul>
+
+            ${sourceList}
+
+          </ul>
+
+        </section>
+
+      `
+      : ''
+  }
+
+</main>
+
+</body>
+
+</html>
+
+  `.trim();
+
+  const blob =
+    new Blob(
+      [
+        htmlDocument
+      ],
+      {
+        type:
+          'text/html;charset=utf-8'
+      }
+    );
+
+  const url =
+    URL.createObjectURL(
+      blob
+    );
+
+  const safeName =
+    String(
+      current.title ||
+      'dms-ai-result'
+    )
+      .replace(
+        /[<>:"/\\|?*\x00-\x1F]/g,
+        ''
+      )
+      .replace(
+        /\s+/g,
+        '-'
+      )
+      .slice(
+        0,
+        100
+      )
+      .trim() ||
+    'dms-ai-result';
+
+  const link =
+    document.createElement(
+      'a'
+    );
+
+  link.href =
+    url;
+
+  link.download =
+    safeName +
+    '.html';
+
+  document.body.appendChild(
+    link
+  );
+
+  link.click();
+
+  link.remove();
+
+  setTimeout(
+    () => {
+
+      URL.revokeObjectURL(
+        url
+      );
+
+    },
+    1000
+  );
+
+  toast(
+    state.lang ===
+    'sl'
+      ? 'Rezultat je prenesen.'
+      : 'Result downloaded.'
+  );
+
+}
+
+
+/* =========================================================
+   SAVED AI RESULTS SCREEN
+   ========================================================= */
+
+function saved() {
+
+  const works =
+    Array.isArray(
+      state.works
+    )
+      ? state.works
+      : [];
+
+  return dmsLayout(`
+
+    ${pageHeader(
+      t('saved'),
+      t('saved'),
+      state.lang ===
+      'sl'
+        ? 'Shranjeni rezultati umetne inteligence.'
+        : 'Saved artificial intelligence results.'
+    )}
+
+    ${
+      works.length
+        ? `
+
+          <div
+            class="work-list">
+
+            ${works
+              .map(
+                (
+                  work,
+                  index
+                ) =>
+                  savedWorkRow(
+                    work,
+                    index
+                  )
+              )
+              .join('')}
+
           </div>
 
         `
-        : ''
+        : `
+
+          <div
+            class="card">
+
+            <div
+              class="document-empty">
+
+              <strong>
+
+                ${t(
+                  'noResults'
+                )}
+
+              </strong>
+
+            </div>
+
+          </div>
+
+        `
     }
 
   `);
@@ -6991,204 +16401,725 @@ function create() {
 
 
 /* =========================================================
-   RESULT FORMATTING
+   SAVED WORK ROW
    ========================================================= */
 
-function formatText(
-  text
+function savedWorkRow(
+  work,
+  index
 ) {
 
-  const lines =
+  const typeLabels = {
+
+    assistant:
+      t('aiAssistant'),
+
+    brief:
+      t('lecture'),
+
+    article:
+      t('articleWriting'),
+
+    ask:
+      t('askDocumentation')
+
+  };
+
+  const type =
+    typeLabels[
+      work.type
+    ] ||
+    t('ai');
+
+  const preview =
     String(
-      text ||
+      work.content ||
       ''
     )
-      .split(
-        /\r?\n/
-      );
+      .replace(
+        /\s+/g,
+        ' '
+      )
+      .trim();
 
-  return lines
-    .map(
-      line => {
+  return `
 
-        const clean =
-          line.trim();
+    <div
+      class="work-item">
 
-        if (!clean) {
+      <div
+        class="document-file-icon"
+        style="
+          width:33px;
+          height:36px
+        ">
 
-          return `
-            <div
-              style="
-                height:10px
-              ">
-            </div>
-          `;
+        AI
 
+      </div>
+
+      <div
+        class="work-item-main">
+
+        <div
+          class="work-item-title">
+
+          ${escapeHtml(
+            work.title ||
+            type
+          )}
+
+        </div>
+
+        <div
+          class="work-item-meta">
+
+          ${escapeHtml(
+            type
+          )}
+
+          ·
+
+          ${escapeHtml(
+            formatDateTime(
+              work.createdAt
+            )
+          )}
+
+        </div>
+
+        ${
+          preview
+            ? `
+
+              <div
+                class="muted"
+                style="
+                  margin-top:6px;
+                  overflow:hidden;
+                  text-overflow:ellipsis;
+                  white-space:nowrap
+                ">
+
+                ${escapeHtml(
+                  preview
+                )}
+
+              </div>
+
+            `
+            : ''
         }
 
-        const escaped =
-          escapeHtml(
-            clean
-          );
+      </div>
 
-        if (
-          escaped.startsWith(
-            '### '
-          )
-        ) {
+      <div
+        class="work-item-actions">
 
-          return `
-            <h4
-              style="
-                margin-top:24px
-              ">
+        <button
+          type="button"
+          class="btn btn-secondary btn-sm"
+          onclick="
+            openSavedWork(
+              ${index}
+            )
+          ">
 
-              ${escaped.slice(
-                4
-              )}
+          ${t(
+            'openResult'
+          )}
 
-            </h4>
-          `;
+        </button>
 
-        }
+        <button
+          type="button"
+          class="btn btn-secondary btn-sm"
+          onclick="
+            downloadSavedWork(
+              ${index}
+            )
+          ">
 
-        if (
-          escaped.startsWith(
-            '## '
-          )
-        ) {
+          ${t(
+            'download'
+          )}
 
-          return `
-            <h3
-              style="
-                margin-top:28px
-              ">
+        </button>
 
-              ${escaped.slice(
-                3
-              )}
+        <button
+          type="button"
+          class="btn btn-ghost btn-sm"
+          onclick="
+            removeSavedWork(
+              ${index}
+            )
+          ">
 
-            </h3>
-          `;
+          ${t(
+            'delete'
+          )}
 
-        }
+        </button>
 
-        if (
-          escaped.startsWith(
-            '# '
-          )
-        ) {
+      </div>
 
-          return `
-            <h2
-              style="
-                margin-top:28px
-              ">
+    </div>
 
-              ${escaped.slice(
-                2
-              )}
-
-            </h2>
-          `;
-
-        }
-
-        const formatted =
-          escaped.replace(
-            /\*\*(.*?)\*\*/g,
-            '<strong>$1</strong>'
-          );
-
-        return `
-          <p class="english">
-
-            ${formatted}
-
-          </p>
-        `;
-
-      }
-    )
-    .join('');
+  `;
 
 }
 
 
 /* =========================================================
-   RESULT SOURCES
+   SETTINGS SCREEN
    ========================================================= */
 
-function sourceBlock(
-  passages
+function settings() {
+
+  return dmsLayout(`
+
+    ${pageHeader(
+      t('settings'),
+      t('settings'),
+      t(
+        'settingsDescription'
+      )
+    )}
+
+
+    <div
+      class="dashboard-columns equal">
+
+      <section
+        class="card">
+
+        <div
+          class="card-header">
+
+          <div
+            class="card-header-title">
+
+            <strong>
+
+              ${t(
+                'repository'
+              )}
+
+            </strong>
+
+            <span>
+
+              ${t(
+                'localOnly'
+              )}
+
+            </span>
+
+          </div>
+
+        </div>
+
+        <div
+          class="card-body">
+
+          ${
+            state.localFolderName
+              ? `
+
+                <div
+                  class="local-folder-path">
+
+                  ${escapeHtml(
+                    state.localFolderName
+                  )}
+
+                </div>
+
+              `
+              : `
+
+                <div
+                  class="alert alert-warning">
+
+                  ${t(
+                    'folderNotSelected'
+                  )}
+
+                </div>
+
+              `
+          }
+
+          <div
+            class="local-library-actions">
+
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="
+                chooseBooksFolder()
+              ">
+
+              ${
+                state.localFolderName
+                  ? t(
+                      'changeFolder'
+                    )
+                  : t(
+                      'chooseFolder'
+                    )
+              }
+
+            </button>
+
+            ${
+              state.localFolderName
+                ? `
+
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    onclick="
+                      refreshBooks()
+                    ">
+
+                    ↻
+
+                    ${t(
+                      'refresh'
+                    )}
+
+                  </button>
+
+                `
+                : ''
+            }
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <section
+        class="card">
+
+        <div
+          class="card-header">
+
+          <div
+            class="card-header-title">
+
+            <strong>
+
+              ${t(
+                'language'
+              )}
+
+            </strong>
+
+            <span>
+
+              ${state.lang ===
+              'sl'
+                ? 'Slovenščina'
+                : 'English'}
+
+            </span>
+
+          </div>
+
+        </div>
+
+        <div
+          class="card-body">
+
+          ${languageSelector()}
+
+          <div
+            class="muted">
+
+            ${
+              state.lang ===
+              'sl'
+                ? 'Jezik uporabniškega vmesnika.'
+                : 'User interface language.'
+            }
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <div
+      class="section">
+
+      <div
+        class="detail-section"
+        style="
+          margin-top:0
+        ">
+
+        <div
+          class="detail-section-header">
+
+          <strong>
+
+            ${t(
+              'securityNote'
+            )}
+
+          </strong>
+
+        </div>
+
+        <div
+          class="detail-section-body">
+
+          <div
+            class="alert alert-info">
+
+            ${escapeHtml(
+              t(
+                'securityNote'
+              )
+            )}
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  `);
+
+}
+
+/* =========================================================
+   PDF SEARCH RESULT OPENING
+   ========================================================= */
+
+function openSearchResult(
+  bookId,
+  page
 ) {
+
+  const document =
+    getDocumentById(
+      bookId
+    );
+
+  if (!document) {
+    return;
+  }
+
+  state.documentId =
+    document.id;
+
+  state.sourceDocumentId =
+    document.id;
+
+  addRecentDocument(
+    document
+  );
+
+  openPdf(
+    document.pdf,
+    Number(
+      page
+    ) || undefined
+  );
+
+}
+
+
+/* =========================================================
+   SEARCH INDEX STATUS
+   ========================================================= */
+
+function getSearchIndexCount() {
+
+  return Array.isArray(
+    state.searchIndex
+  )
+    ? state.searchIndex.length
+    : 0;
+
+}
+
+
+/* =========================================================
+   UPDATE PAGE COUNTS FROM INDEX
+   ========================================================= */
+
+function updateDocumentPageCounts() {
 
   if (
     !Array.isArray(
-      passages
-    ) ||
-    !passages.length
+      state.searchIndex
+    )
+  ) {
+
+    return;
+
+  }
+
+  BOOKS.forEach(
+    document => {
+
+      const pages =
+        state.searchIndex
+          .filter(
+            row =>
+              row &&
+              row.bookId ===
+              document.id
+          )
+          .map(
+            row =>
+              Number(
+                row.page ||
+                0
+              )
+          );
+
+      if (
+        pages.length
+      ) {
+
+        document.pages =
+          Math.max(
+            ...pages
+          );
+
+      }
+
+    }
+  );
+
+  save();
+
+}
+
+
+/* =========================================================
+   DOCUMENTS FROM FOLDER
+   ========================================================= */
+
+function getDocumentFolder(
+  document
+) {
+
+  if (
+    !document ||
+    !document.path
   ) {
 
     return '';
 
   }
 
+  const parts =
+    getPathParts(
+      document.path
+    );
+
+  return parts
+    .slice(
+      0,
+      -1
+    )
+    .join('/');
+
+}
+
+
+/* =========================================================
+   DOCUMENT CATEGORY NORMALIZATION
+   ========================================================= */
+
+function ensureMetadataForDocuments() {
+
+  let changed =
+    false;
+
+  BOOKS.forEach(
+    document => {
+
+      const existing =
+        state.metadata[
+          document.id
+        ];
+
+      if (
+        existing
+      ) {
+
+        return;
+
+      }
+
+      state.metadata[
+        document.id
+      ] = {
+
+        category:
+          document.category ||
+          '',
+
+        subcategory:
+          document.subcategory ||
+          '',
+
+        department:
+          '',
+
+        owner:
+          '',
+
+        author:
+          '',
+
+        documentDate:
+          '',
+
+        status:
+          'active',
+
+        version:
+          '1.0',
+
+        tags:
+          [],
+
+        keywords:
+          '',
+
+        notes:
+          '',
+
+        reviewDate:
+          '',
+
+        expiryDate:
+          ''
+
+      };
+
+      changed =
+        true;
+
+    }
+  );
+
+  if (
+    changed
+  ) {
+
+    save();
+
+  }
+
+}
+
+
+/* =========================================================
+   DOCUMENT REPOSITORY CONTROLS
+   ========================================================= */
+
+function localLibraryControls() {
+
   return `
 
-    <div class="card section">
-
-      <h3>
-
-        ${t(
-          'sources'
-        )}
-
-      </h3>
+    <div
+      class="local-library-card">
 
       <div
-        class="muted"
-        style="
-          margin-top:10px;
-          line-height:1.7
-        ">
+        class="local-library-head">
+
+        <div
+          class="local-library-copy">
+
+          <strong>
+
+            ${t(
+              'localDocuments'
+            )}
+
+          </strong>
+
+          <span>
+
+            ${
+              state.localFolderName
+                ? (
+                    t('selectedFolder') +
+                    ': ' +
+                    state.localFolderName
+                  )
+                : t(
+                    'folderNotSelected'
+                  )
+            }
+
+          </span>
+
+        </div>
+
+      </div>
+
+      <div
+        class="local-library-actions">
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="
+            chooseBooksFolder()
+          ">
+
+          📁
+
+          ${
+            state.localFolderName
+              ? t(
+                  'changeFolder'
+                )
+              : t(
+                  'chooseFolder'
+                )
+          }
+
+        </button>
 
         ${
-          passages
-            .map(
-              (
-                passage,
-                index
-              ) =>
-                `${index + 1}. ${
-                  escapeHtml(
-                    passage.bookTitle ||
-                    ''
-                  )
-                }${
-                  passage.author
-                    ? ` — ${escapeHtml(
-                        passage.author
-                      )}`
-                    : ''
-                }${
-                  passage.page
-                    ? ` · ${
-                        state.lang ===
-                        'sl'
-                          ? 'stran'
-                          : 'page'
-                      } ${
-                        escapeHtml(
-                          passage.page
-                        )
-                      }`
-                    : ''
-                }`
-            )
-            .join(
-              '<br>'
-            )
+          state.localFolderName
+            ? `
+
+              <button
+                type="button"
+                class="btn btn-secondary"
+                onclick="
+                  refreshBooks()
+                ">
+
+                ↻
+
+                ${t(
+                  'refreshDocuments'
+                )}
+
+              </button>
+
+            `
+            : ''
         }
 
       </div>
@@ -7201,1209 +17132,174 @@ function sourceBlock(
 
 
 /* =========================================================
-   RESULT SCREEN
+   DOCUMENTS QUICK SUMMARY
    ========================================================= */
 
-function result() {
+function documentsQuickSummary() {
 
-  if (
-    state.lectureGenerating
-  ) {
+  const stats =
+    getDashboardStats();
 
-    return layout(`
-
-      <div class="working">
-
-        <div class="dot"></div>
-
-        <h2>
-
-          ${
-            state.lang ===
-            'sl'
-
-              ? 'AI pripravlja predavanje…'
-
-              : 'AI is preparing your lecture…'
-          }
-
-        </h2>
-
-        <div class="muted">
-
-          ${escapeHtml(
-            state.lectureTopic
-          )}
-
-        </div>
-
-      </div>
-
-    `);
-
-  }
-
-
-  if (
-    state.assistantGenerating
-  ) {
-
-    return layout(`
-
-      <div class="working">
-
-        <div class="dot"></div>
-
-        <h2>
-
-          ${t(
-            'assistantPreparing'
-          )}
-
-        </h2>
-
-        <div class="muted">
-
-          ${escapeHtml(
-            state.assistantPrompt
-          )}
-
-        </div>
-
-      </div>
-
-    `);
-
-  }
-
-
-  if (
-    state.articleGenerating
-  ) {
-
-    return layout(`
-
-      <div class="working">
-
-        <div class="dot"></div>
-
-        <h2>
-
-          ${t(
-            'articlePreparing'
-          )}
-
-        </h2>
-
-        <div class="muted">
-
-          ${escapeHtml(
-            state.articleTopic
-          )}
-
-        </div>
-
-        <div
-          class="muted"
-          style="
-            margin-top:10px
-          ">
-
-          ${t(
-            'articleMinimum'
-          )}
-
-        </div>
-
-      </div>
-
-    `);
-
-  }
-
-
-  if (
-    state.askGenerating
-  ) {
-
-    return layout(`
-
-      <div class="working">
-
-        <div class="dot"></div>
-
-        <h2>
-
-          ${t(
-            'answerPreparing'
-          )}
-
-        </h2>
-
-        <div class="muted">
-
-          ${escapeHtml(
-            state.askPrompt
-          )}
-
-        </div>
-
-      </div>
-
-    `);
-
-  }
-
-
-  if (
-    state.creationType ===
-    'assistant'
-  ) {
-
-    if (
-      state.assistantError
-    ) {
-
-      return layout(`
-
-        <div class="top">
-
-          <button
-            type="button"
-            class="back"
-            onclick="
-              go('create')
-            ">
-
-            ‹
-
-          </button>
-
-          <div style="flex:1">
-
-            <strong>
-
-              ${t(
-                'aiAssistant'
-              )}
-
-            </strong>
-
-          </div>
-
-        </div>
-
-        <div class="section card">
-
-          <h3>
-
-            ${t(
-              'assistantError'
-            )}
-
-          </h3>
-
-          <p class="muted">
-
-            ${escapeHtml(
-              state.assistantError
-            )}
-
-          </p>
-
-        </div>
-
-        <button
-          type="button"
-          class="primary"
-          onclick="
-            generateAssistant()
-          ">
-
-          ✦
-
-          ${t(
-            'assistantButton'
-          )}
-
-        </button>
-
-      `);
-
-    }
-
-    return layout(`
-
-      <div class="top">
-
-        <button
-          type="button"
-          class="back"
-          onclick="
-            go('create')
-          ">
-
-          ‹
-
-        </button>
-
-        <div style="flex:1">
-
-          <strong>
-
-            ${t(
-              'aiAssistant'
-            )}
-
-          </strong>
-
-        </div>
-
-      </div>
-
-      <div
-        class="eyebrow"
-        style="
-          margin-top:10px
-        ">
-
-        ${t(
-          'aiAssistant'
-        )}
-
-      </div>
-
-      <h1>
-
-        ${t(
-          'aiAssistant'
-        )}
-
-      </h1>
-
-      <div
-        class="muted"
-        style="
-          margin-bottom:22px;
-          line-height:1.6
-        ">
-
-        ${escapeHtml(
-          state.assistantPrompt
-        )}
-
-      </div>
-
-      <div class="section">
-
-        ${
-          state.generatedAssistant
-            ? formatText(
-                state.generatedAssistant
-              )
-
-            : `
-
-              <div class="muted">
-
-                ${t(
-                  'assistantNotCreated'
-                )}
-
-              </div>
-
-            `
-        }
-
-      </div>
-
-      ${sourceBlock(
-        state.assistantPassages
-      )}
-
-      <button
-        type="button"
-        class="primary"
-        onclick="
-          go('create')
-        ">
-
-        ←
-
-        ${t(
-          'create'
-        )}
-
-      </button>
-
-    `);
-
-  }
-
-
-  if (
-    state.creationType ===
-    'article'
-  ) {
-
-    if (
-      state.articleError
-    ) {
-
-      return layout(`
-
-        <div class="top">
-
-          <button
-            type="button"
-            class="back"
-            onclick="
-              go('create')
-            ">
-
-            ‹
-
-          </button>
-
-          <div style="flex:1">
-
-            <strong>
-
-              ${t(
-                'articleWriting'
-              )}
-
-            </strong>
-
-          </div>
-
-        </div>
-
-        <div class="section card">
-
-          <h3>
-
-            ${t(
-              'articleError'
-            )}
-
-          </h3>
-
-          <p class="muted">
-
-            ${escapeHtml(
-              state.articleError
-            )}
-
-          </p>
-
-        </div>
-
-        <button
-          type="button"
-          class="primary"
-          onclick="
-            generateArticle()
-          ">
-
-          ✦
-
-          ${t(
-            'createArticle'
-          )}
-
-        </button>
-
-      `);
-
-    }
-
-    return layout(`
-
-      <div class="top">
-
-        <button
-          type="button"
-          class="back"
-          onclick="
-            go('create')
-          ">
-
-          ‹
-
-        </button>
-
-        <div style="flex:1">
-
-          <strong>
-
-            ${t(
-              'articleWriting'
-            )}
-
-          </strong>
-
-        </div>
-
-      </div>
-
-      <div
-        class="eyebrow"
-        style="
-          margin-top:10px
-        ">
-
-        ${t(
-          'articleWriting'
-        )}
-
-      </div>
-
-      <h1>
-
-        ${escapeHtml(
-          state.articleTopic
-        )}
-
-      </h1>
-
-      <div
-        class="muted"
-        style="
-          margin-bottom:22px
-        ">
-
-        ${t(
-          'articleMinimum'
-        )}
-
-      </div>
-
-      <div class="section">
-
-        ${
-          state.generatedArticle
-            ? formatText(
-                state.generatedArticle
-              )
-
-            : `
-
-              <div class="muted">
-
-                ${t(
-                  'articleNotCreated'
-                )}
-
-              </div>
-
-            `
-        }
-
-      </div>
-
-      ${sourceBlock(
-        state.articlePassages
-      )}
-
-      <button
-        type="button"
-        class="primary"
-        onclick="
-          go('create')
-        ">
-
-        ←
-
-        ${t(
-          'create'
-        )}
-
-      </button>
-
-    `);
-
-  }
-
-
-  if (
-    state.creationType ===
-    'ask'
-  ) {
-
-    if (
-      state.askError
-    ) {
-
-      return layout(`
-
-        <div class="top">
-
-          <button
-            type="button"
-            class="back"
-            onclick="
-              go('create')
-            ">
-
-            ‹
-
-          </button>
-
-          <div style="flex:1">
-
-            <strong>
-
-              ${t(
-                'askBooks'
-              )}
-
-            </strong>
-
-          </div>
-
-        </div>
-
-        <div class="section card">
-
-          <h3>
-
-            ${t(
-              'noAnswer'
-            )}
-
-          </h3>
-
-          <p class="muted">
-
-            ${escapeHtml(
-              state.askError
-            )}
-
-          </p>
-
-        </div>
-
-        <button
-          type="button"
-          class="primary"
-          onclick="
-            generateAsk()
-          ">
-
-          ✦
-
-          ${t(
-            'askBooksButton'
-          )}
-
-        </button>
-
-      `);
-
-    }
-
-    return layout(`
-
-      <div class="top">
-
-        <button
-          type="button"
-          class="back"
-          onclick="
-            go('create')
-          ">
-
-          ‹
-
-        </button>
-
-        <div style="flex:1">
-
-          <strong>
-
-            ${t(
-              'askBooks'
-            )}
-
-          </strong>
-
-          <div class="muted">
-
-            ${state.sources.length}
-
-            ${t(
-              'selectedBooks'
-            )}
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div
-        class="eyebrow"
-        style="
-          margin-top:10px
-        ">
-
-        ${t(
-          'answer'
-        )}
-
-      </div>
-
-      <h1>
-
-        ${t(
-          'answer'
-        )}
-
-      </h1>
-
-      <div
-        class="muted"
-        style="
-          margin-bottom:22px
-        ">
-
-        ${escapeHtml(
-          state.askPrompt
-        )}
-
-      </div>
-
-      <div class="section">
-
-        ${
-          state.generatedAnswer
-
-            ? formatText(
-                state.generatedAnswer
-              )
-
-            : `
-
-              <div class="muted">
-
-                ${t(
-                  'answerNotCreated'
-                )}
-
-              </div>
-
-            `
-        }
-
-      </div>
-
-      ${sourceBlock(
-        state.askPassages
-      )}
-
-      <button
-        type="button"
-        class="primary"
-        onclick="
-          go('create')
-        ">
-
-        ←
-
-        ${t(
-          'create'
-        )}
-
-      </button>
-
-    `);
-
-  }
-
-
-  if (
-    state.lectureError
-  ) {
-
-    return layout(`
-
-      <div class="top">
-
-        <button
-          type="button"
-          class="back"
-          onclick="
-            go('create')
-          ">
-
-          ‹
-
-        </button>
-
-        <div style="flex:1">
-
-          <strong>
-
-            ${t(
-              'aiLecture'
-            )}
-
-          </strong>
-
-        </div>
-
-      </div>
-
-      <div class="section card">
-
-        <h3>
-
-          ${t(
-            'lectureError'
-          )}
-
-        </h3>
-
-        <p class="muted">
-
-          ${escapeHtml(
-            state.lectureError
-          )}
-
-        </p>
-
-      </div>
-
-      <button
-        type="button"
-        class="primary"
-        onclick="
-          generate()
-        ">
-
-        ✦
-
-        ${t(
-          'createLecture'
-        )}
-
-      </button>
-
-    `);
-
-  }
-
-
-  return layout(`
-
-    <div class="top">
-
-      <button
-        type="button"
-        class="back"
-        onclick="
-          go('create')
-        ">
-
-        ‹
-
-      </button>
-
-      <div style="flex:1">
-
-        <strong>
-
-          ${t(
-            'aiLecture'
-          )}
-
-        </strong>
-
-        <div class="muted">
-
-          ${state.sources.length}
-
-          ${t(
-            'selectedBooks'
-          )}
-
-          ·
-
-          ${state.lectureLength}
-
-          min
-
-        </div>
-
-      </div>
-
-    </div>
+  return `
 
     <div
-      class="eyebrow"
+      class="dashboard-grid"
       style="
-        margin-top:10px
+        margin-bottom:13px
       ">
 
-      ${t(
-        'aiLecture'
+      ${statCard(
+        t('totalDocuments'),
+        stats.total,
+        '▤'
+      )}
+
+      ${statCard(
+        t('categoriesCount'),
+        stats.categories,
+        '▦'
+      )}
+
+      ${statCard(
+        t('reviewCount'),
+        stats.review,
+        '✓'
+      )}
+
+      ${statCard(
+        t('expiredDocuments'),
+        stats.expired,
+        '!'
       )}
 
     </div>
 
-    <h1>
-
-      ${escapeHtml(
-        state.lectureTopic
-      )}
-
-    </h1>
-
-    <div class="section">
-
-      ${
-        state.generatedLecture
-          ? formatText(
-              state.generatedLecture
-            )
-          : `
-
-            <div class="muted">
-
-              ${
-                state.lang ===
-                'sl'
-
-                  ? 'Predavanje še ni ustvarjeno.'
-
-                  : 'The lecture has not been generated yet.'
-              }
-
-            </div>
-
-          `
-      }
-
-    </div>
-
-    ${sourceBlock(
-      state.lecturePassages
-    )}
-
-    <button
-      type="button"
-      class="primary"
-      onclick="
-        go('create')
-      ">
-
-      ←
-
-      ${t(
-        'create'
-      )}
-
-    </button>
-
-  `);
+  `;
 
 }
 
 
 /* =========================================================
-   SAVED SCREEN
+   BOOK COMPATIBILITY
    ========================================================= */
 
-function saved() {
+function openBook(
+  index
+) {
 
-  const works =
-    state.works;
+  const document =
+    BOOKS[
+      index
+    ];
 
-  return layout(`
+  if (
+    !document ||
+    !document.pdf
+  ) {
 
-    <h2>
+    return;
 
-      ${t('saved')}
-
-    </h2>
-
-    <div class="section">
-
-      <div
-        style="
-          display:flex;
-          justify-content:space-between;
-          align-items:center;
-          margin-bottom:12px
-        ">
-
-        <h3>
-
-          ${t(
-            'works'
-          )}
-
-        </h3>
-
-        <span class="muted">
-
-          ${works.length}
-
-        </span>
+  }
 
-      </div>
-
-      ${
-        works.length
-
-          ? works
-              .map(
-                (
-                  work,
-                  index
-                ) => {
+  state.documentId =
+    document.id;
 
-                  const typeLabel =
-                    work.type ===
-                    'assistant'
-
-                      ? t(
-                          'assistantWork'
-                        )
+  state.sourceDocumentId =
+    document.id;
 
-                      : work.type ===
-                        'article'
+  addRecentDocument(
+    document
+  );
 
-                        ? t(
-                            'articleWork'
-                          )
+  openPdf(
+    document.pdf
+  );
 
-                        : work.type ===
-                          'ask'
-
-                          ? t(
-                              'askWork'
-                            )
-
-                          : t(
-                              'lectureWork'
-                            );
+}
 
-                  const marker =
-                    work.type ===
-                    'assistant'
-                      ? 'AI'
-                      : work.type ===
-                        'article'
-                        ? 'Č'
-                        : work.type ===
-                          'ask'
-                          ? 'Q'
-                          : 'A';
-
-                  const title =
-                    work.title ||
-                    typeLabel;
 
-                  const preview =
-                    String(
-                      work.content ||
-                      ''
-                    )
-                      .replace(
-                        /\s+/g,
-                        ' '
-                      )
-                      .trim();
-
-                  const shortPreview =
-                    preview.length >
-                    170
-                      ? (
-                          preview.slice(
-                            0,
-                            170
-                          ) +
-                          '…'
-                        )
-                      : preview;
-
-                  return `
-
-                    <div
-                      class="row"
-                      style="
-                        align-items:flex-start;
-                        cursor:pointer
-                      "
-                      onclick="
-                        openSavedWork(
-                          ${index}
-                        )
-                      ">
-
-                      <div class="num">
-
-                        ${marker}
-
-                      </div>
-
-                      <div class="grow">
-
-                        <div
-                          style="
-                            font-weight:600
-                          ">
-
-                          ${escapeHtml(
-                            title
-                          )}
-
-                        </div>
-
-                        <div
-                          class="muted"
-                          style="
-                            margin-top:4px
-                          ">
-
-                          ${typeLabel}
-
-                        </div>
-
-                        ${
-                          shortPreview
-                            ? `
-
-                              <div
-                                style="
-                                  margin-top:8px;
-                                  line-height:1.5
-                                ">
-
-                                ${escapeHtml(
-                                  shortPreview
-                                )}
-
-                              </div>
+/* =========================================================
+   DOCUMENT SEARCH FROM TOP BAR
+   ========================================================= */
 
-                            `
-                            : ''
-                        }
-
-                        <div
-                          class="muted"
-                          style="
-                            margin-top:8px;
-                            font-size:11px
-                          ">
+function executeGlobalSearch() {
 
-                          ${t(
-                            'created'
-                          )}
+  if (
+    state.query.trim()
+  ) {
 
-                          ·
+    go('search');
 
-                          ${escapeHtml(
-                            formatWorkDate(
-                              work.createdAt
-                            )
-                          )}
+  } else {
 
-                        </div>
+    go('documents');
 
-                        <div
-                          style="
-                            display:flex;
-                            gap:8px;
-                            margin-top:10px;
-                            flex-wrap:wrap
-                          ">
+  }
 
-                          <button
-                            type="button"
-                            class="chip on"
-                            onclick="
-                              event.stopPropagation();
+}
 
-                              openSavedWork(
-                                ${index}
-                              );
-                            ">
 
-                            ${t(
-                              'openWork'
-                            )}
+/* =========================================================
+   SET ACTIVE DOCUMENT
+   ========================================================= */
 
-                          </button>
+function setActiveDocument(
+  documentId
+) {
 
-                          <button
-                            type="button"
-                            class="chip"
-                            onclick="
-                              event.stopPropagation();
+  const document =
+    getDocumentById(
+      documentId
+    );
 
-                              downloadSavedWork(
-                                ${index}
-                              );
-                            ">
+  if (!document) {
+    return;
+  }
 
-                            ${t(
-                              'downloadWork'
-                            )}
+  state.documentId =
+    document.id;
 
-                          </button>
+  state.sourceDocumentId =
+    document.id;
 
-                          <button
-                            type="button"
-                            class="chip"
-                            onclick="
-                              event.stopPropagation();
+  save();
 
-                              removeSavedWork(
-                                ${index}
-                              );
-                            ">
+}
 
-                            ${t(
-                              'deleteWork'
-                            )}
 
-                          </button>
+/* =========================================================
+   CLEAR SEARCH
+   ========================================================= */
 
-                        </div>
+function clearSearch() {
 
-                      </div>
+  state.query =
+    '';
 
-                    </div>
+  state.searchStatus =
+    'all';
 
-                  `;
+  state.searchCategory =
+    'all';
 
-                }
-              )
-              .join('')
+  state.searchDepartment =
+    'all';
 
-          : `
+  state.searchFolder =
+    'all';
 
-            <div
-              class="muted"
-              style="
-                padding:18px 0
-              ">
+  state.searchDateFrom =
+    '';
 
-              ${t(
-                'noSavedWorks'
-              )}
+  state.searchDateTo =
+    '';
 
-            </div>
+  state.searchSort =
+    'relevance';
 
-          `
-      }
+  save();
 
-    </div>
-
-  `);
+  render();
 
 }
 
@@ -8423,112 +17319,172 @@ function render() {
     return;
   }
 
-  root.innerHTML =
+  ensureMetadataForDocuments();
 
+  let html =
+    '';
+
+  if (
     state.screen ===
-    'library'
+    'dashboard'
+  ) {
 
-      ? library()
+    html =
+      dashboard();
 
-    : state.screen ===
-      'reader'
+  }
 
-      ? reader()
+  else if (
+    state.screen ===
+    'documents'
+  ) {
 
-    : state.screen ===
-      'search'
+    html =
+      documents();
 
-      ? search()
+  }
 
-    : state.screen ===
-      'create'
+  else if (
+    state.screen ===
+    'search'
+  ) {
 
-      ? create()
+    html =
+      search();
 
-    : state.screen ===
-      'result'
+  }
 
-      ? result()
+  else if (
+    state.screen ===
+    'categories'
+  ) {
 
-    : state.screen ===
-      'saved'
+    html =
+      categories();
 
-      ? saved()
+  }
 
-    : library();
+  else if (
+    state.screen ===
+    'recent'
+  ) {
+
+    html =
+      recent();
+
+  }
+
+  else if (
+    state.screen ===
+    'favorites'
+  ) {
+
+    html =
+      favorites();
+
+  }
+
+  else if (
+    state.screen ===
+    'review'
+  ) {
+
+    html =
+      review();
+
+  }
+
+  else if (
+    state.screen ===
+    'archive'
+  ) {
+
+    html =
+      archive();
+
+  }
+
+  else if (
+    state.screen ===
+    'ai'
+  ) {
+
+    html =
+      ai();
+
+  }
+
+  else if (
+    state.screen ===
+    'saved'
+  ) {
+
+    html =
+      saved();
+
+  }
+
+  else if (
+    state.screen ===
+    'settings'
+  ) {
+
+    html =
+      settings();
+
+  }
+
+  else if (
+    state.screen ===
+    'document'
+  ) {
+
+    html =
+      documentDetails();
+
+  }
+
+  else if (
+    state.screen ===
+    'result'
+  ) {
+
+    html =
+      result();
+
+  }
+
+  else {
+
+    html =
+      dashboard();
+
+  }
+
+  root.innerHTML =
+    html;
 
 }
 
 
 /* =========================================================
-   GLOBAL FUNCTIONS
+   GLOBAL FUNCTION EXPORTS
    ========================================================= */
-
-window.setLanguage =
-  setLanguage;
 
 window.go =
   go;
 
+window.render =
+  render;
+
+window.save =
+  save;
+
 window.toast =
   toast;
 
-window.openBook =
-  openBook;
-
-window.openPdf =
-  openPdf;
-
-window.setSearchQuery =
-  setSearchQuery;
-
-window.setSearchFilter =
-  setSearchFilter;
-
-window.openSearchResult =
-  openSearchResult;
-
-window.generate =
-  generate;
-
-window.generateAssistant =
-  generateAssistant;
-
-window.generateArticle =
-  generateArticle;
-
-window.generateAsk =
-  generateAsk;
-
-window.toggleLectureSource =
-  toggleLectureSource;
-
-window.toggleAllLectureSources =
-  toggleAllLectureSources;
-
-window.setLectureTopic =
-  setLectureTopic;
-
-window.setLectureLength =
-  setLectureLength;
-
-window.setAssistantPrompt =
-  setAssistantPrompt;
-
-window.setArticleTopic =
-  setArticleTopic;
-
-window.setAskPrompt =
-  setAskPrompt;
-
-window.openSavedWork =
-  openSavedWork;
-
-window.downloadSavedWork =
-  downloadSavedWork;
-
-window.removeSavedWork =
-  removeSavedWork;
+window.setLanguage =
+  setLanguage;
 
 window.chooseBooksFolder =
   chooseBooksFolder;
@@ -8539,17 +17495,176 @@ window.refreshBooks =
 window.restoreLocalBooksFolder =
   restoreLocalBooksFolder;
 
-window.save =
-  save;
+window.openPdf =
+  openPdf;
 
-window.render =
-  render;
+window.openBook =
+  openBook;
+
+window.openDocument =
+  openDocument;
+
+window.openDocumentDetails =
+  openDocumentDetails;
+
+window.openSearchResult =
+  openSearchResult;
+
+window.executeGlobalSearch =
+  executeGlobalSearch;
+
+window.clearSearch =
+  clearSearch;
+
+window.setSearchQuery =
+  setSearchQuery;
+
+window.setSearchSort =
+  setSearchSort;
+
+window.setSearchFilter =
+  setSearchFilter;
+
+window.clearFilters =
+  clearFilters;
+
+window.toggleFavorite =
+  toggleFavorite;
+
+window.toggleDocumentSelection =
+  toggleDocumentSelection;
+
+window.toggleAllDocuments =
+  toggleAllDocuments;
+
+window.clearDocumentSelection =
+  clearDocumentSelection;
+
+window.toggleAiDocument =
+  toggleAiDocument;
+
+window.toggleAllAiDocuments =
+  toggleAllAiDocuments;
+
+window.openCategory =
+  openCategory;
+
+window.clearActiveCategory =
+  clearActiveCategory;
+
+window.updateDocumentStatus =
+  updateDocumentStatus;
+
+window.restoreDocument =
+  restoreDocument;
+
+window.saveDocumentMetadata =
+  saveDocumentMetadata;
+
+window.startAiForDocument =
+  startAiForDocument;
+
+window.startAiAction =
+  startAiAction;
+
+window.setAiMode =
+  setAiMode;
+
+window.runAiQuickAction =
+  runAiQuickAction;
+
+window.setAssistantPrompt =
+  setAssistantPrompt;
+
+window.setBriefTopic =
+  setBriefTopic;
+
+window.setBriefLength =
+  setBriefLength;
+
+window.setArticleTopic =
+  setArticleTopic;
+
+window.setAskPrompt =
+  setAskPrompt;
+
+window.generateAssistant =
+  generateAssistant;
+
+window.generateBrief =
+  generateBrief;
+
+window.generateArticle =
+  generateArticle;
+
+window.generateAsk =
+  generateAsk;
+
+window.openSavedWork =
+  openSavedWork;
+
+window.removeSavedWork =
+  removeSavedWork;
+
+window.downloadSavedWork =
+  downloadSavedWork;
+
+window.downloadCurrentAiResult =
+  downloadCurrentAiResult;
+
+window.openSourcePassage =
+  openSourcePassage;
 
 
 /* =========================================================
-   START
+   STARTUP
    ========================================================= */
 
 render();
 
 restoreLocalBooksFolder();
+
+
+/* =========================================================
+   AFTER LOCAL FOLDER RESTORE
+   ========================================================= */
+
+window.addEventListener(
+  'load',
+  () => {
+
+    if (
+      BOOKS.length
+    ) {
+
+      ensureMetadataForDocuments();
+
+    }
+
+  }
+);
+
+
+/* =========================================================
+   VISIBILITY REFRESH
+   ========================================================= */
+
+document.addEventListener(
+  'visibilitychange',
+  () => {
+
+    if (
+      !document.hidden &&
+      LOCAL_BOOKS_DIRECTORY_HANDLE
+    ) {
+
+      /*
+       * Ne osvežujemo samodejno pri vsakem prihodu
+       * na stran, ker bi s tem po nepotrebnem
+       * ponovno brali lokalni imenik.
+       */
+
+    }
+
+  }
+);
