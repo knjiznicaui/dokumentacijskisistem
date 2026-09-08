@@ -581,7 +581,7 @@ const I18N = {
   sl: {
 
     appTitle:
-      'Sistem za upravljanje dokumentacijo',
+      'Sistem za upravljanje dokumentacije',
 
     dashboard:
       'Nadzorna plošča',
