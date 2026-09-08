@@ -5248,6 +5248,33 @@ function setSearchQuery(
 
   render();
 
+  requestAnimationFrame(
+    () => {
+
+      const input =
+        document.querySelector(
+          '.search'
+        );
+
+      if (!input) {
+
+        return;
+
+      }
+
+      input.focus();
+
+      const end =
+        input.value.length;
+
+      input.setSelectionRange(
+        end,
+        end
+      );
+
+    }
+  );
+
 }
 
 
